@@ -1,0 +1,44 @@
+{
+ "dataset": "capabilities",
+ "id_field": "id",
+ "id_prefix": "cap_",
+ "spec_ref": "05-model-router/spec.md §1.3; Qafiya v1.1 §8 layout; chained history v1.3",
+ "fields": {
+  "id": "id",
+  "created_at": "timestamp",
+  "spec_version": "string",
+  "status": "enum[active,retired,discredited]",
+  "superseded_by": "id|null",
+  "source_ref": "list<id>",
+  "model_ref": "id",
+  "prompt_class": "enum[compute_via_code,tabular_summary,prose_summary,multi_doc_selective,claim_check,structured_extract,open_chat]",
+  "output_budget_tokens": "number",
+  "n": "number",
+  "measured": "object",
+  "measured.accuracy": "number",
+  "measured.termination_rate": "number",
+  "measured.schema_compliance": "number",
+  "measured.source_run": "string",
+  "measured.grader": "string",
+  "measured.code_runs_rate": "number|null",
+  "measured.item_ids": "list<string>",
+  "eligible": "boolean",
+  "eligibility_derivation": "string",
+  "thresholds_snapshot": "object"
+ },
+ "derivations": [
+  "filter",
+  "count",
+  "groupby",
+  "min",
+  "max",
+  "avg"
+ ],
+ "invariants": [
+  "model_ref resolves to an active ds:models record",
+  "output_budget_tokens equals the referenced variant's output_budget_tokens",
+  "eligible == eval(eligibility_derivation, measured, thresholds_snapshot) — recomputed at every audit, never hand-set",
+  "eligible=false requires n >= policy.gates.verifiability.min_samples",
+  "measured.grader names the scoring rule that produced these numbers — a row whose grader is unknown cannot be re-derived when the scorer changes (see exp1 amendment B.1)"
+ ]
+}

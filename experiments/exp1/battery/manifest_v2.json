@@ -1,0 +1,32 @@
+{
+ "architecture_pairs": "each task exists as *_inhead (model computes) and *_code (model writes code, harness runs it) on identical ground truth",
+ "by_class": {
+  "compute_via_code": 6,
+  "structured_extract": 6
+ },
+ "corpus": {
+  "expenses_large.csv": "ebc762f9c45a2d88b591c2d5cf0c3ff2e9ac4aa75719589f8b23de94f039500d",
+  "expenses_medium.csv": "696bfab8a31d1c17937a1c02860a7b3daa65a8aa612542a648b32e578cb7ab15",
+  "expenses_small.csv": "c7af93c0052ec2e083803cdca0c5b44cfa15b8dc866c018a49ea6239d023830c",
+  "invoices_medium.csv": "2fac47576aeb4ea845c7c059866510db9d1bd667e50c1b22696d42644b338560",
+  "invoices_small.csv": "6580360aabb4760cafd5010db35cc0019b56506ad65d09a99e786af5ce82491c"
+ },
+ "ground_truth": "computed by make_battery.py / this module from the copied corpus",
+ "items": "items_v2.jsonl",
+ "items_sha256": "5084db3086d212e3c9cea1f766e4c3ac83cbb478f5b96adee82982d8035553a3",
+ "n_items": 12,
+ "prompt_chars": {
+  "b_groupby_medium_code": 727,
+  "b_groupby_medium_inhead": 8158,
+  "b_max_medium_code": 745,
+  "b_max_medium_inhead": 8176,
+  "b_top_vendor_large_code": 758,
+  "b_top_vendor_large_inhead": 30813,
+  "b_total_large_code": 737,
+  "b_total_large_inhead": 30792,
+  "b_total_small_code": 726,
+  "b_total_small_inhead": 2516,
+  "b_travel_across_files_code": 798,
+  "b_travel_across_files_inhead": 22004
+ }
+}

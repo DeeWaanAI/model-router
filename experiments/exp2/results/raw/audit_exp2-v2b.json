@@ -1,0 +1,127 @@
+{
+ "run": "exp2-v2b",
+ "checks": [
+  {
+   "label": "\u00a76.1.5 chain verifies and data matches history: models",
+   "pass": true,
+   "detail": "chain=61 entries verified; data=33 records"
+  },
+  {
+   "label": "\u00a76.1.5 chain verifies and data matches history: capabilities",
+   "pass": true,
+   "detail": "chain=42 entries verified; data=26 records"
+  },
+  {
+   "label": "\u00a76.1.5 chain verifies and data matches history: policy",
+   "pass": true,
+   "detail": "chain=53 entries verified; data=53 records"
+  },
+  {
+   "label": "\u00a76.1.5 chain verifies and data matches history: rules",
+   "pass": true,
+   "detail": "chain=8 entries verified; data=8 records"
+  },
+  {
+   "label": "\u00a76.1.5 chain verifies and data matches history: decision_log",
+   "pass": true,
+   "detail": "chain=1662 entries verified; data=828 records"
+  },
+  {
+   "label": "\u00a76.1.4 no declared price exceeds the \u00a73.1 unit guard",
+   "pass": true,
+   "detail": "[]"
+  },
+  {
+   "label": "\u00a76.1.4 every active connection carries a user declaration (label, declared_at, source_ref)",
+   "pass": true,
+   "detail": "[]"
+  },
+  {
+   "label": "\u00a76.1.4 no secret material in the registry: auth holds a scheme and an env-var name only",
+   "pass": true,
+   "detail": "[]"
+  },
+  {
+   "label": "\u00a76.1.4 every active connection is routable in shape (connector, base_url, model, locus, privacy_class)",
+   "pass": true,
+   "detail": "[]"
+  },
+  {
+   "label": "\u00a76.1.3 every stored `eligible` recomputes from its own snapshot",
+   "pass": true,
+   "detail": "26 rows checked"
+  },
+  {
+   "label": "\u00a76.1.6 every binding source resolves",
+   "pass": true,
+   "detail": "[]"
+  },
+  {
+   "label": "\u00a76.1.6 no binding sources from SUPERSEDED.json",
+   "pass": true,
+   "detail": "[]"
+  },
+  {
+   "label": "\u00a76.1.7 every sensitive route stays inside its policy, and every cloud route carries a recorded warning",
+   "pass": true,
+   "detail": "[]"
+  },
+  {
+   "label": "\u00a76.1.1 gate replay reproduces every logged gate_trace",
+   "pass": true,
+   "detail": "[]"
+  },
+  {
+   "label": "\u00a76.1.2 first attempt is the replayed argmin, and `chosen` is the final attempt",
+   "pass": true,
+   "detail": "[]"
+  },
+  {
+   "label": "\u00a76.1.8 every actual cost recomputes from tokens x pinned price",
+   "pass": true,
+   "detail": "[]"
+  },
+  {
+   "label": "\u00a76.2 SCOPED to run=exp2-v2b: no private payload in this run's records",
+   "pass": true,
+   "detail": "{}"
+  },
+  {
+   "label": "\u00a76.2 STANDING log state: no private payload anywhere in the log today",
+   "pass": false,
+   "detail": "{'p11': ['decision_log/data.jsonl', 'decision_log/history.jsonl']}"
+  },
+  {
+   "label": "\u00a76.2 scan covered all three log files at both scopes",
+   "pass": true,
+   "detail": "['decision_log/bindings.jsonl', 'decision_log/data.jsonl', 'decision_log/history.jsonl']"
+  },
+  {
+   "label": "\u00a76.3 binding coverage is 100%",
+   "pass": true,
+   "detail": "44/44"
+  }
+ ],
+ "failures": [
+  "\u00a76.2 STANDING log state: no private payload anywhere in the log today"
+ ],
+ "coverage": {
+  "decisions": 44,
+  "eligibility_coverage": 0.125,
+  "unmeasured_variant_class_pairs": 14,
+  "binding_coverage": 1.0,
+  "privacy_label_coverage": 0.9318,
+  "gate3_token_estimate_unverifiable": 44
+ },
+ "scan_scope": "exp2-v2b",
+ "scanned_artifacts": [
+  "decision_log/bindings.jsonl",
+  "decision_log/data.jsonl",
+  "decision_log/history.jsonl"
+ ],
+ "standing_scanned_artifacts": [
+  "decision_log/bindings.jsonl",
+  "decision_log/data.jsonl",
+  "decision_log/history.jsonl"
+ ]
+}

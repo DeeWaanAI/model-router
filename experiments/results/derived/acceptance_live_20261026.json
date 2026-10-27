@@ -1,0 +1,14 @@
+{
+ "script": "router/acceptance_live.py",
+ "exit": 0,
+ "stdout_tail": [
+  "  connector modules on disk: ['__init__.py', 'ollama.py', 'openai_compatible.py']",
+  "[PASS] one openai_compatible class served 2 real endpoints (llama3.2:latest locally, together in the cloud); cloud spend $0.00018820",
+  "",
+  "  NOTE: the local leg is Ollama's /v1 surface. LM Studio / Jan / GPT4All are not installed here and installing GUI software needs the owner's go-ahead (RC-5.1)."
+ ],
+ "leg_spends_usd": [
+  0.0001882
+ ],
+ "cloud_spend_usd": 0.0001882
+}

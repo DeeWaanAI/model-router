@@ -1,0 +1,14 @@
+{
+ "ACTUAL_SPEND_USD": 0.004521,
+ "battery_sha256": "5084db3086d212e3c9cea1f766e4c3ac83cbb478f5b96adee82982d8035553a3",
+ "ceiling_usd": 1.5,
+ "cost_usd": 0.004521,
+ "execution": "model-written programs ran under router/code_exec.py: throwaway dir, battery CSVs only, scrubbed env, import allowlist, timeout. Guardrail, not a sandbox.",
+ "harness_wall_s": 355.6,
+ "n_items": 12,
+ "note": "forced arms are controls, kept in results/raw; routed arm is logged+bound",
+ "policy_id": "pol_179278215748500002",
+ "policy_label": "v6",
+ "preflight_estimate_usd": 0.406496,
+ "run": "exp1-pilot-v2"
+}

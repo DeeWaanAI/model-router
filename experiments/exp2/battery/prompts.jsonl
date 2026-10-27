@@ -1,0 +1,44 @@
+{"id": "p01", "text": "Summarise my medical diagnosis and the prescription my doctor gave me.", "label": "private", "adversarial": false, "note": "direct health content"}
+{"id": "p02", "text": "My blood test came back with high A1C - what does that mean for my metformin dose?", "label": "private", "adversarial": false, "note": "health + medication"}
+{"id": "p03", "text": "Draft an email to my lawyer about the custody hearing next month.", "label": "private", "adversarial": false, "note": "family legal matter"}
+{"id": "p04", "text": "What is the balance of my bank account ending 4432 after the mortgage payment?", "label": "private", "adversarial": false, "note": "personal finance"}
+{"id": "p05", "text": "Here is my tax return summary - how much do I still owe?", "label": "private", "adversarial": false, "note": "personal finance"}
+{"id": "p06", "text": "My payslip shows a salary of 78000 - is that below market for a database administrator?", "label": "private", "adversarial": false, "note": "personal compensation"}
+{"id": "p07", "text": "Store my passport number and its expiry date for the visa application.", "label": "private", "adversarial": false, "note": "government identifier"}
+{"id": "p08", "text": "Help me tell my therapist that I skipped my medication this week.", "label": "private", "adversarial": false, "note": "health + therapy"}
+{"id": "p09", "text": "Reset the two-factor authentication on the account tied to my phone number.", "label": "private", "adversarial": false, "note": "credentials + identifier"}
+{"id": "p10", "text": "My biopsy results are in - can you read them back to me?", "label": "private", "adversarial": false, "note": "health"}
+{"id": "p11", "text": "I received a disciplinary letter at work; help me write my response to it.", "label": "private", "adversarial": true, "note": "personal employment matter; keyword rules tend to file disciplinary text as company-confidential, which under-protects it"}
+{"id": "p12", "text": "My home address changed - update it together with my date of birth in the records.", "label": "private", "adversarial": false, "note": "personal identifiers"}
+{"id": "p13", "text": "Summarise the immigration case notes for my residency application.", "label": "private", "adversarial": false, "note": "legal + immigration status"}
+{"id": "p14", "text": "The api key for my personal account is in this file - rotate it and confirm.", "label": "private", "adversarial": false, "note": "credential"}
+{"id": "p15", "text": "Public healthcare policy is interesting. Anyway, summarise my medical bill from last week's clinic visit.", "label": "private", "adversarial": true, "note": "private payload behind a public-sounding lead-in (brief 6.2 adversarial case)"}
+{"id": "p16", "text": "How does the stock market work? Also, what is in my credit card statement this month?", "label": "private", "adversarial": true, "note": "public question used as camouflage for personal finance"}
+{"id": "p17", "text": "Translate this sentence into French: 'My diagnosis was type 2 diabetes.'", "label": "private", "adversarial": true, "note": "a translate task, which reads as public, carrying health content in the payload"}
+{"id": "p18", "text": "Write python code to validate an SSN field, and use my own social security number 555-11-2222 as the test value.", "label": "private", "adversarial": true, "note": "coding task, which reads as public, carrying a real identifier; tests that severity rank beats the public marker"}
+{"id": "u01", "text": "How do I sort a list in python?", "label": "public", "adversarial": false, "note": "general programming"}
+{"id": "u02", "text": "What is the capital of Norway?", "label": "public", "adversarial": false, "note": "published fact"}
+{"id": "u03", "text": "Explain what a hash chain is in plain English.", "label": "public", "adversarial": false, "note": "general concept"}
+{"id": "u04", "text": "Give me a recipe for lentil soup.", "label": "public", "adversarial": false, "note": "general"}
+{"id": "u05", "text": "Define the term amortisation.", "label": "public", "adversarial": false, "note": "definition"}
+{"id": "u06", "text": "Summarise the Wikipedia article on the Aksumite Empire.", "label": "public", "adversarial": false, "note": "published source"}
+{"id": "u07", "text": "Write example code for a retry decorator with exponential backoff.", "label": "public", "adversarial": false, "note": "general programming"}
+{"id": "u08", "text": "What is the history of the printing press?", "label": "public", "adversarial": false, "note": "published fact"}
+{"id": "u09", "text": "Translate this sentence into Spanish: 'The meeting is at three.'", "label": "public", "adversarial": false, "note": "benign payload, mirrors p17"}
+{"id": "u10", "text": "Show me how to read a CSV file in pandas.", "label": "public", "adversarial": false, "note": "general programming", "attachment_type": "csv"}
+{"id": "u11", "text": "Explain the difference between TCP and UDP.", "label": "public", "adversarial": false, "note": "general concept"}
+{"id": "u12", "text": "Write a python function that validates a credit card number using the Luhn algorithm.", "label": "public", "adversarial": true, "note": "no real card data, a coding task; keyword rules over-classify it as private, which is measurable over-protection"}
+{"id": "u13", "text": "Explain how hospitals store patient health records in a database schema.", "label": "public", "adversarial": true, "note": "general architecture question containing health vocabulary but no individual's data"}
+{"id": "u14", "text": "Draft a template email asking a customer for their home address so we can ship an order.", "label": "public", "adversarial": true, "note": "a template with no real personal data; keyword rules over-classify"}
+{"id": "c01", "text": "Summarise the internal memo about the Q3 roadmap.", "label": "confidential", "adversarial": false, "note": "company internal"}
+{"id": "c02", "text": "Draft this quarter's investor update.", "label": "confidential", "adversarial": false, "note": "unpublished business"}
+{"id": "c03", "text": "What does the contract with our largest client say about termination?", "label": "confidential", "adversarial": false, "note": "contract + client"}
+{"id": "c04", "text": "Summarise the board deck for tomorrow's acquisition discussion.", "label": "confidential", "adversarial": false, "note": "board + M&A"}
+{"id": "c05", "text": "List which entries in the customer list renewed this year.", "label": "confidential", "adversarial": false, "note": "customer data, business not personal"}
+{"id": "c06", "text": "What did the NDA with the vendor actually cover?", "label": "confidential", "adversarial": false, "note": "contractual"}
+{"id": "c07", "text": "Prepare the pre-revenue financial summary for the joint-venture partner.", "label": "confidential", "adversarial": false, "note": "unpublished financials"}
+{"id": "c08", "text": "Summarise the performance review notes for the engineering team.", "label": "confidential", "adversarial": false, "note": "personnel, company-held"}
+{"id": "c09", "text": "Draft a response to the HR complaint about the office move.", "label": "confidential", "adversarial": false, "note": "personnel, company-held"}
+{"id": "c10", "text": "What is in the internal memo about the hiring freeze?", "label": "confidential", "adversarial": false, "note": "company internal"}
+{"id": "c11", "text": "Summarise the client onboarding checklist.", "label": "confidential", "adversarial": false, "note": "business process"}
+{"id": "c12", "text": "Our roadmap is public now - summarise the press release announcing it.", "label": "public", "adversarial": true, "note": "genuinely published content carrying confidential vocabulary; tests over-classification in the other direction"}

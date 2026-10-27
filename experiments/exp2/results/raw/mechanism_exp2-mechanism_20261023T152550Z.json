@@ -1,0 +1,88 @@
+{
+ "at": "2026-10-23T15:25:50Z",
+ "both_keys": {
+  "chosen": "qwen-flash",
+  "chosen_clearance": "confidential",
+  "chosen_locus": "cloud",
+  "classified": "confidential",
+  "clearance_raised_on": "qwen-flash",
+  "gate_survivors": {
+   "context_fit": 1,
+   "privacy": 3,
+   "verifiability": 3
+  },
+  "outcome": "planned",
+  "store": "throwaway (the real registry is untouched)"
+ },
+ "cost_usd": 0.0,
+ "finding": {
+  "both_classified_as": "confidential",
+  "both_keys_expose_data": true,
+  "conclusion": [
+   "Gate 1 is a conjunction of the policy's locus map and the model's own clearance. Editing the map alone exposed data: False. Editing the map AND raising a cloud model's clearance exposed data: True. So the user-facing tunable the owner flagged is NOT by itself sufficient to leak confidential text; a second, registry-level change is required. That is the fail-safe property spec \u00a72.1 claims, demonstrated rather than asserted."
+  ],
+  "locus_map_alone_exposes_data": false,
+  "v2_locus": null,
+  "v2_outcome": "refused",
+  "v3_gate1_exclusions": [
+   "clearance_public_below_confidential"
+  ],
+  "v3_locus": null,
+  "v3_outcome": "refused"
+ },
+ "ground_truth_label": "private (one named individual's health + employment record)",
+ "mode": "dry_run",
+ "purpose": "mechanism check: private-labelled confidential-classified text under v2 vs v3, with the cost protection removed by length",
+ "runs": [
+  {
+   "allowed_loci_confidential": [
+    "local"
+   ],
+   "chosen": null,
+   "chosen_locus": null,
+   "classified": "confidential",
+   "decision_ref": "dec_179276915126400001",
+   "est_tokens_in_local": null,
+   "gate1_exclusion_reasons": [
+    "locus_cloud_not_allowed_for_confidential"
+   ],
+   "gate_survivors": {
+    "context_fit": 0,
+    "privacy": 2,
+    "verifiability": 2
+   },
+   "matched_rank": 6,
+   "outcome": "refused",
+   "policy_id": "pol_179276708715100001",
+   "policy_label": "v2",
+   "refusal_reason": "context_exceeds_all",
+   "task_class": "tabular_summary"
+  },
+  {
+   "allowed_loci_confidential": [
+    "local",
+    "cloud"
+   ],
+   "chosen": null,
+   "chosen_locus": null,
+   "classified": "confidential",
+   "decision_ref": "dec_179276915143400003",
+   "est_tokens_in_local": null,
+   "gate1_exclusion_reasons": [
+    "clearance_public_below_confidential"
+   ],
+   "gate_survivors": {
+    "context_fit": 0,
+    "privacy": 2,
+    "verifiability": 2
+   },
+   "matched_rank": 6,
+   "outcome": "refused",
+   "policy_id": "pol_179276865808400001",
+   "policy_label": "v3-conf-cloud",
+   "refusal_reason": "context_exceeds_all",
+   "task_class": "tabular_summary"
+  }
+ ],
+ "text_chars": 45511
+}

@@ -1,0 +1,34 @@
+{
+  "dataset": "rules",
+  "id_field": "id",
+  "id_prefix": "rul_",
+  "spec_ref": "05-model-router/spec.md \u00a71.5; Qafiya v1.1 \u00a78 layout; chained history v1.3",
+  "fields": {
+    "id": "id",
+    "created_at": "timestamp",
+    "spec_version": "string",
+    "status": "enum[active,retired,discredited]",
+    "superseded_by": "id|null",
+    "source_ref": "list<id>",
+    "rule_kind": "enum[privacy,task]",
+    "version_label": "string",
+    "default_label": "string",
+    "rules": "list<object>",
+    "rules[].rank": "number",
+    "rules[].match.type": "enum[keyword_any,keyword_all,regex,dataset_ref,attachment_type]",
+    "rules[].label": "string",
+    "label_set": "list<string>",
+    "validated_on": "object",
+    "validated_on.labelled_set": "string",
+    "validated_on.n": "number",
+    "validated_on.accuracy": "number|null"
+  },
+  "derivations": ["filter", "count"],
+  "invariants": [
+    "every rules[].label is a member of label_set",
+    "default_label is a member of label_set",
+    "evaluation is ordered by rules[].rank, ties by array position \u2014 first match wins, no unordered evaluation",
+    "the match payload key depends on match.type: keyword_any|keyword_all|attachment_type -> values[], regex|dataset_ref -> value",
+    "rule_kind=privacy implies default_label=private (fail closed, spec \u00a72.1)"
+  ]
+}

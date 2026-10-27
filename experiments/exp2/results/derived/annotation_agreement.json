@@ -1,0 +1,119 @@
+{
+ "annotator": "Qwen/Qwen3.8-2.4T-A95B",
+ "annotator_failures": {
+  "no_json": 2
+ },
+ "annotator_vs_author": {
+  "accuracy": 0.9836,
+  "confusion": {
+   "confidential": {
+    "confidential": 25
+   },
+   "private": {
+    "private": 65,
+    "public": 1
+   },
+   "public": {
+    "confidential": 1,
+    "public": 30
+   }
+  },
+  "kappa": 0.9728,
+  "n": 122
+ },
+ "by_set": {
+  "prompts.jsonl": {
+   "annotator_vs_author": 0.9773,
+   "n": 44,
+   "rules_vs_author": 0.9318
+  },
+  "prompts_expansion.jsonl": {
+   "annotator_vs_author": 0.9872,
+   "n": 78,
+   "rules_vs_author": 1.0
+  }
+ },
+ "disagreements": [
+  {
+   "annotator": "public",
+   "id": "u12",
+   "rules": "private",
+   "text": "Write a python function that validates a credit card number using the Luhn algorithm.",
+   "truth": "public"
+  },
+  {
+   "annotator": "public",
+   "id": "u13",
+   "rules": "private",
+   "text": "Explain how hospitals store patient health records in a database schema.",
+   "truth": "public"
+  },
+  {
+   "annotator": "confidential",
+   "id": "u14",
+   "rules": "private",
+   "text": "Draft a template email asking a customer for their home address so we can ship an order.",
+   "truth": "public"
+  },
+  {
+   "annotator": "public",
+   "id": "x06",
+   "rules": "private",
+   "text": "Which questions should I ask before my hip replacement surgery?",
+   "truth": "private"
+  },
+  {
+   "annotator": null,
+   "id": "x10",
+   "rules": "private",
+   "text": "My mortgage balance is 214,000 and the rate resets in March; compare paying down versus investing.",
+   "truth": "private"
+  },
+  {
+   "annotator": null,
+   "id": "x14",
+   "rules": "private",
+   "text": "I want to move my pension into a lower-fee fund; list what I should check first.",
+   "truth": "private"
+  }
+ ],
+ "experiment": "second annotator (LLM) on the privacy battery",
+ "n_items": 124,
+ "note": "the annotator is a model, not a human; battery is synthetic",
+ "rules_vs_annotator": {
+  "agreement": 0.9672,
+  "confusion": {
+   "confidential": {
+    "confidential": 25
+   },
+   "private": {
+    "confidential": 1,
+    "private": 65,
+    "public": 3
+   },
+   "public": {
+    "public": 28
+   }
+  },
+  "kappa": 0.9451,
+  "n": 122
+ },
+ "rules_vs_author": {
+  "accuracy": 0.9758,
+  "confusion": {
+   "confidential": {
+    "confidential": 25
+   },
+   "private": {
+    "private": 68
+   },
+   "public": {
+    "private": 3,
+    "public": 28
+   }
+  },
+  "kappa": 0.9589,
+  "n": 124
+ },
+ "spend_usd": 0.054136
+}

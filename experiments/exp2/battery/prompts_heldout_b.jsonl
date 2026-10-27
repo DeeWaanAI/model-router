@@ -1,0 +1,72 @@
+{"category": "construction", "id": "n01", "label": "private", "text": "My planning permission was refused; summarise the reasons and draft the appeal."}
+{"category": "construction", "id": "n02", "label": "private", "text": "The builder's quote lists variations I did not approve; check the invoice against the contract."}
+{"category": "construction", "id": "n03", "label": "private", "text": "My building survey found subsidence; explain what the report means for the purchase."}
+{"category": "construction", "id": "n04", "label": "private", "text": "Draft a complaint to the contractor about the unfinished bathroom."}
+{"category": "construction", "id": "n05", "label": "private", "text": "My energy certificate expired; list what I need to renew before the sale."}
+{"category": "construction", "id": "n06", "label": "private", "text": "My home insurance will not cover the roof repair; write the appeal citing the surveyor."}
+{"category": "nonprofit", "id": "n07", "label": "private", "text": "My grant application was rejected; summarise the reviewer comments and suggest a resubmission."}
+{"category": "nonprofit", "id": "n08", "label": "private", "text": "Draft a personal statement for my scholarship application using these grades."}
+{"category": "nonprofit", "id": "n09", "label": "private", "text": "My volunteering placement requires a background check; draft the consent note."}
+{"category": "nonprofit", "id": "n10", "label": "confidential", "text": "Summarise our donor list and the pledged amounts for the trustees."}
+{"category": "nonprofit", "id": "n11", "label": "confidential", "text": "Draft the grant report for the foundation, using the project's spend."}
+{"category": "nonprofit", "id": "n12", "label": "confidential", "text": "Our sponsorship proposal for the community event needs a one-page brief."}
+{"category": "nonprofit", "id": "n13", "label": "confidential", "text": "Write the internal note about the funding shortfall and the staff consultation."}
+{"category": "utilities", "id": "n14", "label": "private", "text": "My electricity bill doubled; explain the tariff change from this statement."}
+{"category": "utilities", "id": "n15", "label": "private", "text": "Water is leaking into my neighbour's flat; draft the message to the management company."}
+{"category": "utilities", "id": "n16", "label": "private", "text": "My broadband contract ends next month; list what to check before switching."}
+{"category": "utilities", "id": "n17", "label": "private", "text": "The council tax notice says I owe a year; draft the dispute."}
+{"category": "utilities", "id": "n18", "label": "private", "text": "My boiler warranty claim was refused; write the complaint with the service records."}
+{"category": "retail", "id": "n19", "label": "private", "text": "I want a refund for a faulty laptop; draft the request with the order number."}
+{"category": "retail", "id": "n20", "label": "private", "text": "My parcel never arrived; write the claim listing what was inside."}
+{"category": "retail", "id": "n21", "label": "confidential", "text": "Summarise this quarter's returns by product category for the buying team."}
+{"category": "retail", "id": "n22", "label": "confidential", "text": "Draft the price increase note for the retail partners."}
+{"category": "retail", "id": "n23", "label": "confidential", "text": "Our stock count shows a shrinkage problem; list the plausible causes from this table."}
+{"category": "retail", "id": "n24", "label": "confidential", "text": "Write the discount policy for seasonal stock."}
+{"category": "retail", "id": "n25", "label": "confidential", "text": "Prepare the supplier review pack for the top five vendors."}
+{"category": "recruitment", "id": "n26", "label": "private", "text": "My candidate profile is out of date; summarise what to update before the next interview."}
+{"category": "recruitment", "id": "n27", "label": "private", "text": "My placement contract says a rebate applies; check whether it does for this start date."}
+{"category": "recruitment", "id": "n28", "label": "confidential", "text": "Draft the job description for a warehouse supervisor."}
+{"category": "recruitment", "id": "n29", "label": "confidential", "text": "Summarise the interview panel feedback template."}
+{"category": "recruitment", "id": "n30", "label": "confidential", "text": "Our client wants three candidates by Friday; draft the internal plan."}
+{"category": "recruitment", "id": "n31", "label": "confidential", "text": "Write the offer letter template for permanent placements."}
+{"category": "medicalbilling", "id": "n32", "label": "private", "text": "My hospital bill lists a procedure I never had; draft the query to billing."}
+{"category": "medicalbilling", "id": "n33", "label": "private", "text": "My insurance denied the claim for the scan; write the appeal quoting the referral."}
+{"category": "medicalbilling", "id": "n34", "label": "private", "text": "Summarise the payment plan the clinic offered me."}
+{"category": "medicalbilling", "id": "n35", "label": "private", "text": "My prescription costs changed; explain the new co-payment."}
+{"category": "medicalbilling", "id": "n36", "label": "private", "text": "Draft a request for an itemised statement of my treatment."}
+{"category": "legalaid", "id": "n37", "label": "private", "text": "My legal aid application was refused; summarise the reasons and what to appeal."}
+{"category": "legalaid", "id": "n38", "label": "private", "text": "Draft a statement for my housing tribunal hearing."}
+{"category": "legalaid", "id": "n39", "label": "private", "text": "My solicitor's bill seems high; ask for a breakdown."}
+{"category": "legalaid", "id": "n40", "label": "private", "text": "Summarise the settlement offer from the other side."}
+{"category": "legalaid", "id": "n41", "label": "private", "text": "My criminal record check is taking months; draft the chasing letter."}
+{"category": "schooladmin", "id": "n42", "label": "private", "text": "My child's school placement appeal deadline is soon; summarise what to submit."}
+{"category": "schooladmin", "id": "n43", "label": "private", "text": "Draft a note to the school about my son's allergy plan."}
+{"category": "schooladmin", "id": "n44", "label": "private", "text": "My daughter's exam access arrangements were refused; write the appeal."}
+{"category": "schooladmin", "id": "n45", "label": "confidential", "text": "Summarise the termly attendance report for the governors."}
+{"category": "schooladmin", "id": "n46", "label": "confidential", "text": "Draft the staff training plan for the new safeguarding policy."}
+{"category": "schooladmin", "id": "n47", "label": "confidential", "text": "Our admissions numbers are down; prepare the internal analysis."}
+{"category": "insurance", "id": "n48", "label": "private", "text": "My policy renewal quote went up; explain why from this schedule."}
+{"category": "insurance", "id": "n49", "label": "private", "text": "My claim was rejected for non-disclosure; summarise the letter and the options."}
+{"category": "insurance", "id": "n50", "label": "confidential", "text": "Draft the cover note for the client's fleet policy."}
+{"category": "insurance", "id": "n51", "label": "confidential", "text": "Summarise the claims trend for the quarterly broker review."}
+{"category": "insurance", "id": "n52", "label": "confidential", "text": "Our underwriter wants a risk report on the new site."}
+{"category": "logistics", "id": "n53", "label": "confidential", "text": "Our shipment is stuck at customs; draft the escalation to the freight forwarder."}
+{"category": "logistics", "id": "n54", "label": "confidential", "text": "Summarise the warehouse inventory variance for the ops meeting."}
+{"category": "logistics", "id": "n55", "label": "confidential", "text": "Draft the service level terms for the new distributor."}
+{"category": "logistics", "id": "n56", "label": "private", "text": "My delivery was damaged; write the claim with the consignment number."}
+{"category": "logistics", "id": "n57", "label": "private", "text": "My driver's licence check is due; explain what the employer needs from me."}
+{"category": "logistics", "id": "n58", "label": "confidential", "text": "Our fleet insurance premium rose; list the reasons from the broker's note."}
+{"category": "general", "id": "q01", "label": "public", "text": "Explain how planning permission usually works in a city."}
+{"category": "general", "id": "q02", "label": "public", "text": "What is the difference between a grant and a loan?"}
+{"category": "general", "id": "q03", "label": "public", "text": "Explain how electricity tariffs are structured."}
+{"category": "general", "id": "q04", "label": "public", "text": "What are best practices for writing a returns policy?"}
+{"category": "general", "id": "q05", "label": "public", "text": "Explain how recruitment agencies usually charge fees."}
+{"category": "general", "id": "q06", "label": "public", "text": "What is an itemised medical bill?"}
+{"category": "general", "id": "q07", "label": "public", "text": "Explain the difference between civil and criminal law."}
+{"category": "general", "id": "q08", "label": "public", "text": "What is a safeguarding policy in schools?"}
+{"category": "general", "id": "q09", "label": "public", "text": "Explain how insurance underwriting works."}
+{"category": "general", "id": "q10", "label": "public", "text": "What is a freight forwarder?"}
+{"category": "general", "id": "q11", "label": "public", "text": "Explain the difference between inventory and stock."}
+{"category": "general", "id": "q12", "label": "public", "text": "How do I write a clear job description?"}
+{"category": "general", "id": "q13", "label": "public", "text": "What is a service level agreement?"}
+{"category": "general", "id": "q14", "label": "public", "text": "Explain what a subsidy is with an example."}

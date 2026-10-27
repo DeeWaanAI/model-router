@@ -1,0 +1,182 @@
+{
+ "actual_spend_usd": 0.274189,
+ "amendment_b1": {
+  "affected_items": [
+   "b_total_large_code",
+   "b_total_large_inhead",
+   "b_total_small_code",
+   "b_total_small_inhead"
+  ],
+  "alias_map": {
+   "total_amount": "total"
+  },
+  "n_rows_rescored": 8,
+  "rescored": [
+   {
+    "arm": "cloud-70b",
+    "b1_grader": 1.0,
+    "frozen_grader": 0.5,
+    "item": "b_total_large_code"
+   },
+   {
+    "arm": "cloud-cheap",
+    "b1_grader": 1.0,
+    "frozen_grader": 0.5,
+    "item": "b_total_large_code"
+   },
+   {
+    "arm": "cloud-max",
+    "b1_grader": 1.0,
+    "frozen_grader": 0.5,
+    "item": "b_total_large_code"
+   },
+   {
+    "arm": "local-8b",
+    "b1_grader": 1.0,
+    "frozen_grader": 0.5,
+    "item": "b_total_large_code"
+   },
+   {
+    "arm": "cloud-70b",
+    "b1_grader": 1.0,
+    "frozen_grader": 0.5,
+    "item": "b_total_small_code"
+   },
+   {
+    "arm": "cloud-cheap",
+    "b1_grader": 1.0,
+    "frozen_grader": 0.5,
+    "item": "b_total_small_code"
+   },
+   {
+    "arm": "cloud-max",
+    "b1_grader": 1.0,
+    "frozen_grader": 0.5,
+    "item": "b_total_small_code"
+   },
+   {
+    "arm": "local-8b",
+    "b1_grader": 1.0,
+    "frozen_grader": 0.5,
+    "item": "b_total_small_code"
+   }
+  ]
+ },
+ "arms": {
+  "cloud-70b": {
+   "cost_usd": 0.061291,
+   "fields_correct": 13,
+   "fields_total": 22,
+   "model": "Llama-3.3-70B-Instruct-Turbo",
+   "n_measurable": 12,
+   "n_runs": 12,
+   "n_skipped_context": 0,
+   "quality_mean": 0.5833,
+   "schema": 0.9167,
+   "termination": 1.0,
+   "usd_per_correct_field": 0.004715
+  },
+  "cloud-cheap": {
+   "cost_usd": 0.004537,
+   "fields_correct": 9,
+   "fields_total": 22,
+   "model": "qwen-flash",
+   "n_measurable": 12,
+   "n_runs": 12,
+   "n_skipped_context": 0,
+   "quality_mean": 0.4167,
+   "schema": 0.8333,
+   "termination": 1.0,
+   "usd_per_correct_field": 0.000504
+  },
+  "cloud-max": {
+   "cost_usd": 0.205818,
+   "fields_correct": 13,
+   "fields_total": 22,
+   "model": "Qwen3.8-2.4T-A95B",
+   "n_measurable": 12,
+   "n_runs": 12,
+   "n_skipped_context": 0,
+   "quality_mean": 0.5833,
+   "schema": 0.6667,
+   "termination": 0.75,
+   "usd_per_correct_field": 0.015832
+  },
+  "local-3b": {
+   "cost_usd": 0.0,
+   "fields_correct": 1,
+   "fields_total": 16,
+   "model": "llama3.2:latest",
+   "n_measurable": 9,
+   "n_runs": 12,
+   "n_skipped_context": 3,
+   "quality_mean": 0.0556,
+   "schema": 0.3333,
+   "termination": 1.0,
+   "usd_per_correct_field": 0.0
+  },
+  "local-8b": {
+   "cost_usd": 0.0,
+   "fields_correct": 10,
+   "fields_total": 16,
+   "model": "llama3.1:8b-instruct-q4_K_M",
+   "n_measurable": 9,
+   "n_runs": 12,
+   "n_skipped_context": 3,
+   "quality_mean": 0.5556,
+   "schema": 0.7778,
+   "termination": 1.0,
+   "usd_per_correct_field": 0.0
+  }
+ },
+ "audit": {
+  "coverage": {
+   "binding_coverage": 1.0,
+   "decisions": 6,
+   "eligibility_coverage": 0.8333,
+   "gate3_token_estimate_unverifiable": 6,
+   "privacy_label_coverage": 1.0,
+   "unmeasured_variant_class_pairs": 1
+  },
+  "exit": 0,
+  "failures": []
+ },
+ "capabilities": {
+  "eligible": [
+   "cap_179278555190800003"
+  ],
+  "ineligible": [
+   "cap_179278555189200001",
+   "cap_179278555190200002",
+   "cap_179278555191500004",
+   "cap_179278555192300005",
+   "cap_179278555193000006",
+   "cap_179278555193600007",
+   "cap_179278555194300008",
+   "cap_179278555195100009",
+   "cap_179278555196000010"
+  ],
+  "n_rows": 10
+ },
+ "cost_usd": 0.274189,
+ "experiment": "exp1 frontier + exp3 verifiability",
+ "preflight_estimate_usd": 0.406496,
+ "routed": {
+  "all_bound": true,
+  "cost_usd": 0.002542,
+  "fields_correct": 9,
+  "fields_total": 11,
+  "loci": [
+   "cloud"
+  ],
+  "models": [
+   "Llama-3.3-70B-Instruct-Turbo"
+  ],
+  "n_graded": 6,
+  "n_items": 6,
+  "outcomes": {
+   "answered": 6
+  },
+  "quality_mean": 0.8182
+ }
+}

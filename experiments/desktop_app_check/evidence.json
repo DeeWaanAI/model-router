@@ -1,0 +1,14 @@
+{
+ "endpoint": "http://127.0.0.1:1234/v1",
+ "model": "qwen2.5-0.5b-instruct-q4_k_m.gguf",
+ "served_by": "llama-server 2.54.0 (LM Studio bundled backend, Apple Metal arm64)",
+ "model_sha256": "74a4da8c9fdbcd15bd1f6d01d621410d31c6fc00986f5eb687824e7b93d7a9db",
+ "outcome": "answered",
+ "answer": "Hello from the connector. A hash chain is a data structure that stores a sequence of hash values, each of which is a hash of a set of previously computed hash values. This structure is used to efficiently compute the hash of a given input, which is useful in various applications such as cryptography, data compression, and hash table operations. The hash chain is a fundamental concept in the field of hash functions and is widely used in modern computing and data processing systems.",
+ "tokens_in": 55,
+ "tokens_out": 93,
+ "meter": "provider",
+ "actual_spend_usd": 0.0,
+ "connector": "openai_compatible",
+ "pass": true
+}

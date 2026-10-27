@@ -1,0 +1,739 @@
+{
+ "at": "2026-10-26T18:19:04Z",
+ "battery": {
+  "file": "prompts_heldout_b.jsonl",
+  "n": 72,
+  "sha256": "f236580547f50cb2dc96fbe5fadae98e712a0f306ef81209d9a42fcc8d5659b6"
+ },
+ "experiment": "classifier options on battery B (held-out, unseen domains)",
+ "metrics": {
+  "accuracy": 0.4167,
+  "n": 72,
+  "over": 35,
+  "over_ids": [
+   "n10",
+   "n11",
+   "n12",
+   "n13",
+   "n21",
+   "n22",
+   "n23",
+   "n24",
+   "n25",
+   "n28",
+   "n29",
+   "n31",
+   "n45",
+   "n46",
+   "n47",
+   "n51",
+   "n52",
+   "n53",
+   "n54",
+   "n55",
+   "n58",
+   "q01",
+   "q02",
+   "q03",
+   "q04",
+   "q05",
+   "q06",
+   "q07",
+   "q08",
+   "q09",
+   "q10",
+   "q11",
+   "q12",
+   "q13",
+   "q14"
+  ],
+  "under": 7,
+  "under_ids": [
+   "n02",
+   "n03",
+   "n14",
+   "n16",
+   "n27",
+   "n48",
+   "n57"
+  ]
+ },
+ "rows": [
+  {
+   "changed": false,
+   "final": "private",
+   "guard_fired": false,
+   "id": "n01",
+   "rules_label": "private",
+   "true": "private"
+  },
+  {
+   "changed": false,
+   "final": "confidential",
+   "guard_fired": false,
+   "id": "n02",
+   "rules_label": "confidential",
+   "true": "private"
+  },
+  {
+   "changed": true,
+   "final": "confidential",
+   "guard_fired": false,
+   "id": "n03",
+   "rules_label": "public",
+   "true": "private",
+   "verdict": {
+    "cost_usd": null,
+    "error": "auth",
+    "label": null,
+    "tokens_in": null,
+    "tokens_out": null
+   }
+  },
+  {
+   "changed": false,
+   "final": "private",
+   "guard_fired": false,
+   "id": "n04",
+   "rules_label": "private",
+   "true": "private"
+  },
+  {
+   "changed": false,
+   "final": "private",
+   "guard_fired": false,
+   "id": "n05",
+   "rules_label": "private",
+   "true": "private"
+  },
+  {
+   "changed": false,
+   "final": "private",
+   "guard_fired": false,
+   "id": "n06",
+   "rules_label": "private",
+   "true": "private"
+  },
+  {
+   "changed": false,
+   "final": "private",
+   "guard_fired": false,
+   "id": "n07",
+   "rules_label": "private",
+   "true": "private"
+  },
+  {
+   "changed": false,
+   "final": "private",
+   "guard_fired": false,
+   "id": "n08",
+   "rules_label": "private",
+   "true": "private"
+  },
+  {
+   "changed": false,
+   "final": "private",
+   "guard_fired": false,
+   "id": "n09",
+   "rules_label": "private",
+   "true": "private"
+  },
+  {
+   "changed": false,
+   "final": "private",
+   "guard_fired": false,
+   "id": "n10",
+   "rules_label": "private",
+   "true": "confidential"
+  },
+  {
+   "changed": false,
+   "final": "private",
+   "guard_fired": false,
+   "id": "n11",
+   "rules_label": "private",
+   "true": "confidential"
+  },
+  {
+   "changed": false,
+   "final": "private",
+   "guard_fired": false,
+   "id": "n12",
+   "rules_label": "private",
+   "true": "confidential"
+  },
+  {
+   "changed": false,
+   "final": "private",
+   "guard_fired": false,
+   "id": "n13",
+   "rules_label": "private",
+   "true": "confidential"
+  },
+  {
+   "changed": true,
+   "final": "confidential",
+   "guard_fired": false,
+   "id": "n14",
+   "rules_label": "public",
+   "true": "private",
+   "verdict": {
+    "cost_usd": null,
+    "error": "auth",
+    "label": null,
+    "tokens_in": null,
+    "tokens_out": null
+   }
+  },
+  {
+   "changed": false,
+   "final": "private",
+   "guard_fired": false,
+   "id": "n15",
+   "rules_label": "private",
+   "true": "private"
+  },
+  {
+   "changed": false,
+   "final": "confidential",
+   "guard_fired": false,
+   "id": "n16",
+   "rules_label": "confidential",
+   "true": "private"
+  },
+  {
+   "changed": false,
+   "final": "private",
+   "guard_fired": false,
+   "id": "n17",
+   "rules_label": "private",
+   "true": "private"
+  },
+  {
+   "changed": false,
+   "final": "private",
+   "guard_fired": false,
+   "id": "n18",
+   "rules_label": "private",
+   "true": "private"
+  },
+  {
+   "changed": false,
+   "final": "private",
+   "guard_fired": false,
+   "id": "n19",
+   "rules_label": "private",
+   "true": "private"
+  },
+  {
+   "changed": false,
+   "final": "private",
+   "guard_fired": false,
+   "id": "n20",
+   "rules_label": "private",
+   "true": "private"
+  },
+  {
+   "changed": false,
+   "final": "private",
+   "guard_fired": false,
+   "id": "n21",
+   "rules_label": "private",
+   "true": "confidential"
+  },
+  {
+   "changed": false,
+   "final": "private",
+   "guard_fired": false,
+   "id": "n22",
+   "rules_label": "private",
+   "true": "confidential"
+  },
+  {
+   "changed": false,
+   "final": "private",
+   "guard_fired": false,
+   "id": "n23",
+   "rules_label": "private",
+   "true": "confidential"
+  },
+  {
+   "changed": false,
+   "final": "private",
+   "guard_fired": false,
+   "id": "n24",
+   "rules_label": "private",
+   "true": "confidential"
+  },
+  {
+   "changed": false,
+   "final": "private",
+   "guard_fired": false,
+   "id": "n25",
+   "rules_label": "private",
+   "true": "confidential"
+  },
+  {
+   "changed": false,
+   "final": "private",
+   "guard_fired": false,
+   "id": "n26",
+   "rules_label": "private",
+   "true": "private"
+  },
+  {
+   "changed": false,
+   "final": "confidential",
+   "guard_fired": false,
+   "id": "n27",
+   "rules_label": "confidential",
+   "true": "private"
+  },
+  {
+   "changed": false,
+   "final": "private",
+   "guard_fired": false,
+   "id": "n28",
+   "rules_label": "private",
+   "true": "confidential"
+  },
+  {
+   "changed": false,
+   "final": "private",
+   "guard_fired": false,
+   "id": "n29",
+   "rules_label": "private",
+   "true": "confidential"
+  },
+  {
+   "changed": false,
+   "final": "confidential",
+   "guard_fired": false,
+   "id": "n30",
+   "rules_label": "confidential",
+   "true": "confidential"
+  },
+  {
+   "changed": false,
+   "final": "private",
+   "guard_fired": false,
+   "id": "n31",
+   "rules_label": "private",
+   "true": "confidential"
+  },
+  {
+   "changed": false,
+   "final": "private",
+   "guard_fired": false,
+   "id": "n32",
+   "rules_label": "private",
+   "true": "private"
+  },
+  {
+   "changed": false,
+   "final": "private",
+   "guard_fired": false,
+   "id": "n33",
+   "rules_label": "private",
+   "true": "private"
+  },
+  {
+   "changed": false,
+   "final": "private",
+   "guard_fired": false,
+   "id": "n34",
+   "rules_label": "private",
+   "true": "private"
+  },
+  {
+   "changed": false,
+   "final": "private",
+   "guard_fired": false,
+   "id": "n35",
+   "rules_label": "private",
+   "true": "private"
+  },
+  {
+   "changed": false,
+   "final": "private",
+   "guard_fired": false,
+   "id": "n36",
+   "rules_label": "private",
+   "true": "private"
+  },
+  {
+   "changed": false,
+   "final": "private",
+   "guard_fired": false,
+   "id": "n37",
+   "rules_label": "private",
+   "true": "private"
+  },
+  {
+   "changed": false,
+   "final": "private",
+   "guard_fired": false,
+   "id": "n38",
+   "rules_label": "private",
+   "true": "private"
+  },
+  {
+   "changed": false,
+   "final": "private",
+   "guard_fired": false,
+   "id": "n39",
+   "rules_label": "private",
+   "true": "private"
+  },
+  {
+   "changed": false,
+   "final": "private",
+   "guard_fired": false,
+   "id": "n40",
+   "rules_label": "private",
+   "true": "private"
+  },
+  {
+   "changed": false,
+   "final": "private",
+   "guard_fired": false,
+   "id": "n41",
+   "rules_label": "private",
+   "true": "private"
+  },
+  {
+   "changed": false,
+   "final": "private",
+   "guard_fired": false,
+   "id": "n42",
+   "rules_label": "private",
+   "true": "private"
+  },
+  {
+   "changed": false,
+   "final": "private",
+   "guard_fired": false,
+   "id": "n43",
+   "rules_label": "private",
+   "true": "private"
+  },
+  {
+   "changed": false,
+   "final": "private",
+   "guard_fired": false,
+   "id": "n44",
+   "rules_label": "private",
+   "true": "private"
+  },
+  {
+   "changed": false,
+   "final": "private",
+   "guard_fired": false,
+   "id": "n45",
+   "rules_label": "private",
+   "true": "confidential"
+  },
+  {
+   "changed": false,
+   "final": "private",
+   "guard_fired": false,
+   "id": "n46",
+   "rules_label": "private",
+   "true": "confidential"
+  },
+  {
+   "changed": false,
+   "final": "private",
+   "guard_fired": false,
+   "id": "n47",
+   "rules_label": "private",
+   "true": "confidential"
+  },
+  {
+   "changed": true,
+   "final": "confidential",
+   "guard_fired": false,
+   "id": "n48",
+   "rules_label": "public",
+   "true": "private",
+   "verdict": {
+    "cost_usd": null,
+    "error": "auth",
+    "label": null,
+    "tokens_in": null,
+    "tokens_out": null
+   }
+  },
+  {
+   "changed": false,
+   "final": "private",
+   "guard_fired": false,
+   "id": "n49",
+   "rules_label": "private",
+   "true": "private"
+  },
+  {
+   "changed": false,
+   "final": "confidential",
+   "guard_fired": false,
+   "id": "n50",
+   "rules_label": "confidential",
+   "true": "confidential"
+  },
+  {
+   "changed": false,
+   "final": "private",
+   "guard_fired": false,
+   "id": "n51",
+   "rules_label": "private",
+   "true": "confidential"
+  },
+  {
+   "changed": false,
+   "final": "private",
+   "guard_fired": false,
+   "id": "n52",
+   "rules_label": "private",
+   "true": "confidential"
+  },
+  {
+   "changed": false,
+   "final": "private",
+   "guard_fired": false,
+   "id": "n53",
+   "rules_label": "private",
+   "true": "confidential"
+  },
+  {
+   "changed": false,
+   "final": "private",
+   "guard_fired": false,
+   "id": "n54",
+   "rules_label": "private",
+   "true": "confidential"
+  },
+  {
+   "changed": false,
+   "final": "private",
+   "guard_fired": false,
+   "id": "n55",
+   "rules_label": "private",
+   "true": "confidential"
+  },
+  {
+   "changed": false,
+   "final": "private",
+   "guard_fired": false,
+   "id": "n56",
+   "rules_label": "private",
+   "true": "private"
+  },
+  {
+   "changed": true,
+   "final": "confidential",
+   "guard_fired": false,
+   "id": "n57",
+   "rules_label": "public",
+   "true": "private",
+   "verdict": {
+    "cost_usd": null,
+    "error": "auth",
+    "label": null,
+    "tokens_in": null,
+    "tokens_out": null
+   }
+  },
+  {
+   "changed": false,
+   "final": "private",
+   "guard_fired": false,
+   "id": "n58",
+   "rules_label": "private",
+   "true": "confidential"
+  },
+  {
+   "changed": true,
+   "final": "confidential",
+   "guard_fired": false,
+   "id": "q01",
+   "rules_label": "public",
+   "true": "public",
+   "verdict": {
+    "cost_usd": null,
+    "error": "auth",
+    "label": null,
+    "tokens_in": null,
+    "tokens_out": null
+   }
+  },
+  {
+   "changed": true,
+   "final": "confidential",
+   "guard_fired": false,
+   "id": "q02",
+   "rules_label": "public",
+   "true": "public",
+   "verdict": {
+    "cost_usd": null,
+    "error": "auth",
+    "label": null,
+    "tokens_in": null,
+    "tokens_out": null
+   }
+  },
+  {
+   "changed": true,
+   "final": "confidential",
+   "guard_fired": false,
+   "id": "q03",
+   "rules_label": "public",
+   "true": "public",
+   "verdict": {
+    "cost_usd": null,
+    "error": "auth",
+    "label": null,
+    "tokens_in": null,
+    "tokens_out": null
+   }
+  },
+  {
+   "changed": true,
+   "final": "confidential",
+   "guard_fired": false,
+   "id": "q04",
+   "rules_label": "public",
+   "true": "public",
+   "verdict": {
+    "cost_usd": null,
+    "error": "auth",
+    "label": null,
+    "tokens_in": null,
+    "tokens_out": null
+   }
+  },
+  {
+   "changed": true,
+   "final": "confidential",
+   "guard_fired": false,
+   "id": "q05",
+   "rules_label": "public",
+   "true": "public",
+   "verdict": {
+    "cost_usd": null,
+    "error": "auth",
+    "label": null,
+    "tokens_in": null,
+    "tokens_out": null
+   }
+  },
+  {
+   "changed": false,
+   "final": "private",
+   "guard_fired": false,
+   "id": "q06",
+   "rules_label": "private",
+   "true": "public"
+  },
+  {
+   "changed": true,
+   "final": "confidential",
+   "guard_fired": false,
+   "id": "q07",
+   "rules_label": "public",
+   "true": "public",
+   "verdict": {
+    "cost_usd": null,
+    "error": "auth",
+    "label": null,
+    "tokens_in": null,
+    "tokens_out": null
+   }
+  },
+  {
+   "changed": true,
+   "final": "confidential",
+   "guard_fired": false,
+   "id": "q08",
+   "rules_label": "public",
+   "true": "public",
+   "verdict": {
+    "cost_usd": null,
+    "error": "auth",
+    "label": null,
+    "tokens_in": null,
+    "tokens_out": null
+   }
+  },
+  {
+   "changed": true,
+   "final": "confidential",
+   "guard_fired": false,
+   "id": "q09",
+   "rules_label": "public",
+   "true": "public",
+   "verdict": {
+    "cost_usd": null,
+    "error": "auth",
+    "label": null,
+    "tokens_in": null,
+    "tokens_out": null
+   }
+  },
+  {
+   "changed": false,
+   "final": "confidential",
+   "guard_fired": true,
+   "id": "q10",
+   "rules_label": "confidential",
+   "true": "public"
+  },
+  {
+   "changed": false,
+   "final": "confidential",
+   "guard_fired": true,
+   "id": "q11",
+   "rules_label": "confidential",
+   "true": "public"
+  },
+  {
+   "changed": false,
+   "final": "confidential",
+   "guard_fired": true,
+   "id": "q12",
+   "rules_label": "confidential",
+   "true": "public"
+  },
+  {
+   "changed": false,
+   "final": "confidential",
+   "guard_fired": true,
+   "id": "q13",
+   "rules_label": "confidential",
+   "true": "public"
+  },
+  {
+   "changed": true,
+   "final": "confidential",
+   "guard_fired": false,
+   "id": "q14",
+   "rules_label": "public",
+   "true": "public",
+   "verdict": {
+    "cost_usd": null,
+    "error": "auth",
+    "label": null,
+    "tokens_in": null,
+    "tokens_out": null
+   }
+  }
+ ],
+ "ruleset_ref": "rul_179299781445100001",
+ "script": "experiments/exp2/verifier_eval.py",
+ "spend_usd": 0.0,
+ "variant": "frontier",
+ "verifier_conn": {
+  "connector": "openai_compatible",
+  "label": "Together Qwen3.8",
+  "model": "Qwen/Qwen3.8-2.4T-A95B"
+ }
+}

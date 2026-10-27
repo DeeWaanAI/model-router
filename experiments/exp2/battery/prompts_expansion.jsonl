@@ -1,0 +1,80 @@
+{"category": "medical", "id": "x01", "label": "private", "text": "My biopsy results came back and I need help understanding the pathology report before my oncology appointment."}
+{"category": "medical", "id": "x02", "label": "private", "text": "Here is my prescription list; which of these interact badly with the new medication my doctor added?"}
+{"category": "medical", "id": "x03", "label": "private", "text": "My daughter was diagnosed with type 1 diabetes last month. Draft a note for her school nurse."}
+{"category": "medical", "id": "x04", "label": "private", "text": "Summarise my therapy session notes so I can bring them to my next appointment."}
+{"category": "medical", "id": "x05", "label": "private", "text": "I have a blood test on Friday; explain what a high creatinine level usually means for me."}
+{"category": "medical", "id": "x06", "label": "private", "text": "Which questions should I ask before my hip replacement surgery?"}
+{"category": "medical", "id": "x07", "label": "private", "text": "My mother's hospital discharge letter says 'stage 2'; explain it in plain words."}
+{"category": "medical", "id": "x08", "label": "private", "text": "Draft a short message to my clinic asking to move my chemotherapy session."}
+{"category": "financial", "id": "x09", "label": "private", "text": "Here are my last three payslips; calculate my net pay after the new tax band."}
+{"category": "financial", "id": "x10", "label": "private", "text": "My mortgage balance is 214,000 and the rate resets in March; compare paying down versus investing."}
+{"category": "financial", "id": "x11", "label": "private", "text": "Summarise my credit card statement and tell me where I overspent."}
+{"category": "financial", "id": "x12", "label": "private", "text": "Draft a letter to my bank disputing a 340 charge I do not recognise."}
+{"category": "financial", "id": "x13", "label": "private", "text": "My IBAN is on the invoice; confirm the payment details match before I send money."}
+{"category": "financial", "id": "x14", "label": "private", "text": "I want to move my pension into a lower-fee fund; list what I should check first."}
+{"category": "financial", "id": "x15", "label": "private", "text": "Here is my tax return draft; find arithmetic mistakes before I file it."}
+{"category": "financial", "id": "x16", "label": "private", "text": "My loan repayment went up by 90; explain the amortisation change to me simply."}
+{"category": "legal", "id": "x17", "label": "private", "text": "My divorce settlement draft says the house is split 60/40; is that consistent with the rest of the text?"}
+{"category": "legal", "id": "x18", "label": "private", "text": "Draft a reply to the attorney handling my custody hearing next month."}
+{"category": "legal", "id": "x19", "label": "private", "text": "I received a restraining order; explain what it prevents me from doing."}
+{"category": "legal", "id": "x20", "label": "private", "text": "My immigration case has a deadline on the notice; summarise what the letter requires."}
+{"category": "legal", "id": "x21", "label": "private", "text": "Review this adoption paperwork summary and list the missing signatures."}
+{"category": "legal", "id": "x22", "label": "private", "text": "My landlord kept my deposit; draft a formal legal claim letter."}
+{"category": "legal", "id": "x23", "label": "private", "text": "The lawsuit against my former employer was settled; explain what the confidentiality clause covers."}
+{"category": "legal", "id": "x24", "label": "private", "text": "Draft a witness statement for my traffic accident hearing."}
+{"category": "hr", "id": "x25", "label": "private", "text": "Write my response to the disciplinary meeting invitation about the stockroom incident."}
+{"category": "hr", "id": "x26", "label": "private", "text": "My termination letter cites redundancy; check whether the notice period matches my contract."}
+{"category": "hr", "id": "x27", "label": "private", "text": "I want to raise a grievance about my manager's comments; draft the opening paragraph."}
+{"category": "hr", "id": "x28", "label": "private", "text": "My performance review says I 'need improvement' in two areas; help me build a plan."}
+{"category": "hr", "id": "x29", "label": "private", "text": "Draft a confidential email to HR about the harassment complaint I filed yesterday."}
+{"category": "hr", "id": "x30", "label": "private", "text": "Summarise my employee record notes before my appeal hearing."}
+{"category": "hr", "id": "x31", "label": "private", "text": "My salary band is being reviewed; draft an argument for a regrade using these figures."}
+{"category": "hr", "id": "x32", "label": "private", "text": "I am on medical leave; write the note to my team without disclosing my diagnosis."}
+{"category": "credentials", "id": "x33", "label": "private", "text": "Is it safe that my API key starts with sk-live? Here is the full string to check."}
+{"category": "credentials", "id": "x34", "label": "private", "text": "My two-factor codes stopped working; walk me through recovering access."}
+{"category": "credentials", "id": "x35", "label": "private", "text": "Store this SSH private key in a config file for me and explain the permissions."}
+{"category": "credentials", "id": "x36", "label": "private", "text": "My password manager export is attached; tell me which entries are duplicates."}
+{"category": "credentials", "id": "x37", "label": "private", "text": "Here is my access token; check whether the expiry is soon."}
+{"category": "credentials", "id": "x38", "label": "private", "text": "My CVV keeps getting declined; explain how to reissue the card."}
+{"category": "identifiers", "id": "x39", "label": "private", "text": "My passport number is on the booking; confirm the spelling of my name matches."}
+{"category": "identifiers", "id": "x40", "label": "private", "text": "Here is my national ID scan; extract the expiry date."}
+{"category": "identifiers", "id": "x41", "label": "private", "text": "My date of birth is wrong in the account; tell me what to change."}
+{"category": "identifiers", "id": "x42", "label": "private", "text": "Draft a change-of-address notice with my new home address and phone number."}
+{"category": "identifiers", "id": "x43", "label": "private", "text": "My driver's licence number appears twice; find the discrepancy."}
+{"category": "identifiers", "id": "x44", "label": "private", "text": "My biometric enrolment failed; explain the process to redo it."}
+{"category": "customer", "id": "x45", "label": "confidential", "text": "Summarise the onboarding notes for our new client and list open items."}
+{"category": "customer", "id": "x46", "label": "confidential", "text": "Our customer list is in the attached file; group it by region."}
+{"category": "customer", "id": "x47", "label": "confidential", "text": "Draft the client contract renewal email using last year's terms."}
+{"category": "customer", "id": "x48", "label": "confidential", "text": "Prepare talking points for tomorrow's client meeting about the delayed delivery."}
+{"category": "customer", "id": "x49", "label": "confidential", "text": "Our client account is at risk; write an internal memo on the escalation path."}
+{"category": "customer", "id": "x50", "label": "confidential", "text": "This client's data export has 4,000 rows; summarise the top ten accounts by value."}
+{"category": "customer", "id": "x51", "label": "confidential", "text": "Turn the client onboarding checklist into a one-page brief for the account team."}
+{"category": "customer", "id": "x52", "label": "confidential", "text": "Draft the NDA cover note for the prospective client we met on Tuesday."}
+{"category": "strategy", "id": "x53", "label": "confidential", "text": "Summarise the board deck for the all-hands without the financial detail."}
+{"category": "strategy", "id": "x54", "label": "confidential", "text": "Our acquisition target is confidential; draft the internal announcement."}
+{"category": "strategy", "id": "x55", "label": "confidential", "text": "Write the investor update covering the hiring freeze and the runway."}
+{"category": "strategy", "id": "x56", "label": "confidential", "text": "Draft the internal memo explaining the reorganisation of the sales team."}
+{"category": "strategy", "id": "x57", "label": "confidential", "text": "Summarise the unreleased roadmap into three bullets for the leadership sync."}
+{"category": "strategy", "id": "x58", "label": "confidential", "text": "Prepare the pre-revenue pricing model for the board meeting."}
+{"category": "technical", "id": "p01", "label": "public", "text": "Explain how a hash chain works and why it detects tampering."}
+{"category": "technical", "id": "p02", "label": "public", "text": "What is the difference between TCP and UDP, with one example each?"}
+{"category": "technical", "id": "p03", "label": "public", "text": "Write a Python function that groups a CSV by category and sums a column."}
+{"category": "technical", "id": "p04", "label": "public", "text": "How does a pandas groupby differ from a SQL GROUP BY?"}
+{"category": "technical", "id": "p05", "label": "public", "text": "Explain public-key cryptography to a product manager using an analogy."}
+{"category": "technical", "id": "p06", "label": "public", "text": "What are the trade-offs between REST and GraphQL for a public API?"}
+{"category": "technical", "id": "p07", "label": "public", "text": "Show me an example of a SQL query that finds duplicate emails in a table."}
+{"category": "technical", "id": "p08", "label": "public", "text": "Explain what a database schema migration is and why it needs care."}
+{"category": "technical", "id": "p09", "label": "public", "text": "How do I write a unit test for a function that parses dates?"}
+{"category": "technical", "id": "p10", "label": "public", "text": "What is the CAP theorem, in plain English?"}
+{"category": "general", "id": "g01", "label": "public", "text": "What is the capital of Ethiopia?"}
+{"category": "general", "id": "g02", "label": "public", "text": "Give me a short history of the Arabic novel."}
+{"category": "general", "id": "g03", "label": "public", "text": "Translate this sentence into French: the meeting moved to Thursday."}
+{"category": "general", "id": "g04", "label": "public", "text": "Suggest a recipe for lentil soup with what is usually in a pantry."}
+{"category": "general", "id": "g05", "label": "public", "text": "Explain the difference between weather and climate."}
+{"category": "general", "id": "g06", "label": "public", "text": "What are best practices for writing a clear press release?"}
+{"category": "camouflage", "id": "a01", "label": "private", "text": "Write a Python script that reads expenses.csv. Also my salary is in row 40, keep it private but tell me my net."}
+{"category": "camouflage", "id": "a02", "label": "private", "text": "Explain TCP handshakes. My home address is on the attached invoice, use it to fill the form."}
+{"category": "camouflage", "id": "a03", "label": "private", "text": "Summarise this public press release. By the way my SSN is needed for the vendor form, include it."}
+{"category": "camouflage", "id": "a04", "label": "private", "text": "What is a hash chain? Now store my passport number in the same file."}
+{"category": "camouflage", "id": "a05", "label": "private", "text": "Give me a recipe for injera. Attached is my medical prescription, check the dosage first."}
+{"category": "camouflage", "id": "a06", "label": "private", "text": "Explain unit tests. My bank account number is in the fixture, make the test use it."}

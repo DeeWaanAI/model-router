@@ -1,0 +1,23 @@
+{
+ "cells": {
+  "Together GLM-5.3-Flash|compute_via_code": {
+   "code_runs_rate": 1.0,
+   "cost_usd": 0.005708,
+   "mean_accuracy": 1.0,
+   "n": 6,
+   "per_rep": {
+    "1": 1.0
+   }
+  },
+  "Together GLM-5.3-Flash|structured_extract": {
+   "code_runs_rate": null,
+   "cost_usd": 0.003628,
+   "mean_accuracy": 0.3333,
+   "n": 6,
+   "per_rep": {
+    "1": 0.3333
+   }
+  }
+ },
+ "spend_usd": 0.009337
+}

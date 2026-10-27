@@ -1,0 +1,61 @@
+{
+ "purpose": "DashScope availability probe (one minimal call per host x model)",
+ "at": "2026-10-22T20:13:56Z",
+ "prompt": "Reply with one word: ready",
+ "max_tokens": 8,
+ "key_name": "DASHSCOPE_API_KEY",
+ "key_length": 115,
+ "note": "no dollar cost computed: DashScope prices are not yet frozen in ds:models",
+ "results": [
+  {
+   "region": "intl",
+   "model": "qwen2.5-7b-instruct",
+   "callable": false,
+   "error": "HTTP 403 Forbidden from https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions: {\"error\":{\"message\":\"Access denied. For details, see: https://www.alibabacloud.com/help/en/model-studio/error-code#access-denied\",\"type\":\"access_denied\",\"param\":null,\"code\":\"access_denied\"},\"id\":\"chatcmpl-6e12400c-3fa0-977a-834a-c93d79675bd8\",\"request_id\":\"6e12400c-3fa0-977a-834a-c93d79675bd8\"}"
+  },
+  {
+   "region": "intl",
+   "model": "qwen-turbo",
+   "callable": false,
+   "error": "HTTP 429 Too Many Requests from https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions: {\"error\":{\"message\":\"You have exceeded your current request limit. For details, see: https://www.alibabacloud.com/help/en/model-studio/error-code#rate-limit\",\"type\":\"limit_requests\",\"param\":null,\"code\":\"limit_requests\"},\"request_id\":\"ae681827-bbc2-92bd-af34-efef2054378a\"}"
+  },
+  {
+   "region": "intl",
+   "model": "qwen-plus",
+   "callable": true,
+   "http_status": 200,
+   "finish_reason": "stop",
+   "wall_clock_s": 0.879,
+   "tokens_in": 14,
+   "tokens_out": 1,
+   "response_text": "ready",
+   "served_model": "qwen-plus",
+   "usage_raw": {
+    "prompt_tokens": 14,
+    "completion_tokens": 1,
+    "total_tokens": 15,
+    "prompt_tokens_details": {
+     "cached_tokens": 0
+    }
+   }
+  },
+  {
+   "region": "cn",
+   "model": "qwen2.5-7b-instruct",
+   "callable": false,
+   "error": "HTTP 401 Unauthorized from https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions: {\"error\":{\"message\":\"Incorrect API key provided. For details, see: https://help.aliyun.com/zh/model-studio/error-code#apikey-error\",\"type\":\"invalid_request_error\",\"param\":null,\"code\":\"invalid_api_key\"},\"request_id\":\"31ef438f-53a4-921f-a5ee-3445b230a95e\"}"
+  },
+  {
+   "region": "cn",
+   "model": "qwen-turbo",
+   "callable": false,
+   "error": "HTTP 401 Unauthorized from https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions: {\"error\":{\"message\":\"Incorrect API key provided. For details, see: https://help.aliyun.com/zh/model-studio/error-code#apikey-error\",\"type\":\"invalid_request_error\",\"param\":null,\"code\":\"invalid_api_key\"},\"request_id\":\"0b861453-1d2d-924e-aa35-81ee82376712\"}"
+  },
+  {
+   "region": "cn",
+   "model": "qwen-plus",
+   "callable": false,
+   "error": "HTTP 401 Unauthorized from https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions: {\"error\":{\"message\":\"Incorrect API key provided. For details, see: https://help.aliyun.com/zh/model-studio/error-code#apikey-error\",\"type\":\"invalid_request_error\",\"param\":null,\"code\":\"invalid_api_key\"},\"request_id\":\"11db5201-8eac-9a8e-acb6-9cadbb3cc409\"}"
+  }
+ ]
+}

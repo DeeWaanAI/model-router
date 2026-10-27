@@ -1,0 +1,473 @@
+{
+ "capability_rows_from_exp1": {
+  "eligible": [
+   "cap_179278555190800003"
+  ],
+  "ineligible": [
+   "cap_179278555189200001",
+   "cap_179278555190200002",
+   "cap_179278555191500004",
+   "cap_179278555192300005",
+   "cap_179278555193000006",
+   "cap_179278555193600007",
+   "cap_179278555194300008",
+   "cap_179278555195100009",
+   "cap_179278555196000010"
+  ],
+  "n_rows": 10
+ },
+ "cost_usd": 0.0,
+ "experiment": "exp3 verifiability: measured eligibility and its price",
+ "sweep": {
+  "audit": {
+   "coverage": {
+    "binding_coverage": 1.0,
+    "decisions": 144,
+    "eligibility_coverage": 0.8333,
+    "gate3_token_estimate_unverifiable": 144,
+    "privacy_label_coverage": 1.0,
+    "unmeasured_variant_class_pairs": 1
+   },
+   "exit": 0,
+   "failures": []
+  },
+  "cheapest_cloud_usd_per_item": {
+   "b_groupby_medium_code": 8e-06,
+   "b_max_medium_code": 8.400000000000001e-06,
+   "b_top_vendor_large_code": 8.400000000000001e-06,
+   "b_total_large_code": 8.400000000000001e-06,
+   "b_total_small_code": 8.1e-06,
+   "b_travel_across_files_code": 9.15e-06
+  },
+  "cost_usd": 0.0,
+  "coverage_compute_via_code": 0.8333,
+  "distinct_winner_sets": 4,
+  "floor_price_ratio_mean": 40.0,
+  "floor_price_ratio_range": [
+   39.99999999999999,
+   40.00000000000001
+  ],
+  "floor_winner": "Qwen3.8-2.4T-A95B",
+  "knob_price": [
+   {
+    "est_cost_usd": 0.002018,
+    "mean_measured_accuracy": 1.0,
+    "min_accuracy": 0.8,
+    "min_schema": 0.9,
+    "policy": "shipped: acc>=0.8 and schema>=0.9",
+    "winner": {
+     "Qwen3.8-2.4T-A95B": 6
+    }
+   },
+   {
+    "est_cost_usd": 0.001054,
+    "mean_measured_accuracy": 0.8333,
+    "min_accuracy": 0.8,
+    "min_schema": 0.0,
+    "policy": "accuracy floor only (schema released)",
+    "winner": {
+     "Llama-3.3-70B-Instruct-Turbo": 6
+    }
+   },
+   {
+    "est_cost_usd": 0.002018,
+    "mean_measured_accuracy": 1.0,
+    "min_accuracy": 0.0,
+    "min_schema": 0.9,
+    "policy": "schema floor only (accuracy released)",
+    "winner": {
+     "Qwen3.8-2.4T-A95B": 6
+    }
+   },
+   {
+    "est_cost_usd": 0.0,
+    "mean_measured_accuracy": 0.0,
+    "min_accuracy": 0.0,
+    "min_schema": 0.0,
+    "policy": "neither floor",
+    "winner": {
+     "llama3.2:latest": 6
+    }
+   }
+  ],
+  "mode_changes_outcomes_at": [],
+  "mode_removes_candidates": [
+   "Qwen3.8-2.4T-A95B-reasoning"
+  ],
+  "n_decisions": 144,
+  "n_points": 24,
+  "no_floor": {
+   "chosen_counts": {
+    "llama3.2:latest": 6
+   },
+   "est_cost_usd": 0.0,
+   "mean_measured_accuracy": 0.0,
+   "min_accuracy": 0.0,
+   "min_schema": 0.0,
+   "mode": "allow_flagged",
+   "n_choices_unmeasured": 0,
+   "n_decisions": 6,
+   "policy_id": "pol_179278346266400001",
+   "refused": 0
+  },
+  "points": [
+   {
+    "chosen_counts": {
+     "llama3.2:latest": 6
+    },
+    "est_cost_usd": 0.0,
+    "mean_measured_accuracy": 0.0,
+    "min_accuracy": 0.0,
+    "min_schema": 0.0,
+    "mode": "allow_flagged",
+    "n_choices_unmeasured": 0,
+    "n_decisions": 6,
+    "policy_id": "pol_179278346266400001",
+    "refused": 0
+   },
+   {
+    "chosen_counts": {
+     "llama3.1:8b-instruct-q4_K_M": 6
+    },
+    "est_cost_usd": 0.0,
+    "mean_measured_accuracy": 0.6667,
+    "min_accuracy": 0.0,
+    "min_schema": 0.5,
+    "mode": "allow_flagged",
+    "n_choices_unmeasured": 0,
+    "n_decisions": 6,
+    "policy_id": "pol_179278346331800014",
+    "refused": 0
+   },
+   {
+    "chosen_counts": {
+     "Qwen3.8-2.4T-A95B": 6
+    },
+    "est_cost_usd": 0.002018,
+    "mean_measured_accuracy": 1.0,
+    "min_accuracy": 0.0,
+    "min_schema": 0.9,
+    "mode": "allow_flagged",
+    "n_choices_unmeasured": 0,
+    "n_decisions": 6,
+    "policy_id": "pol_179278346358900027",
+    "refused": 0
+   },
+   {
+    "chosen_counts": {
+     "llama3.1:8b-instruct-q4_K_M": 6
+    },
+    "est_cost_usd": 0.0,
+    "mean_measured_accuracy": 0.6667,
+    "min_accuracy": 0.2,
+    "min_schema": 0.0,
+    "mode": "allow_flagged",
+    "n_choices_unmeasured": 0,
+    "n_decisions": 6,
+    "policy_id": "pol_179278346387800040",
+    "refused": 0
+   },
+   {
+    "chosen_counts": {
+     "llama3.1:8b-instruct-q4_K_M": 6
+    },
+    "est_cost_usd": 0.0,
+    "mean_measured_accuracy": 0.6667,
+    "min_accuracy": 0.2,
+    "min_schema": 0.5,
+    "mode": "allow_flagged",
+    "n_choices_unmeasured": 0,
+    "n_decisions": 6,
+    "policy_id": "pol_179278346416300053",
+    "refused": 0
+   },
+   {
+    "chosen_counts": {
+     "Qwen3.8-2.4T-A95B": 6
+    },
+    "est_cost_usd": 0.002018,
+    "mean_measured_accuracy": 1.0,
+    "min_accuracy": 0.2,
+    "min_schema": 0.9,
+    "mode": "allow_flagged",
+    "n_choices_unmeasured": 0,
+    "n_decisions": 6,
+    "policy_id": "pol_179278346445600066",
+    "refused": 0
+   },
+   {
+    "chosen_counts": {
+     "llama3.1:8b-instruct-q4_K_M": 6
+    },
+    "est_cost_usd": 0.0,
+    "mean_measured_accuracy": 0.6667,
+    "min_accuracy": 0.45,
+    "min_schema": 0.0,
+    "mode": "allow_flagged",
+    "n_choices_unmeasured": 0,
+    "n_decisions": 6,
+    "policy_id": "pol_179278346477300079",
+    "refused": 0
+   },
+   {
+    "chosen_counts": {
+     "llama3.1:8b-instruct-q4_K_M": 6
+    },
+    "est_cost_usd": 0.0,
+    "mean_measured_accuracy": 0.6667,
+    "min_accuracy": 0.45,
+    "min_schema": 0.5,
+    "mode": "allow_flagged",
+    "n_choices_unmeasured": 0,
+    "n_decisions": 6,
+    "policy_id": "pol_179278346507300092",
+    "refused": 0
+   },
+   {
+    "chosen_counts": {
+     "Qwen3.8-2.4T-A95B": 6
+    },
+    "est_cost_usd": 0.002018,
+    "mean_measured_accuracy": 1.0,
+    "min_accuracy": 0.45,
+    "min_schema": 0.9,
+    "mode": "allow_flagged",
+    "n_choices_unmeasured": 0,
+    "n_decisions": 6,
+    "policy_id": "pol_179278346537500105",
+    "refused": 0
+   },
+   {
+    "chosen_counts": {
+     "Llama-3.3-70B-Instruct-Turbo": 6
+    },
+    "est_cost_usd": 0.001054,
+    "mean_measured_accuracy": 0.8333,
+    "min_accuracy": 0.8,
+    "min_schema": 0.0,
+    "mode": "allow_flagged",
+    "n_choices_unmeasured": 0,
+    "n_decisions": 6,
+    "policy_id": "pol_179278346569500118",
+    "refused": 0
+   },
+   {
+    "chosen_counts": {
+     "Llama-3.3-70B-Instruct-Turbo": 6
+    },
+    "est_cost_usd": 0.001054,
+    "mean_measured_accuracy": 0.8333,
+    "min_accuracy": 0.8,
+    "min_schema": 0.5,
+    "mode": "allow_flagged",
+    "n_choices_unmeasured": 0,
+    "n_decisions": 6,
+    "policy_id": "pol_179278346600500131",
+    "refused": 0
+   },
+   {
+    "chosen_counts": {
+     "Qwen3.8-2.4T-A95B": 6
+    },
+    "est_cost_usd": 0.002018,
+    "mean_measured_accuracy": 1.0,
+    "min_accuracy": 0.8,
+    "min_schema": 0.9,
+    "mode": "allow_flagged",
+    "n_choices_unmeasured": 0,
+    "n_decisions": 6,
+    "policy_id": "pol_179278346631600144",
+    "refused": 0
+   },
+   {
+    "chosen_counts": {
+     "llama3.2:latest": 6
+    },
+    "est_cost_usd": 0.0,
+    "mean_measured_accuracy": 0.0,
+    "min_accuracy": 0.0,
+    "min_schema": 0.0,
+    "mode": "refuse",
+    "n_choices_unmeasured": 0,
+    "n_decisions": 6,
+    "policy_id": "pol_179278346662600157",
+    "refused": 0
+   },
+   {
+    "chosen_counts": {
+     "llama3.1:8b-instruct-q4_K_M": 6
+    },
+    "est_cost_usd": 0.0,
+    "mean_measured_accuracy": 0.6667,
+    "min_accuracy": 0.0,
+    "min_schema": 0.5,
+    "mode": "refuse",
+    "n_choices_unmeasured": 0,
+    "n_decisions": 6,
+    "policy_id": "pol_179278346697200170",
+    "refused": 0
+   },
+   {
+    "chosen_counts": {
+     "Qwen3.8-2.4T-A95B": 6
+    },
+    "est_cost_usd": 0.002018,
+    "mean_measured_accuracy": 1.0,
+    "min_accuracy": 0.0,
+    "min_schema": 0.9,
+    "mode": "refuse",
+    "n_choices_unmeasured": 0,
+    "n_decisions": 6,
+    "policy_id": "pol_179278346729700183",
+    "refused": 0
+   },
+   {
+    "chosen_counts": {
+     "llama3.1:8b-instruct-q4_K_M": 6
+    },
+    "est_cost_usd": 0.0,
+    "mean_measured_accuracy": 0.6667,
+    "min_accuracy": 0.2,
+    "min_schema": 0.0,
+    "mode": "refuse",
+    "n_choices_unmeasured": 0,
+    "n_decisions": 6,
+    "policy_id": "pol_179278346761800196",
+    "refused": 0
+   },
+   {
+    "chosen_counts": {
+     "llama3.1:8b-instruct-q4_K_M": 6
+    },
+    "est_cost_usd": 0.0,
+    "mean_measured_accuracy": 0.6667,
+    "min_accuracy": 0.2,
+    "min_schema": 0.5,
+    "mode": "refuse",
+    "n_choices_unmeasured": 0,
+    "n_decisions": 6,
+    "policy_id": "pol_179278346794000209",
+    "refused": 0
+   },
+   {
+    "chosen_counts": {
+     "Qwen3.8-2.4T-A95B": 6
+    },
+    "est_cost_usd": 0.002018,
+    "mean_measured_accuracy": 1.0,
+    "min_accuracy": 0.2,
+    "min_schema": 0.9,
+    "mode": "refuse",
+    "n_choices_unmeasured": 0,
+    "n_decisions": 6,
+    "policy_id": "pol_179278346826700222",
+    "refused": 0
+   },
+   {
+    "chosen_counts": {
+     "llama3.1:8b-instruct-q4_K_M": 6
+    },
+    "est_cost_usd": 0.0,
+    "mean_measured_accuracy": 0.6667,
+    "min_accuracy": 0.45,
+    "min_schema": 0.0,
+    "mode": "refuse",
+    "n_choices_unmeasured": 0,
+    "n_decisions": 6,
+    "policy_id": "pol_179278346861100235",
+    "refused": 0
+   },
+   {
+    "chosen_counts": {
+     "llama3.1:8b-instruct-q4_K_M": 6
+    },
+    "est_cost_usd": 0.0,
+    "mean_measured_accuracy": 0.6667,
+    "min_accuracy": 0.45,
+    "min_schema": 0.5,
+    "mode": "refuse",
+    "n_choices_unmeasured": 0,
+    "n_decisions": 6,
+    "policy_id": "pol_179278346897000248",
+    "refused": 0
+   },
+   {
+    "chosen_counts": {
+     "Qwen3.8-2.4T-A95B": 6
+    },
+    "est_cost_usd": 0.002018,
+    "mean_measured_accuracy": 1.0,
+    "min_accuracy": 0.45,
+    "min_schema": 0.9,
+    "mode": "refuse",
+    "n_choices_unmeasured": 0,
+    "n_decisions": 6,
+    "policy_id": "pol_179278346931300261",
+    "refused": 0
+   },
+   {
+    "chosen_counts": {
+     "Llama-3.3-70B-Instruct-Turbo": 6
+    },
+    "est_cost_usd": 0.001054,
+    "mean_measured_accuracy": 0.8333,
+    "min_accuracy": 0.8,
+    "min_schema": 0.0,
+    "mode": "refuse",
+    "n_choices_unmeasured": 0,
+    "n_decisions": 6,
+    "policy_id": "pol_179278346965200274",
+    "refused": 0
+   },
+   {
+    "chosen_counts": {
+     "Llama-3.3-70B-Instruct-Turbo": 6
+    },
+    "est_cost_usd": 0.001054,
+    "mean_measured_accuracy": 0.8333,
+    "min_accuracy": 0.8,
+    "min_schema": 0.5,
+    "mode": "refuse",
+    "n_choices_unmeasured": 0,
+    "n_decisions": 6,
+    "policy_id": "pol_179278347000100287",
+    "refused": 0
+   },
+   {
+    "chosen_counts": {
+     "Qwen3.8-2.4T-A95B": 6
+    },
+    "est_cost_usd": 0.002018,
+    "mean_measured_accuracy": 1.0,
+    "min_accuracy": 0.8,
+    "min_schema": 0.9,
+    "mode": "refuse",
+    "n_choices_unmeasured": 0,
+    "n_decisions": 6,
+    "policy_id": "pol_179278347035600300",
+    "refused": 0
+   }
+  ],
+  "run": "exp3-sweep-v3",
+  "shipped_default": {
+   "chosen_counts": {
+    "Qwen3.8-2.4T-A95B": 6
+   },
+   "est_cost_usd": 0.002018,
+   "mean_measured_accuracy": 1.0,
+   "min_accuracy": 0.8,
+   "min_schema": 0.9,
+   "mode": "allow_flagged",
+   "n_choices_unmeasured": 0,
+   "n_decisions": 6,
+   "policy_id": "pol_179278346631600144",
+   "refused": 0
+  },
+  "source_measurements": [
+   "exp1-pilot-v3/arms_exp1-pilot-v3-regraded.jsonl"
+  ],
+  "unmeasured_arms": [
+   "Qwen3.8-2.4T-A95B-reasoning"
+  ]
+ }
+}

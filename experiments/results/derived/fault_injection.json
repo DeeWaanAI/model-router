@@ -1,0 +1,89 @@
+{
+ "clean_controls": [
+  {
+   "exit": 0,
+   "failures": [],
+   "run": "exp2-v5"
+  },
+  {
+   "exit": 0,
+   "failures": [],
+   "run": "exp1-pilot-v3"
+  },
+  {
+   "exit": 0,
+   "failures": [],
+   "run": "exp3-sweep-v3"
+  }
+ ],
+ "cost_usd": 0.0,
+ "detected_on_expected_check": "7/7",
+ "experiment": "audit fault injection",
+ "false_positives": "0/3",
+ "mutations": [
+  {
+   "caught_on_expected_check": true,
+   "exit": 1,
+   "expected_check": "\u00a76.1.2",
+   "failures": [
+    "\u00a76.1.2 first attempt is the replayed argmin, and `chosen` is the final attempt"
+   ],
+   "mutation": "M1 chosen is not the argmin"
+  },
+  {
+   "caught_on_expected_check": true,
+   "exit": 1,
+   "expected_check": "\u00a76.1.1",
+   "failures": [
+    "\u00a76.1.1 gate replay reproduces every logged gate_trace"
+   ],
+   "mutation": "M2 gate trace survivor list edited"
+  },
+  {
+   "caught_on_expected_check": true,
+   "exit": 1,
+   "expected_check": "\u00a76.1.8",
+   "failures": [
+    "\u00a76.1.8 every actual cost recomputes from tokens x pinned price"
+   ],
+   "mutation": "M3 actual cost inflated"
+  },
+  {
+   "caught_on_expected_check": true,
+   "exit": 1,
+   "expected_check": "\u00a76.1.3",
+   "failures": [
+    "\u00a76.1.3 every stored `eligible` recomputes from its own snapshot"
+   ],
+   "mutation": "M4 eligible contradicts its snapshot"
+  },
+  {
+   "caught_on_expected_check": true,
+   "exit": 1,
+   "expected_check": "\u00a76.1.7",
+   "failures": [
+    "\u00a76.1.7 every sensitive route stays inside its policy, and every cloud route carries a recorded warning"
+   ],
+   "mutation": "M5 private->cloud without warning"
+  },
+  {
+   "caught_on_expected_check": true,
+   "exit": 1,
+   "expected_check": "\u00a76.1.6",
+   "failures": [
+    "\u00a76.1.6 every binding source resolves"
+   ],
+   "mutation": "M6 binding source does not resolve"
+  },
+  {
+   "caught_on_expected_check": true,
+   "exit": 1,
+   "expected_check": "\u00a76.1.5",
+   "failures": [
+    "\u00a76.1.5 chain verifies and data matches history: decision_log"
+   ],
+   "mutation": "M7 data.jsonl edited, chain untouched"
+  }
+ ],
+ "note": "mutations M1-M6 are chained records, so the hash chain cannot catch them; M7 is a byte edit that leaves the chain intact"
+}

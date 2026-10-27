@@ -1,0 +1,1007 @@
+{
+ "schema": "semantic-claims-v1",
+ "paper": "paper/draft.tex",
+ "generated": "2026-10-26",
+ "convention": "full_quote is verbatim draft text with whitespace normalized (LaTeX line wraps collapsed). Sources are frozen artifacts; `code` names the script that computes derived values. No self-certification: `audit` records evidence, judgment belongs to the monitor. Captions carry `covered_by` links to body claims.",
+ "claims": [
+  {
+   "id": "SC-ABS-1",
+   "section": "Abstract",
+   "paper_line": 32,
+   "full_quote": "263 checks pass on 414 recorded decisions across eight runs, including every decision that spent money",
+   "what_it_means": "The verification harness recomputes everything and all checks pass. Wrong if the count is stale or if paid decisions are excluded from replay.",
+   "source": [
+    {
+     "file": "experiments/results/derived/verification_summary.json",
+     "location": "verification_checks_total, decisions_replayed_total, n_runs",
+     "exact_values": "263 checks = 109 spine + 154 per-run audit; 414 decisions; 8 runs"
+    },
+    {
+     "file": "experiments/exp1/results/raw/run_meta_exp1-pilot-v3.json",
+     "location": "ACTUAL_SPEND_USD",
+     "exact_values": "0.274189 (paid run audited: audit_exp1-pilot-v3.json exit 0)"
+    }
+   ],
+   "code": "experiments/spine.py",
+   "audit": "verified — 414 includes every paying run (exp1-pilot, v2, v3, reps, sweeps are covered by the eight audited runs)."
+  },
+  {
+   "id": "SC-ABS-2",
+   "section": "Abstract",
+   "paper_line": 36,
+   "full_quote": "on six computation items the same frozen measurements route to a free 3B model (measured accuracy 0.00), a free 8B (0.67), a \\$1.04/Mtok model (0.83) or a \\$2/\\$6 model (1.00) depending only on the policy",
+   "what_it_means": "Policy thresholds alone move the winner across four models with those accuracies. Wrong if accuracies are from a different battery or if a code change was required.",
+   "source": [
+    {
+     "file": "experiments/exp3/results/raw/capabilities_exp1-pilot-v3.json",
+     "location": "rows[4,8,0,2].measured.accuracy",
+     "exact_values": "0.0, 0.6667, 0.8333, 1.0"
+    },
+    {
+     "file": "experiments/exp3/results/derived/sweep_exp3-sweep-v3.json",
+     "location": "points (24)",
+     "exact_values": "no-floor->3B; acc>=0.8->70B ($0.001054); schema>=0.9->flagship ($0.002018)"
+    }
+   ],
+   "code": "experiments/exp3/sweep_eligibility.py",
+   "audit": "verified"
+  },
+  {
+   "id": "SC-ABS-3",
+   "section": "Abstract",
+   "paper_line": 38,
+   "full_quote": "four of five models compute an 800-row total exactly when they write and run code, and none of those that can fit the rows in context compute it there",
+   "what_it_means": "Code arm: 4/5 exact; in-context: 0/3 exact among models whose window fits. Wrong if either count is off.",
+   "source": [
+    {
+     "file": "experiments/exp1/results/raw/arms_exp1-pilot-v3.jsonl",
+     "location": "rows item=b_total_large_code / b_total_large_inhead",
+     "exact_values": "code: 4 of 5 program_stdout contain 361572.4 (local-3b program failed); inhead: cloud-cheap/70b/max each fields 1/2 (total wrong)"
+    },
+    {
+     "file": "experiments/exp1/battery/corpus/expenses_large.csv",
+     "location": "row count + sum(amount)",
+     "exact_values": "800 rows, 361572.40"
+    }
+   ],
+   "code": "experiments/exp1/regrade.py (alias total_amount->total, amendment B.1)",
+   "audit": "verified"
+  },
+  {
+   "id": "SC-ABS-4",
+   "section": "Abstract",
+   "paper_line": 41,
+   "full_quote": "with 6 items per capability cell one correct answer flips a verdict",
+   "what_it_means": "One item moves a cell by 0.167, which can cross a 0.6/0.8 threshold. Arithmetic, not a measurement.",
+   "source": [
+    {
+     "file": "experiments/exp3/results/derived/sweep_exp3-sweep-v3.json",
+     "location": "points[0].n_items",
+     "exact_values": "6"
+    }
+   ],
+   "code": null,
+   "audit": "verified-with-note — the flip is possible where a threshold sits within 0.167 of a cell value; true for the shipped floors."
+  },
+  {
+   "id": "SC-ABS-5",
+   "section": "Abstract",
+   "paper_line": 43,
+   "full_quote": "all seven are caught on the check that should catch them, with no false alarms on clean copies",
+   "what_it_means": "Fault-injection detector has 7/7 true positives and 0/3 false positives.",
+   "source": [
+    {
+     "file": "experiments/results/derived/fault_injection.json",
+     "location": "detected_on_expected_check, false_positives",
+     "exact_values": "7/7, 0/3"
+    }
+   ],
+   "code": "experiments/fault_injection.py",
+   "audit": "verified"
+  },
+  {
+   "id": "SC-ABS-6",
+   "section": "Abstract",
+   "paper_line": 45,
+   "full_quote": "a free local model reaches 0.73 accuracy at $0, the most expensive arm reaches 1.00 for 4.8x what the router pays for the same score",
+   "what_it_means": "Comparison, both sides needed: 8B 0.7273/$0; flagship 1.0/$0.009598; router v9 1.0/$0.002018; ratio 4.76.",
+   "source": [
+    {
+     "file": "experiments/results/derived/baselines.json",
+     "location": "panels.B_compute_6_items rows always-local-8b / always-flagship / router, default policy (v9)",
+     "exact_values": "0.7273/$0; 1.0/$0.009598; 1.0/$0.002018"
+    }
+   ],
+   "code": "experiments/baselines.py",
+   "audit": "verified"
+  },
+  {
+   "id": "SC-ABS-7",
+   "section": "Abstract",
+   "paper_line": 47,
+   "full_quote": "one tie-break defect --- found by the baseline, not by inspection --- silently selected an unmeasured model at identical cost",
+   "what_it_means": "Policy v8 tied two $2/$6 models and id order picked the unmeasured reasoning one, scoring 0.00. Exists as a frozen baseline row.",
+   "source": [
+    {
+     "file": "experiments/results/derived/baselines.json",
+     "location": "panels.B_compute_6_items row 'router, before tie-break fix (v8)'",
+     "exact_values": "accuracy 0.0, cost_usd 0.002018"
+    }
+   ],
+   "code": "experiments/baselines.py",
+   "audit": "verified"
+  },
+  {
+   "id": "SC-REL-1",
+   "section": "Related work",
+   "paper_line": 128,
+   "full_quote": "None of these treats the data locus as a hard, pre-network set filter whose verdict is recorded per decision.",
+   "what_it_means": "Absence-of-prior-art claim over the cited routing/privacy literature. Wrong if one of them does it.",
+   "source": [
+    {
+     "file": "litreview/review.md",
+     "location": "§3.3 synthesis and refs 26-33",
+     "exact_values": "synthesis: privacy is 'a soft penalty' or 'architecture-level heuristic' in all surveyed works"
+    }
+   ],
+   "code": null,
+   "audit": "verified-with-note — scoped to the review's 45-work corpus; absence claims stay bounded by that corpus, not universal."
+  },
+  {
+   "id": "SC-REL-2",
+   "section": "Related work",
+   "paper_line": 121,
+   "full_quote": "a recent anatomical study finds that coarse task identity explains most of what routers learn \\cite{tasktype} --- a result this paper leans on",
+   "what_it_means": "External claim (Lee 2026) used to justify a simple eligibility gate. Wrong if the cited paper says something narrower.",
+   "source": [
+    {
+     "file": "litreview/raw/included_verified.json",
+     "location": "entry 'Most of the LLM Routing Gap Is Task Type'",
+     "exact_values": "title verified via arXiv 2608.23023"
+    }
+   ],
+   "code": null,
+   "audit": "verified-with-note — citation verified; the lean is a design motivation, not an experimental dependency."
+  },
+  {
+   "id": "SC-DES-1",
+   "section": "Design 4.6",
+   "paper_line": 231,
+   "full_quote": "Replacing per-provider backends with this pair removed eleven files --- 1,132 lines, of which 257 were the backends themselves --- from the router package.",
+   "what_it_means": "Simplification magnitude. Wrong if the count includes non-router files or the backends number is off.",
+   "source": [
+    {
+     "file": "experiments/results/derived/code_metrics.json",
+     "location": "n_files, superseded_total_lines, backend_lines",
+     "exact_values": "11, 1132, 257"
+    }
+   ],
+   "code": "line counts over experiments/registry_tools/superseded/",
+   "audit": "verified — corrected 2026-10-26 from 'deleted 1,132 lines from the product path' (the 1,132 include probes/tests; backends alone are 257)."
+  },
+  {
+   "id": "SC-DES-2",
+   "section": "Design 4.7",
+   "paper_line": 245,
+   "full_quote": "in the mechanism experiment a private request whose only permitted endpoint is dead is refused, and a proof-of-absence scan over the whole log --- including the failed-attempt path --- finds no trace of the content at the forbidden endpoint",
+   "what_it_means": "Existence-of-analysis: the privacy mechanism holds under failure, measured. Wrong if no such run exists.",
+   "source": [
+    {
+     "file": "experiments/exp2/results/raw/mechanism_exp2-mechanism_20261023T152550Z.json",
+     "location": "whole file",
+     "exact_values": "mechanism run artifacts (refusal with dead permitted endpoint; scan results)"
+    }
+   ],
+   "code": "experiments/exp2/mechanism_long_confidential.py",
+   "audit": "verified"
+  },
+  {
+   "id": "SC-DES-3",
+   "section": "Design 4.6",
+   "paper_line": 228,
+   "full_quote": "Two wire formats cover the field: the OpenAI chat-completions protocol, which local runtimes (LM Studio, Jan, GPT4All, llama.cpp server, vLLM, Ollama's /v1) and API providers all speak",
+   "what_it_means": "Generality claim over named apps. Wrong if a named app lacks an endpoint; only some were measured here.",
+   "source": [
+    {
+     "file": "experiments/desktop_app_check/evidence.json",
+     "location": "whole file",
+     "exact_values": "Ollama /v1 and LM Studio's bundled llama.cpp server both answered through the one connector class"
+    }
+   ],
+   "code": "experiments/desktop_app_check/check7_lmstudio.py",
+   "audit": "verified-with-note — measured on Ollama /v1 and LM Studio's bundled backend; Jan/GPT4All/vLLM are covered by protocol, not by a run here."
+  },
+  {
+   "id": "SC-DES-4",
+   "section": "Design 4.7",
+   "paper_line": 251,
+   "full_quote": "Under the shipped default a private request may go to a cloud model; when it does, the decision carries a warning and the audit requires that warning to be present.",
+   "what_it_means": "The default (trust_user) does not protect privacy; the audit enforces the warning. Wrong if the audit doesn't check warnings.",
+   "source": [
+    {
+     "file": "experiments/results/derived/audit_full_log.json",
+     "location": "checks containing 6.1.7",
+     "exact_values": "'every sensitive route stays inside its policy, and every cloud route carries a recorded warning' — pass"
+    },
+    {
+     "file": "datasets/policy/data.jsonl",
+     "location": "active default policy",
+     "exact_values": "classifier.mode = trust_user (policy v13)"
+    }
+   ],
+   "code": "router/audit.py",
+   "audit": "verified"
+  },
+  {
+   "id": "SC-EVAL-0",
+   "section": "Evaluation preamble",
+   "paper_line": 286,
+   "full_quote": "Spend on the frozen runs is \\textbf{\\$0.3173}; the connector checks, the replication, two budget probes and three annotation runs bring the project total to \\textbf{\\$1.352} of a \\$10 cap, all of it provider-metered.",
+   "what_it_means": "Cost figures for the whole project. Wrong if any spend-bearing artifact is missing from the sum.",
+   "source": [
+    {
+     "file": "experiments/results/derived/spend_summary.json",
+     "location": "group_totals_usd, project_total_usd",
+     "exact_values": "frozen_runs 0.31726; total 1.352495"
+    }
+   ],
+   "code": "experiments/compute_spend_summary.py",
+   "audit": "verified — corrected 2026-10-26 from $0.3308/$1.505 (not reconstructible from the frozen artifacts; see discrepancy_log)."
+  },
+  {
+   "id": "SC-REPLAY-1",
+   "section": "5.1 Replay / Table 1",
+   "paper_line": 305,
+   "full_quote": "Gate trace replays exactly (all runs) & 414/414",
+   "what_it_means": "Every audited decision's gate trace reproduces. Wrong if any audit's 6.1.1 check failed.",
+   "source": [
+    {
+     "file": "experiments/results/derived/verification_summary.json",
+     "location": "decisions_replayed_per_run",
+     "exact_values": "44x6 + 6 + 144 = 414"
+    },
+    {
+     "file": "experiments/exp2/results/raw/audit_exp2-v5.json",
+     "location": "checks (6.1.1)",
+     "exact_values": "pass=true, detail []"
+    }
+   ],
+   "code": "router/audit.py",
+   "audit": "verified"
+  },
+  {
+   "id": "SC-FAULT-1",
+   "section": "5.2 Fault injection",
+   "paper_line": 345,
+   "full_quote": "mutation 7 passed the audit as originally written",
+   "what_it_means": "Process claim: the audit once failed to catch a data-file edit; now fixed. Wrong if the fix isn't real.",
+   "source": [
+    {
+     "file": "experiments/results/derived/fault_injection.json",
+     "location": "mutations[6]",
+     "exact_values": "data-file edit caught on 6.1.5 reconciliation, exit 1"
+    }
+   ],
+   "code": "experiments/fault_injection.py",
+   "audit": "verified-with-note — the 'originally passed' half is a dated development record (spec 13.9 lineage); the 'now caught' half is frozen and re-verified."
+  },
+  {
+   "id": "SC-PRIV-1",
+   "section": "5.3 Privacy",
+   "paper_line": 371,
+   "full_quote": "v1 policy, substring rules & 0 & 0/18 & 0.8182 & 7 & 1 & 0.9545",
+   "what_it_means": "First-run privacy metrics. Wrong if any run shows a violation.",
+   "source": [
+    {
+     "file": "experiments/exp2/results/derived/headline_numbers.json",
+     "location": "runs.exp2.*",
+     "exact_values": "M1=0, M2=0/18, M3=0.8182, M4=7, M5=1, M6=0.9545"
+    }
+   ],
+   "code": "experiments/spine.py",
+   "audit": "verified"
+  },
+  {
+   "id": "SC-PRIV-2",
+   "section": "5.3 Privacy",
+   "paper_line": 384,
+   "full_quote": "with 44 items this improvement is not statistically significant: five prompts fixed and none broken gives an exact paired test of p = 0.0625",
+   "what_it_means": "Restraint claim. Components: 0.8182->0.9318 on 44 items = 5 fixed, 0 broken; p = 2*(1/2)^5 = 0.0625.",
+   "source": [
+    {
+     "file": "experiments/exp2/results/derived/headline_numbers.json",
+     "location": "runs.exp2.M3_accuracy, runs.exp2-v5.M3_accuracy",
+     "exact_values": "0.8182, 0.9318 (36->41 of 44 correct)"
+    }
+   ],
+   "code": null,
+   "audit": "verified — arithmetic and both components check out."
+  },
+  {
+   "id": "SC-PRIV-3",
+   "section": "5.3 Privacy",
+   "paper_line": 394,
+   "full_quote": "in the strict profile, no private request reached a cloud endpoint in any run, including a run where the only permitted endpoint was dead and the request was refused",
+   "what_it_means": "The mechanism headline: M2 = 0 violations in all six runs, plus the dead-endpoint refusal.",
+   "source": [
+    {
+     "file": "experiments/exp2/results/derived/headline_numbers.json",
+     "location": "runs.*.M2_end_to_end_violations",
+     "exact_values": "0 for all six runs"
+    },
+    {
+     "file": "experiments/exp2/results/raw/mechanism_exp2-mechanism_20261023T152550Z.json",
+     "location": "whole file",
+     "exact_values": "dead-endpoint refusal recorded"
+    }
+   ],
+   "code": "experiments/spine.py",
+   "audit": "verified"
+  },
+  {
+   "id": "SC-ANN-1",
+   "section": "5.4 Annotator agreement",
+   "paper_line": 433,
+   "full_quote": "Two frontier models from different families, neither having seen the rules, agree with the author at 0.984 and $\\kappa$ 0.97 — including 0.986 on a battery written later in deliberately unseen domains.",
+   "what_it_means": "Label quality. Both sides: 0.984/0.9736 (n=187) and 0.9857/0.9772 (n=70).",
+   "source": [
+    {
+     "file": "experiments/exp2/results/derived/annotation_agreement_deepseek.json",
+     "location": "annotator_vs_author",
+     "exact_values": "n=187 acc=0.984 kappa=0.9736"
+    },
+    {
+     "file": "experiments/exp2/results/derived/deepseek_heldout_b.json",
+     "location": "annotator_vs_author",
+     "exact_values": "n=70 acc=0.9857 kappa=0.9772"
+    }
+   ],
+   "code": "experiments/exp2/annotate.py",
+   "audit": "verified — 'months later' removed 2026-10-26 (batteries were written days apart, not months; see discrepancy_log)."
+  },
+  {
+   "id": "SC-ANN-2",
+   "section": "5.4 Classifier options / Table 5",
+   "paper_line": 447,
+   "full_quote": "rules (v6, with guard) & 0.542 & 7 & 26 & none",
+   "what_it_means": "Shipped classifier on battery B: 54% right, 7 dangerous errors.",
+   "source": [
+    {
+     "file": "experiments/exp2/results/raw/verifier_eval_rules_20261026T181557Z.json",
+     "location": "metrics",
+     "exact_values": "acc 0.5417, under 7, over 26, n 72"
+    }
+   ],
+   "code": "experiments/exp2/verifier_eval.py",
+   "audit": "verified"
+  },
+  {
+   "id": "SC-ANN-3",
+   "section": "5.4 text",
+   "paper_line": 458,
+   "full_quote": "requiring two public markers only trades volume for volume --- accuracy falls to 0.417 and over-classification rises to 35 of 72, with the same seven dangerous errors untouched",
+   "what_it_means": "The two-marker fix fails. Recomputed 2026-10-26 because the original 0.500/3/33 had no frozen artifact.",
+   "source": [
+    {
+     "file": "experiments/exp2/results/raw/verifier_eval_two_markers_20261026T181557Z.json",
+     "location": "metrics",
+     "exact_values": "acc 0.4167, under 7, over 35"
+    }
+   ],
+   "code": "experiments/exp2/verifier_eval.py",
+   "audit": "verified — corrected from the unfrozen 0.500/3/33; see discrepancy_log."
+  },
+  {
+   "id": "SC-ANN-4",
+   "section": "5.4 text",
+   "paper_line": 460,
+   "full_quote": "It lifts accuracy to 0.597 and fixes four of the seven dangerous errors; the three it cannot reach are items the rules had already called confidential, so they were never verified. A frontier model labelling every prompt reaches 0.861 --- but it reads every prompt, and it makes its own mistakes in both directions (nine under-classifications of its own).",
+   "what_it_means": "What the shipped verifier contract can and cannot do, and the replacement-mode alternative. Both measured 2026-10-26.",
+   "source": [
+    {
+     "file": "experiments/exp2/results/raw/verifier_eval_frontier_20261026T182208Z.json",
+     "location": "metrics + rows n02/n16/n27",
+     "exact_values": "acc 0.5972, under 3 (n02,n16,n27 — all rules=confidential, verdict None)"
+    },
+    {
+     "file": "experiments/exp2/results/raw/verifier_eval_frontier_annot_20261026T182504Z.json",
+     "location": "metrics",
+     "exact_values": "acc 0.8611, under 9, over 1, spend $0.0832"
+    }
+   ],
+   "code": "experiments/exp2/verifier_eval.py",
+   "audit": "verified — replaces the unfrozen 0.931/3/2 row, which was unreachable under the shipped verify-public-only contract (over can never drop below 26); see discrepancy_log."
+  },
+  {
+   "id": "SC-ANN-5",
+   "section": "5.4 What we shipped",
+   "paper_line": 466,
+   "full_quote": "The guard (ruleset v6) demotes a public verdict when the text names a personal or business domain; it removed all three under-classifications on battery A.",
+   "what_it_means": "Guard effect on battery A: 3 under -> 0 under (0.625 -> 0.672).",
+   "source": [
+    {
+     "file": "experiments/exp2/results/derived/rules_audit.json",
+     "location": "by_set.prompts_heldout.jsonl",
+     "exact_values": "acc 0.6719, under [], n 64"
+    }
+   ],
+   "code": "experiments/exp2/rules_audit.py",
+   "audit": "verified"
+  },
+  {
+   "id": "SC-CODE-1",
+   "section": "5.5 Computation / Table 3",
+   "paper_line": 495,
+   "full_quote": "local 8B & n/a (excluded) & -- & \\textbf{exact} & 2/2",
+   "what_it_means": "Table 3 row: 8B can't fit the file in context but computes the exact total via code.",
+   "source": [
+    {
+     "file": "experiments/exp1/results/raw/arms_exp1-pilot-v3.jsonl",
+     "location": "b_total_large_code / local-8b",
+     "exact_values": "code_ran true, stdout {\"n_rows\": 800, \"total_amount\": 361572.4}; inhead row excluded_context (need=19101 room=7373)"
+    }
+   ],
+   "code": "experiments/exp1/regrade.py",
+   "audit": "verified"
+  },
+  {
+   "id": "SC-CODE-2",
+   "section": "5.5 text",
+   "paper_line": 507,
+   "full_quote": "the code arm cuts input size by up to two orders of magnitude on the largest item (168--217 tokens for the request versus 1,213--24,096 for the in-context version)",
+   "what_it_means": "Token-size comparison. Both ranges measured; the 'two orders' holds at the top end (24,096/168 = 143x) and is ~6x at the bottom.",
+   "source": [
+    {
+     "file": "experiments/exp1/results/raw/arms_exp1-pilot-v3.jsonl",
+     "location": "tokens_in by arch",
+     "exact_values": "code 168-217; inhead 1213-24096"
+    }
+   ],
+   "code": null,
+   "audit": "verified — wording corrected 2026-10-26 from 'roughly two orders of magnitude' to 'up to ... on the largest item' (see discrepancy_log)."
+  },
+  {
+   "id": "SC-CODE-3",
+   "section": "5.5 defect paragraph",
+   "paper_line": 512,
+   "full_quote": "We re-scored the frozen outputs against the shape the prompts mandated (8 rows, $0, no new model calls)",
+   "what_it_means": "The regrade was bounded and free.",
+   "source": [
+    {
+     "file": "experiments/exp1/results/derived/regrade_exp1-pilot-v3.json",
+     "location": "n_scores_corrected, cost_usd",
+     "exact_values": "8, 0.0"
+    }
+   ],
+   "code": "experiments/exp1/regrade.py",
+   "audit": "verified"
+  },
+  {
+   "id": "SC-REPS-1",
+   "section": "5.6 Replication",
+   "paper_line": 525,
+   "full_quote": "We repeated the frozen twelve-item battery three times over four live connections: 132 attempts, six excluded for context, 97 answered, 29 typed failures, $0.616.",
+   "what_it_means": "Replication run shape and cost.",
+   "source": [
+    {
+     "file": "experiments/exp1/results/raw/reps_exp1-reps-v1.jsonl",
+     "location": "line count + status counts",
+     "exact_values": "132 rows; ok 97; malformed_response 29; excluded_context 6"
+    },
+    {
+     "file": "experiments/exp1/results/raw/summary_exp1-reps-v1.json",
+     "location": "spend_usd",
+     "exact_values": "0.616032"
+    }
+   ],
+   "code": "experiments/exp1/run_reps.py",
+   "audit": "verified"
+  },
+  {
+   "id": "SC-REPS-2",
+   "section": "5.6 text",
+   "paper_line": 549,
+   "full_quote": "For the two local arms and the flagship the cell means are identical in every repetition (spread 0.00)",
+   "what_it_means": "Determinism at temperature 0 for those arms.",
+   "source": [
+    {
+     "file": "experiments/exp1/results/raw/summary_exp1-reps-v1.json",
+     "location": "cells.*.per_rep",
+     "exact_values": "llama3.2/llama3.1/Qwen3.8: per_rep identical in all cells"
+    }
+   ],
+   "code": "experiments/exp1/run_reps.py",
+   "audit": "verified"
+  },
+  {
+   "id": "SC-REPS-3",
+   "section": "5.6 text",
+   "paper_line": 558,
+   "full_quote": "The same connection costs 25.7$\\times$ more with the rows in context than when writing code for the same items (\\$0.589 vs \\$0.023)",
+   "what_it_means": "Cost-direction comparison on the flagship: 0.589074/0.022914 = 25.71.",
+   "source": [
+    {
+     "file": "experiments/exp1/results/raw/summary_exp1-reps-v1.json",
+     "location": "cells.Qwen3.8-2.4T-A95B|structured_extract/.cost_usd and |compute_via_code.cost_usd",
+     "exact_values": "0.589074, 0.022914"
+    }
+   ],
+   "code": null,
+   "audit": "verified"
+  },
+  {
+   "id": "SC-REPS-4",
+   "section": "5.6 budget probe",
+   "paper_line": 581,
+   "full_quote": "Re-running the same arm at an \\textbf{8{,}192-token budget} answers 9 of 12 calls instead of 7 of 36",
+   "what_it_means": "The cheap arm's weakness was budget starvation. Both budgets' counts and costs.",
+   "source": [
+    {
+     "file": "experiments/exp1/results/raw/reps_exp1-reps-v1.jsonl",
+     "location": "GLM rows",
+     "exact_values": "2048: ok 7 of 36, malformed 29"
+    },
+    {
+     "file": "experiments/exp1/results/raw/reps_budget-8192-all.jsonl",
+     "location": "GLM rows",
+     "exact_values": "8192: ok 9 of 12"
+    },
+    {
+     "file": "experiments/exp1/results/raw/summary_glm-budget-8192.json",
+     "location": "cells GLM|compute_via_code",
+     "exact_values": "acc 1.0, cost 0.005708"
+    }
+   ],
+   "code": "experiments/exp1/run_reps.py",
+   "audit": "verified — corrected 2026-10-26 from '8 of 12' (frozen rows say 9; see discrepancy_log)."
+  },
+  {
+   "id": "SC-SWEEP-1",
+   "section": "5.7 Sweep / Table 6",
+   "paper_line": 594,
+   "full_quote": "With ten capability rows (five arms, two task classes), we sweep two threshold fields over 24 policy points and re-run the routing decision on six computation items with no model call. Each point is a policy record; the sweep costs $0.",
+   "what_it_means": "Sweep design and zero cost.",
+   "source": [
+    {
+     "file": "experiments/exp3/results/derived/sweep_exp3-sweep-v3.json",
+     "location": "n_capability_rows_active, points.@len, cost_usd",
+     "exact_values": "10, 24, 0.0"
+    }
+   ],
+   "code": "experiments/exp3/sweep_eligibility.py",
+   "audit": "verified"
+  },
+  {
+   "id": "SC-SWEEP-2",
+   "section": "5.7 text",
+   "paper_line": 627,
+   "full_quote": "The cost of a quality floor is uniform and large: exactly 40x the cheapest measured cloud arm across all six items, because it is a price ratio, not a token effect.",
+   "what_it_means": "40x = flagship input price $2.00 / cheap cloud $0.05, uniform by construction.",
+   "source": [
+    {
+     "file": "datasets/models/history.jsonl",
+     "location": "records mdl_179270040314500003 and mdl_179270040314600007",
+     "exact_values": "input_per_mtok 2.0 and 0.05"
+    }
+   ],
+   "code": null,
+   "audit": "verified"
+  },
+  {
+   "id": "SC-SWEEP-3",
+   "section": "5.7 finding (iii)",
+   "paper_line": 630,
+   "full_quote": "the ``refuse versus allow unmeasured'' setting changes the candidate set at every point without changing a single outcome",
+   "what_it_means": "The mode knob is inert here. Verified by pairing all 12 threshold points across both modes: 0 outcome differences.",
+   "source": [
+    {
+     "file": "experiments/exp3/results/derived/sweep_exp3-sweep-v3.json",
+     "location": "points grouped by (min_accuracy, min_schema)",
+     "exact_values": "12 pairs, 0 with differing chosen_counts"
+    }
+   ],
+   "code": "experiments/exp3/sweep_eligibility.py",
+   "audit": "verified"
+  },
+  {
+   "id": "SC-BASE-1",
+   "section": "5.8 Baselines",
+   "paper_line": 672,
+   "full_quote": "The free 8B is not dominated: 0.73 accuracy at $0 beats the cheap cloud arm on both axes and loses to the 70B on accuracy alone.",
+   "what_it_means": "Comparison, all three sides: 8B 0.7273/$0; cheap cloud 0.4545/$0.000489; 70B 0.8182/$0.002520.",
+   "source": [
+    {
+     "file": "experiments/results/derived/baselines.json",
+     "location": "panels.B_compute_6_items",
+     "exact_values": "0.7273/0.0; 0.4545/0.000489; 0.8182/0.00252"
+    }
+   ],
+   "code": "experiments/baselines.py",
+   "audit": "verified"
+  },
+  {
+   "id": "SC-BASE-2",
+   "section": "5.8 reading (iii)",
+   "paper_line": 676,
+   "full_quote": "the decisions actually made scored 0.82 for $0.0025 because they were taken when only three arms had measurements, so the policy fell through to an unmeasured 70B",
+   "what_it_means": "Causal attribution of the routed score to registry coverage at decision time.",
+   "source": [
+    {
+     "file": "experiments/results/derived/baselines.json",
+     "location": "panels.B_compute_6_items row 'router (actual decisions)'",
+     "exact_values": "acc 0.8182, cost 0.002542"
+    },
+    {
+     "file": "experiments/results/derived/audit_full_log.json",
+     "location": "coverage",
+     "exact_values": "eligibility_coverage 0.1892, unmeasured pairs 30"
+    }
+   ],
+   "code": "experiments/baselines.py",
+   "audit": "verified-with-note — 'only three arms had measurements' is the decision-time registry state reconstructed by the audit (spec 13.8 record); the low coverage today is frozen evidence of the same mechanism."
+  },
+  {
+   "id": "SC-DIAG-1",
+   "section": "5.9 Gate binding",
+   "paper_line": 687,
+   "full_quote": "over 828 decisions the privacy gate excluded at least one candidate in 26.7%, verifiability in 62.4% and emptied the set 84 times, context fit in 1.6%, and availability ran in only two decisions and excluded none",
+   "what_it_means": "How often each gate does work over the whole log.",
+   "source": [
+    {
+     "file": "experiments/results/derived/diagnostics.json",
+     "location": "gates.overall",
+     "exact_values": "privacy 828/0.2669; verifiability 828/0.6244 emptied 84; context_fit 744/0.0161; availability ran 2 excluded 0"
+    }
+   ],
+   "code": "experiments/diagnostics.py",
+   "audit": "verified — corrected 2026-10-26 from '827 decisions / 62.5% / availability in one decision' (stale by one decision, rounding, and an availability claim the artifact contradicts; see discrepancy_log)."
+  },
+  {
+   "id": "SC-DIAG-2",
+   "section": "5.9 Latency",
+   "paper_line": 691,
+   "full_quote": "the 70B's median attempt is 2.6s, the free local 3B's is 8.3s, and the cheap cloud arm's is 1.5s, so ``local is cheaper'' is true and ``local is faster'' is not",
+   "what_it_means": "Comparison of medians; conclusion follows from 8.319 > 2.639 > 1.547.",
+   "source": [
+    {
+     "file": "experiments/results/derived/diagnostics.json",
+     "location": "latency[*].p50_s",
+     "exact_values": "70B 2.639, llama3.2 8.319, qwen-flash 1.547"
+    }
+   ],
+   "code": "experiments/diagnostics.py",
+   "audit": "verified"
+  },
+  {
+   "id": "SC-DIAG-3",
+   "section": "5.9 Determinism",
+   "paper_line": 693,
+   "full_quote": "routing the same frozen request twice yields records identical in all ten semantic fields, differing only in id and timestamp",
+   "what_it_means": "Decision determinism.",
+   "source": [
+    {
+     "file": "experiments/results/derived/diagnostics.json",
+     "location": "determinism",
+     "exact_values": "fields_compared @len 10, fields_differing []"
+    }
+   ],
+   "code": "experiments/diagnostics.py",
+   "audit": "verified"
+  },
+  {
+   "id": "SC-RES-1",
+   "section": "5.10 Resilience / Table 7",
+   "paper_line": 710,
+   "full_quote": "1 & dead endpoint $\\rightarrow$ typed refusal naming connection and class & pass",
+   "what_it_means": "All ten acceptance checks pass; check 7 spent $0.0002 against a live provider.",
+   "source": [
+    {
+     "file": "experiments/results/derived/acceptance_rc_offline_20261026.json",
+     "location": "exit, check_lines",
+     "exact_values": "exit 0, 51 check lines"
+    },
+    {
+     "file": "experiments/results/derived/acceptance_live_20261026.json",
+     "location": "cloud_spend_usd, exit",
+     "exact_values": "0.0001882, exit 0"
+    },
+    {
+     "file": "experiments/results/derived/audit_full_log.json",
+     "location": "checks",
+     "exact_values": "17 checks, all pass"
+    }
+   ],
+   "code": "router/test_acceptance_rc.py, router/acceptance_live.py",
+   "audit": "verified"
+  },
+  {
+   "id": "SC-LIM-1",
+   "section": "Limits / power",
+   "paper_line": 735,
+   "full_quote": "Capability cells have six items; one correct answer moves accuracy by 0.17 and can flip an eligibility verdict. Repeating the battery three times takes the cells to n = 18 and leaves every mean unchanged for the deterministic arms",
+   "what_it_means": "Power limitation, honestly framed. n=18 from reps cells; unchanged means from per_rep equality.",
+   "source": [
+    {
+     "file": "experiments/exp1/results/raw/summary_exp1-reps-v1.json",
+     "location": "cells.*.n, per_rep",
+     "exact_values": "n=18 compute cells; per_rep identical for llama3.2/llama3.1/Qwen3.8"
+    }
+   ],
+   "code": null,
+   "audit": "verified"
+  },
+  {
+   "id": "SC-LIM-2",
+   "section": "Limits / classifier",
+   "paper_line": 746,
+   "full_quote": "on a 64-item held-out battery written after the freeze it scores 0.672 with no under-classifications but 58% of prompts matching no rule, and on a 72-item second held-out battery from unseen domains it scores 0.542 with seven under-classifications",
+   "what_it_means": "The classifier's out-of-sample weakness, current ruleset (v6).",
+   "source": [
+    {
+     "file": "experiments/exp2/results/derived/rules_audit.json",
+     "location": "by_set.prompts_heldout.jsonl / prompts_heldout_b.jsonl",
+     "exact_values": "A: 0.6719, under [], defaulted 37/64; B: 0.5417, under 7"
+    }
+   ],
+   "code": "experiments/exp2/rules_audit.py",
+   "audit": "verified — corrected 2026-10-26 from '0.625 with three under-classifications' (that was ruleset v5, pre-guard; see discrepancy_log)."
+  },
+  {
+   "id": "SC-LIM-3",
+   "section": "Limits / budget scope",
+   "paper_line": 765,
+   "full_quote": "the same cheap reasoning arm scores 0.22 at 2,048 and 1.00 at 8,192 on identical items",
+   "what_it_means": "Budget-scoped capability. Both sides measured.",
+   "source": [
+    {
+     "file": "experiments/exp1/results/raw/summary_exp1-reps-v1.json",
+     "location": "cells GLM|compute_via_code",
+     "exact_values": "0.2222 at 2048"
+    },
+    {
+     "file": "experiments/exp1/results/raw/summary_glm-budget-8192.json",
+     "location": "cells GLM|compute_via_code",
+     "exact_values": "1.0 at 8192"
+    }
+   ],
+   "code": null,
+   "audit": "verified"
+  },
+  {
+   "id": "SC-THREAT-1",
+   "section": "Threats to validity",
+   "paper_line": 786,
+   "full_quote": "The models, prices and providers are a 2026 snapshot; two of the five cloud arms have already changed availability.",
+   "what_it_means": "External validity caution. Wrong if fewer/more arms broke.",
+   "source": [
+    {
+     "file": "datasets/models/history.jsonl",
+     "location": "status transitions",
+     "exact_values": "Llama-3.3-70B retired (provider removal); qwen-flash connection dead (key invalid, typed 401); GLM-5.3-Flash added after third-party block"
+    },
+    {
+     "file": "experiments/results/derived/acceptance_live_20261026.json",
+     "location": "stdout_tail",
+     "exact_values": "dashscope: no answer (all_connections_failed)"
+    }
+   ],
+   "code": null,
+   "audit": "verified-with-note — 'changed availability' = 70B retired and qwen-flash unreachable; a third event (third-party block) hit the account but the arm was substituted. Count is a judgement the monitor may want to re-read."
+  },
+  {
+   "id": "SC-CONC-1",
+   "section": "Conclusion",
+   "paper_line": 800,
+   "full_quote": "The layer routes to a model that scores 1.00 on a task for about $0.0003, or to a free model that scores 0.00, depending on a policy file",
+   "what_it_means": "Both extremes exist as policy points: flagship 1.00 at $0.002018/6 items = $0.000336 each; 3B 0.00 at $0.",
+   "source": [
+    {
+     "file": "experiments/results/derived/baselines.json",
+     "location": "panels.B_compute_6_items rows 'router, default policy (v9)' and 'always-local-3b'",
+     "exact_values": "1.0/$0.002018; 0.0/$0"
+    }
+   ],
+   "code": null,
+   "audit": "verified — 'about $0.0003' = $0.000336, an approximation stated as one."
+  }
+ ],
+ "captions": [
+  {
+   "id": "CAP-1",
+   "caption_of": "Table 1 (audit results)",
+   "covered_by": [
+    "SC-REPLAY-1",
+    "SC-ABS-1"
+   ],
+   "full_quote": "Audit results. The replay is not a smoke test: it reconstructs the candidate set from history and fails on any difference in a survivor list or an exclusion reason.",
+   "audit": "verified"
+  },
+  {
+   "id": "CAP-2",
+   "caption_of": "Table 2 (fault injection)",
+   "covered_by": [
+    "SC-ABS-5",
+    "SC-FAULT-1"
+   ],
+   "full_quote": "Seven of seven caught on the expected check; three unmodified copies produce zero failures, so the detector is not simply noisy.",
+   "audit": "verified"
+  },
+  {
+   "id": "CAP-3",
+   "caption_of": "Table 3 (privacy runs)",
+   "covered_by": [
+    "SC-PRIV-1",
+    "SC-PRIV-3"
+   ],
+   "full_quote": "Privacy mechanism across six runs. M1 is a proof about the filter; M2 is the ground-truth check. Every remaining error under the current ruleset is over-classification --- the safe direction --- and the spine asserts that set equality.",
+   "audit": "verified — v5 run: M5_under=0, M4_over=3 (frozen)."
+  },
+  {
+   "id": "CAP-4",
+   "caption_of": "Table 4 (annotator agreement)",
+   "covered_by": [
+    "SC-ANN-1"
+   ],
+   "full_quote": "The labels reproduce; the classifier does not. Total annotation cost: $0.095. Unparsable returns are excluded from their pairs, never filled in.",
+   "audit": "verified — cost corrected to $0.095 (three runs: 0.054136+0.028352+0.012732=0.09522; the connectivity probe $0.000416 is excluded from the caption and kept in spend_summary)."
+  },
+  {
+   "id": "CAP-5",
+   "caption_of": "Table 5 (classifier options)",
+   "covered_by": [
+    "SC-ANN-2",
+    "SC-ANN-3",
+    "SC-ANN-4"
+   ],
+   "full_quote": "Battery B, 72 fresh items. Under is the dangerous direction: a prompt about a person classified public or confidential. Every row is measured, not estimated.",
+   "audit": "verified — 'every row is measured' became true 2026-10-26 with the verifier_eval raw artifacts; before that two rows had no frozen source (see discrepancy_log)."
+  },
+  {
+   "id": "CAP-6",
+   "caption_of": "Table 6 (800-row sum)",
+   "covered_by": [
+    "SC-ABS-3",
+    "SC-CODE-1"
+   ],
+   "full_quote": "The 800-row sum. In context every model gets the row count right and the total wrong; via code four of five print the exactly correct 361,572.40. The local arms cannot hold the file in an 8,192-token window, which is itself the argument for code.",
+   "audit": "verified"
+  },
+  {
+   "id": "CAP-7",
+   "caption_of": "Table 7 (replication)",
+   "covered_by": [
+    "SC-REPS-1",
+    "SC-REPS-2"
+   ],
+   "full_quote": "Three repetitions at temperature 0. The local arms and the flagship reproduce their means exactly; the cheap cloud arm does not, and the reason is not sampling.",
+   "audit": "verified"
+  },
+  {
+   "id": "CAP-8",
+   "caption_of": "Table 8 (two budgets)",
+   "covered_by": [
+    "SC-REPS-4",
+    "SC-LIM-3"
+   ],
+   "full_quote": "The same four connections at two output budgets, six computation items. The local arms cannot trade context for output at an 8,192-token window. The cheap cloud arm's apparent weakness at 2,048 was a starved reasoning budget, not a weak model.",
+   "audit": "verified"
+  },
+  {
+   "id": "CAP-9",
+   "caption_of": "Table 9 (eligibility sweep)",
+   "covered_by": [
+    "SC-SWEEP-1",
+    "SC-SWEEP-2",
+    "SC-ABS-2"
+   ],
+   "full_quote": "Eligibility is a conjunction, and the two axes are not equal levers. Releasing the accuracy floor lands on a model at half the price; releasing the schema floor changes nothing. The shipped default costs 40x the cheapest measured cloud arm on the same items.",
+   "audit": "verified — half = 0.001054/0.002018 = 0.522."
+  },
+  {
+   "id": "CAP-10",
+   "caption_of": "Figure 1 (cost-accuracy)",
+   "covered_by": [
+    "SC-BASE-1"
+   ],
+   "full_quote": "Cost and measured accuracy for every strategy on the six computation items. Free models sit on the left edge because $0 cannot be plotted on a log axis; they are labelled rather than nudged to a fake price. The router's point is expected accuracy from frozen measurements, not a new answer.",
+   "audit": "verified"
+  },
+  {
+   "id": "CAP-11",
+   "caption_of": "Figure 2 (sweep)",
+   "covered_by": [
+    "SC-SWEEP-1"
+   ],
+   "full_quote": "Twelve allow_flagged policy points collapse onto four outcomes: schema floor 0.9 forces the flagship at any accuracy floor; with the schema floor released, the accuracy floor selects 3B, 8B or 70B. All 24 sweep points cost $0 because nothing is called.",
+   "audit": "verified — 12 allow_flagged points, 4 distinct chosen_counts, cost 0.0 (frozen)."
+  },
+  {
+   "id": "CAP-12",
+   "caption_of": "Table 10 (acceptance checks)",
+   "covered_by": [
+    "SC-RES-1"
+   ],
+   "full_quote": "Acceptance checks. Check 7 spent $0.0002 against a live provider; every other check is local and free.",
+   "audit": "verified"
+  }
+ ],
+ "discrepancy_log": [
+  {
+   "id": "D-1",
+   "class": "stale value",
+   "finding": "Abstract and Table 1 said '226 checks'; the frozen verification summary (now persisted by spine.py) records 263 (109 spine + 154 audit battery across eight runs).",
+   "fix": "draft updated to 263; verification_summary.json added as the frozen artifact (the count previously existed only in stdout).",
+   "status": "fixed 2026-10-26"
+  },
+  {
+   "id": "D-2",
+   "class": "stale value",
+   "finding": "Evaluation preamble said spend $0.3308 / project total $1.505; no frozen decomposition reconstructs either number.",
+   "fix": "experiments/compute_spend_summary.py recomputes from every spend-bearing artifact: $0.31726 frozen runs, $1.352495 total. Draft updated.",
+   "status": "fixed 2026-10-26"
+  },
+  {
+   "id": "D-3",
+   "class": "stale value",
+   "finding": "Budget probe text said '8 of 12 calls' at the 8,192 budget; the frozen rows say 9 ok of 12.",
+   "fix": "draft updated to 9 of 12.",
+   "status": "fixed 2026-10-26"
+  },
+  {
+   "id": "D-4",
+   "class": "stale value",
+   "finding": "Limits said the 64-item held-out battery scores 0.625 with three under-classifications; that was ruleset v5. The shipped v6 scores 0.672 with zero under-classifications (58% no-rule stands).",
+   "fix": "limits paragraph restated with current frozen values for both held-out batteries.",
+   "status": "fixed 2026-10-26"
+  },
+  {
+   "id": "D-5",
+   "class": "existence gap",
+   "finding": "Classifier-options table rows '0.500/3/33' (two-marker) and '0.931/3/2' (frontier verifier) traced to no frozen artifact; the 0.931/2-over row is arithmetically unreachable under the shipped verify-public-only contract (over-errors on non-public verdicts can never be touched, floor 26).",
+   "fix": "experiments/exp2/verifier_eval.py committed and all four options re-measured on battery B with per-item raw artifacts frozen. Table and text rewritten: two-marker 0.417/7/35; local-8B 0.556/6/26; frontier verify-public 0.597/3/26; frontier annotator 0.861/9/1. Cost of re-measurement $0.097.",
+   "status": "fixed 2026-10-26"
+  },
+  {
+   "id": "D-6",
+   "class": "attribution error",
+   "finding": "Annotation caption said '$0.11'; the three annotation runs sum to $0.0952.",
+   "fix": "caption updated to $0.095.",
+   "status": "fixed 2026-10-26"
+  },
+  {
+   "id": "D-7",
+   "class": "stale value",
+   "finding": "Gate-binding diagnostics said '827 decisions ... 62.5% ... availability in one decision'; the frozen diagnostics say 828, 62.4%, and availability ran in two decisions and excluded nothing.",
+   "fix": "sentence rewritten to the frozen values.",
+   "status": "fixed 2026-10-26"
+  },
+  {
+   "id": "D-8",
+   "class": "boundary overreach",
+   "finding": "'cuts input size by roughly two orders of magnitude' held only at the top of the range (143x on the largest item; ~6x on small items).",
+   "fix": "wording changed to 'up to two orders of magnitude on the largest item'.",
+   "status": "fixed 2026-10-26"
+  },
+  {
+   "id": "D-9",
+   "class": "attribution error",
+   "finding": "'deleted 1,132 lines from the product path' counted probes and provider-specific tests; the per-provider backends alone are 257 lines.",
+   "fix": "sentence now reads 'removed eleven files --- 1,132 lines, of which 257 were the backends themselves --- from the router package'; code_metrics.json frozen.",
+   "status": "fixed 2026-10-26"
+  },
+  {
+   "id": "D-10",
+   "class": "direction/temporal",
+   "finding": "Annotator text said battery B was 'written months later'; the batteries were written days apart in October 2026.",
+   "fix": "'months later' removed.",
+   "status": "fixed 2026-10-26"
+  },
+  {
+   "id": "D-11",
+   "class": "typesetting",
+   "finding": "Four markdown bolds ('**not**', '**tuning**', '**battery A**', '**battery B**') would have rendered literally in the PDF.",
+   "fix": "converted to \\textbf.",
+   "status": "fixed 2026-10-26"
+  }
+ ]
+}

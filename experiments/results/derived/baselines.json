@@ -1,0 +1,257 @@
+{
+ "capability_only_picks": {
+  "compute_via_code": {
+   "accuracy": 1.0,
+   "arm": "cloud-max"
+  },
+  "structured_extract": {
+   "accuracy": 0.3333,
+   "arm": "cloud-70b"
+  }
+ },
+ "cost_usd": 0.0,
+ "experiment": "baselines over frozen exp1 rows",
+ "note": "replay of frozen per-arm rows; no model was called",
+ "panels": {
+  "A_all_12_items": [
+   {
+    "accuracy": 0.0625,
+    "cost_usd": 0.0,
+    "fields_correct": 1,
+    "fields_total": 16,
+    "models": [
+     "llama3.2:latest"
+    ],
+    "n_items": 9,
+    "strategy": "always-local-3b",
+    "usd_per_correct_field": 0.0
+   },
+   {
+    "accuracy": 0.625,
+    "cost_usd": 0.0,
+    "fields_correct": 10,
+    "fields_total": 16,
+    "models": [
+     "llama3.1:8b-instruct-q4_K_M"
+    ],
+    "n_items": 9,
+    "strategy": "always-local-8b",
+    "usd_per_correct_field": 0.0
+   },
+   {
+    "accuracy": 0.4091,
+    "cost_usd": 0.004537,
+    "fields_correct": 9,
+    "fields_total": 22,
+    "models": [
+     "qwen-flash"
+    ],
+    "n_items": 12,
+    "strategy": "cheapest-cloud",
+    "usd_per_correct_field": 0.000504
+   },
+   {
+    "accuracy": 0.5909,
+    "cost_usd": 0.061291,
+    "fields_correct": 13,
+    "fields_total": 22,
+    "models": [
+     "Llama-3.3-70B-Instruct-Turbo"
+    ],
+    "n_items": 12,
+    "strategy": "always-70b",
+    "usd_per_correct_field": 0.004715
+   },
+   {
+    "accuracy": 0.5909,
+    "cost_usd": 0.205818,
+    "fields_correct": 13,
+    "fields_total": 22,
+    "models": [
+     "Qwen3.8-2.4T-A95B"
+    ],
+    "n_items": 12,
+    "strategy": "always-flagship",
+    "usd_per_correct_field": 0.015832
+   },
+   {
+    "accuracy": 0.6818,
+    "cost_usd": 0.068369,
+    "fields_correct": 15,
+    "fields_total": 22,
+    "models": [
+     "Llama-3.3-70B-Instruct-Turbo",
+     "Qwen3.8-2.4T-A95B"
+    ],
+    "n_items": 12,
+    "strategy": "capability-only",
+    "usd_per_correct_field": 0.004558
+   },
+   {
+    "accuracy": 0.8182,
+    "cost_usd": 0.002542,
+    "fields_correct": 9,
+    "fields_total": 11,
+    "models": [
+     "Llama-3.3-70B-Instruct-Turbo"
+    ],
+    "n_items": 6,
+    "strategy": "router (actual decisions)",
+    "usd_per_correct_field": 0.000282
+   }
+  ],
+  "B_compute_6_items": [
+   {
+    "accuracy": 0.0,
+    "cost_usd": 0.0,
+    "fields_correct": 0,
+    "fields_total": 11,
+    "models": [
+     "llama3.2:latest"
+    ],
+    "n_items": 6,
+    "strategy": "always-local-3b",
+    "usd_per_correct_field": null
+   },
+   {
+    "accuracy": 0.7273,
+    "cost_usd": 0.0,
+    "fields_correct": 8,
+    "fields_total": 11,
+    "models": [
+     "llama3.1:8b-instruct-q4_K_M"
+    ],
+    "n_items": 6,
+    "strategy": "always-local-8b",
+    "usd_per_correct_field": 0.0
+   },
+   {
+    "accuracy": 0.4545,
+    "cost_usd": 0.000489,
+    "fields_correct": 5,
+    "fields_total": 11,
+    "models": [
+     "qwen-flash"
+    ],
+    "n_items": 6,
+    "strategy": "cheapest-cloud",
+    "usd_per_correct_field": 9.8e-05
+   },
+   {
+    "accuracy": 0.8182,
+    "cost_usd": 0.00252,
+    "fields_correct": 9,
+    "fields_total": 11,
+    "models": [
+     "Llama-3.3-70B-Instruct-Turbo"
+    ],
+    "n_items": 6,
+    "strategy": "always-70b",
+    "usd_per_correct_field": 0.00028
+   },
+   {
+    "accuracy": 1.0,
+    "cost_usd": 0.009598,
+    "fields_correct": 11,
+    "fields_total": 11,
+    "models": [
+     "Qwen3.8-2.4T-A95B"
+    ],
+    "n_items": 6,
+    "strategy": "always-flagship",
+    "usd_per_correct_field": 0.000873
+   },
+   {
+    "accuracy": 1.0,
+    "cost_usd": 0.009598,
+    "fields_correct": 11,
+    "fields_total": 11,
+    "models": [
+     "Qwen3.8-2.4T-A95B"
+    ],
+    "n_items": 6,
+    "strategy": "capability-only",
+    "usd_per_correct_field": 0.000873
+   },
+   {
+    "accuracy": 0.8182,
+    "cost_usd": 0.002542,
+    "fields_correct": 9,
+    "fields_total": 11,
+    "models": [
+     "Llama-3.3-70B-Instruct-Turbo"
+    ],
+    "n_items": 6,
+    "strategy": "router (actual decisions)",
+    "usd_per_correct_field": 0.000282
+   },
+   {
+    "accuracy": 1.0,
+    "cost_usd": 0.002018,
+    "n_items": 6,
+    "note": "expected accuracy from capability rows, not realised answers",
+    "strategy": "router, default policy (v9)",
+    "usd_per_correct_field": null
+   },
+   {
+    "accuracy": 0.0,
+    "cost_usd": 0.002018,
+    "n_items": 6,
+    "note": "expected accuracy from capability rows, not realised answers",
+    "strategy": "router, before tie-break fix (v8)",
+    "usd_per_correct_field": null
+   },
+   {
+    "accuracy": 0.8333,
+    "cost_usd": 0.001054,
+    "n_items": 6,
+    "note": "expected accuracy from capability rows, not realised answers",
+    "strategy": "router, accuracy floor only",
+    "usd_per_correct_field": null
+   },
+   {
+    "accuracy": 0.0,
+    "cost_usd": 0.002018,
+    "n_items": 6,
+    "note": "expected accuracy from capability rows, not realised answers",
+    "strategy": "router, strict profile (v7)",
+    "usd_per_correct_field": null
+   }
+  ]
+ },
+ "router_rows": [
+  {
+   "accuracy": 1.0,
+   "cost_usd": 0.002018,
+   "n_items": 6,
+   "note": "expected accuracy from capability rows, not realised answers",
+   "strategy": "router, default policy (v9)",
+   "usd_per_correct_field": null
+  },
+  {
+   "accuracy": 0.0,
+   "cost_usd": 0.002018,
+   "n_items": 6,
+   "note": "expected accuracy from capability rows, not realised answers",
+   "strategy": "router, before tie-break fix (v8)",
+   "usd_per_correct_field": null
+  },
+  {
+   "accuracy": 0.8333,
+   "cost_usd": 0.001054,
+   "n_items": 6,
+   "note": "expected accuracy from capability rows, not realised answers",
+   "strategy": "router, accuracy floor only",
+   "usd_per_correct_field": null
+  },
+  {
+   "accuracy": 0.0,
+   "cost_usd": 0.002018,
+   "n_items": 6,
+   "note": "expected accuracy from capability rows, not realised answers",
+   "strategy": "router, strict profile (v7)",
+   "usd_per_correct_field": null
+  }
+ ],
+ "source": "experiments/exp1/results/derived/arms_exp1-pilot-v3-regraded.jsonl"
+}

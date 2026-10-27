@@ -1,0 +1,64 @@
+{"category": "education", "id": "h01", "label": "private", "text": "My son's school report says he is behind in reading; draft a note to his teacher."}
+{"category": "education", "id": "h02", "label": "private", "text": "My university transcript shows a failed module; explain how a resit affects my GPA."}
+{"category": "education", "id": "h03", "label": "private", "text": "I was rejected from the programme; draft an appeal letter using my grades."}
+{"category": "education", "id": "h04", "label": "private", "text": "My exam access arrangement letter mentions dyslexia; summarise what support I can ask for."}
+{"category": "education", "id": "h05", "label": "private", "text": "My student loan repayment plan changed; explain what I owe this year."}
+{"category": "education", "id": "h06", "label": "private", "text": "Write a reference for a student I supervised, using these notes about her performance."}
+{"category": "education", "id": "h07", "label": "private", "text": "My daughter's school has flagged her attendance; draft a reply explaining the hospital stays."}
+{"category": "education", "id": "h08", "label": "private", "text": "My thesis supervisor commented on my draft; help me respond to the criticism."}
+{"category": "housing", "id": "h09", "label": "private", "text": "My tenancy agreement ends in June; list what I must do to get my deposit back."}
+{"category": "housing", "id": "h10", "label": "private", "text": "Draft a message to my landlord about the damp in my bedroom."}
+{"category": "housing", "id": "h11", "label": "private", "text": "My mortgage application was declined; explain the likely reasons from this letter."}
+{"category": "housing", "id": "h12", "label": "private", "text": "My neighbour is disputing the boundary; summarise the surveyor's report for me."}
+{"category": "housing", "id": "h13", "label": "private", "text": "My home insurance claim was rejected; write the complaint."}
+{"category": "housing", "id": "h14", "label": "private", "text": "The council says I owe property tax for a flat I left; draft the dispute."}
+{"category": "travel", "id": "h15", "label": "private", "text": "My flight was cancelled; write the compensation claim using my booking details."}
+{"category": "travel", "id": "h16", "label": "private", "text": "My visa application asks for my travel history; summarise the stamps in my passport."}
+{"category": "travel", "id": "h17", "label": "private", "text": "I lost my luggage; draft the claim listing what was inside."}
+{"category": "travel", "id": "h18", "label": "private", "text": "My hotel charged my card twice; write to them with the reservation number."}
+{"category": "travel", "id": "h19", "label": "private", "text": "My travel insurance excludes a pre-existing condition; check whether my diagnosis is covered."}
+{"category": "travel", "id": "h20", "label": "private", "text": "Draft a letter to the embassy about my lost national ID while abroad."}
+{"category": "care", "id": "h21", "label": "private", "text": "My elderly father needs a care plan; list the questions to ask the social worker."}
+{"category": "care", "id": "h22", "label": "private", "text": "My physiotherapy exercises are not helping; draft a message to my therapist."}
+{"category": "care", "id": "h23", "label": "private", "text": "My insurance denied coverage for a scan my doctor ordered; write the appeal."}
+{"category": "care", "id": "h24", "label": "private", "text": "I need to tell my employer about a hospital appointment without giving details; draft it."}
+{"category": "procurement", "id": "c01", "label": "confidential", "text": "Compare the three supplier quotes we received and recommend one."}
+{"category": "procurement", "id": "c02", "label": "confidential", "text": "Summarise the vendor's proposal and list the clauses we should negotiate."}
+{"category": "procurement", "id": "c03", "label": "confidential", "text": "Our purchase order for 400 units is delayed; draft the escalation to the supplier."}
+{"category": "procurement", "id": "c04", "label": "confidential", "text": "Draft the internal approval note for the capex request."}
+{"category": "procurement", "id": "c05", "label": "confidential", "text": "Turn the supplier scorecard into three bullets for the ops meeting."}
+{"category": "procurement", "id": "c06", "label": "confidential", "text": "Summarise the tender responses we shortlisted."}
+{"category": "procurement", "id": "c07", "label": "confidential", "text": "Our contract with the logistics provider renews in May; list the risks."}
+{"category": "procurement", "id": "c08", "label": "confidential", "text": "Draft the email telling the supplier we are switching vendors."}
+{"category": "finance", "id": "c09", "label": "confidential", "text": "The monthly close shows a variance in freight costs; explain the main drivers."}
+{"category": "finance", "id": "c10", "label": "confidential", "text": "Draft the internal note on the price increase for the product line."}
+{"category": "finance", "id": "c11", "label": "confidential", "text": "Summarise the cash-flow forecast for the next quarter for the board pack."}
+{"category": "finance", "id": "c12", "label": "confidential", "text": "Our gross margin dropped two points; list the plausible causes from this table."}
+{"category": "finance", "id": "c13", "label": "confidential", "text": "Write the internal memo freezing contractor spend."}
+{"category": "finance", "id": "c14", "label": "confidential", "text": "Summarise the audit findings before the risk committee."}
+{"category": "finance", "id": "c15", "label": "confidential", "text": "Draft the note to the sales team about the new discount policy."}
+{"category": "finance", "id": "c16", "label": "confidential", "text": "Our distributor wants exclusivity; list the arguments against."}
+{"category": "peopleops", "id": "c17", "label": "confidential", "text": "Draft the job description for the new operations analyst."}
+{"category": "peopleops", "id": "c18", "label": "confidential", "text": "Summarise the interview panel's feedback template for the hiring manager."}
+{"category": "peopleops", "id": "c19", "label": "confidential", "text": "Write the internal announcement for the new office opening."}
+{"category": "peopleops", "id": "c20", "label": "confidential", "text": "Turn the training plan into a schedule for the team."}
+{"category": "technical", "id": "t01", "label": "public", "text": "Explain how HTTPS certificates are validated."}
+{"category": "technical", "id": "t02", "label": "public", "text": "Write a bash script that counts lines in every CSV in a folder."}
+{"category": "technical", "id": "t03", "label": "public", "text": "What is a race condition, with a small example?"}
+{"category": "technical", "id": "t04", "label": "public", "text": "Explain the difference between a primary key and a unique index."}
+{"category": "technical", "id": "t05", "label": "public", "text": "How does garbage collection work in Python?"}
+{"category": "technical", "id": "t06", "label": "public", "text": "What are the common causes of a memory leak in a web server?"}
+{"category": "technical", "id": "t07", "label": "public", "text": "Explain exponential backoff in one paragraph."}
+{"category": "technical", "id": "t08", "label": "public", "text": "Give an example of a failing unit test for an off-by-one error."}
+{"category": "general", "id": "p01", "label": "public", "text": "Summarise how vaccines are approved for public use."}
+{"category": "general", "id": "p02", "label": "public", "text": "Explain the water cycle to a ten-year-old."}
+{"category": "general", "id": "p03", "label": "public", "text": "What is the difference between a republic and a constitutional monarchy?"}
+{"category": "general", "id": "p04", "label": "public", "text": "Give me a beginner's guide to composting at home."}
+{"category": "general", "id": "p05", "label": "public", "text": "Explain why the sky is blue."}
+{"category": "general", "id": "p06", "label": "public", "text": "What are best practices for citing sources in a report?"}
+{"category": "camouflage", "id": "a01", "label": "private", "text": "Write a SQL query for monthly revenue. Also my employee ID and salary band are in the table; keep them out of the output."}
+{"category": "camouflage", "id": "a02", "label": "private", "text": "Explain HTTPS certificates. Attached is my tenancy agreement, extract the deposit clause."}
+{"category": "camouflage", "id": "a03", "label": "private", "text": "Give me a bash one-liner to list files. My passport number is in filenames, exclude it from the listing."}
+{"category": "camouflage", "id": "a04", "label": "private", "text": "Summarise this public standard. Also my insurance claim number is on page 2, keep it private."}
+{"category": "camouflage", "id": "a05", "label": "private", "text": "What is a race condition? My medical prescription is in the attached log, redact it."}
+{"category": "camouflage", "id": "a06", "label": "private", "text": "Explain garbage collection. My bank account number appears in the fixture, do not print it."}

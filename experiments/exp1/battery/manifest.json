@@ -1,0 +1,46 @@
+{
+ "by_class": {
+  "multi_doc_selective": 1,
+  "tabular_summary": 5
+ },
+ "corpus": {
+  "expenses_large.csv": {
+   "bytes": 30961,
+   "rows": 800,
+   "sha256": "ebc762f9c45a2d88b591c2d5cf0c3ff2e9ac4aa75719589f8b23de94f039500d"
+  },
+  "expenses_medium.csv": {
+   "bytes": 7735,
+   "rows": 200,
+   "sha256": "696bfab8a31d1c17937a1c02860a7b3daa65a8aa612542a648b32e578cb7ab15"
+  },
+  "expenses_small.csv": {
+   "bytes": 1946,
+   "rows": 50,
+   "sha256": "c7af93c0052ec2e083803cdca0c5b44cfa15b8dc866c018a49ea6239d023830c"
+  },
+  "invoices_medium.csv": {
+   "bytes": 9694,
+   "rows": 250,
+   "sha256": "2fac47576aeb4ea845c7c059866510db9d1bd667e50c1b22696d42644b338560"
+  },
+  "invoices_small.csv": {
+   "bytes": 2351,
+   "rows": 60,
+   "sha256": "6580360aabb4760cafd5010db35cc0019b56506ad65d09a99e786af5ce82491c"
+  }
+ },
+ "corpus_source": "02-view-renderer/qafiya-ref/experiments/efficiency-experiment/corpus/tabular",
+ "ground_truth": "computed by make_battery.py from the copied corpus; no LLM judge, no human annotation",
+ "items": "items.jsonl",
+ "items_sha256": "f98170e5b408df128c20863019be637104691a03d74a90be7baaf7cd670fad61",
+ "n_items": 6,
+ "prompt_chars": {
+  "b_groupby_medium": 7721,
+  "b_max_medium": 7727,
+  "b_selective_travel": 21491,
+  "b_top_vendor_large": 30354,
+  "b_total_large": 30339,
+  "b_total_small": 2066
+ }
+}

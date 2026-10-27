@@ -1,0 +1,60 @@
+{
+ "at": "2026-10-23T15:21:25Z",
+ "cost_usd": 0.0,
+ "finding": {
+  "both_classified_as": "private",
+  "divergence_demonstrated": false,
+  "note": "no cloud routing observed even with confidential->cloud allowed",
+  "v2_outcome": "refused",
+  "v3_outcome": "refused"
+ },
+ "ground_truth_label": "private (one named individual's health + employment record)",
+ "mode": "dry_run",
+ "purpose": "mechanism check: private-labelled confidential-classified text under v2 vs v3, with the cost protection removed by length",
+ "runs": [
+  {
+   "allowed_loci_confidential": [
+    "local"
+   ],
+   "chosen": null,
+   "chosen_locus": null,
+   "classified": "private",
+   "decision_ref": "dec_179276888627200001",
+   "est_tokens_in_local": null,
+   "gate_survivors": {
+    "context_fit": 0,
+    "privacy": 2,
+    "verifiability": 2
+   },
+   "matched_rank": 2,
+   "outcome": "refused",
+   "policy_id": "pol_179276708715100001",
+   "policy_label": "v2",
+   "refusal_reason": "context_exceeds_all",
+   "task_class": "tabular_summary"
+  },
+  {
+   "allowed_loci_confidential": [
+    "local",
+    "cloud"
+   ],
+   "chosen": null,
+   "chosen_locus": null,
+   "classified": "private",
+   "decision_ref": "dec_179276888643400003",
+   "est_tokens_in_local": null,
+   "gate_survivors": {
+    "context_fit": 0,
+    "privacy": 2,
+    "verifiability": 2
+   },
+   "matched_rank": 2,
+   "outcome": "refused",
+   "policy_id": "pol_179276865808400001",
+   "policy_label": "v3-conf-cloud",
+   "refusal_reason": "context_exceeds_all",
+   "task_class": "tabular_summary"
+  }
+ ],
+ "text_chars": 45571
+}

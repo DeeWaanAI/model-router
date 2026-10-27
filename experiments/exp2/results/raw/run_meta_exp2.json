@@ -1,0 +1,20 @@
+{
+ "aggregate_binding_id": "b_179276693736600089",
+ "aggregate_both_sides": {
+  "private_requests": 22,
+  "private_routed_to_cloud": 0
+ },
+ "audit_M7a_classified_private_exit": 0,
+ "audit_M7b_labelled_private_exit": 1,
+ "battery_sha256": "bd833e8835a6b46c5325b5c087aafad653346ee4db177b73604edd1347e0268b",
+ "cost_usd": 0.0,
+ "finished": "2026-10-23T14:48:57Z",
+ "mode": "dry_run",
+ "n_classified_private_needles": 22,
+ "n_labelled_private_needles": 18,
+ "n_prompts": 44,
+ "policy_id": "pol_179269431986400003",
+ "registry_snapshot_hash": "cff3c0ffa2a04577dbfbef1998eced8c2422c6e5634df117d15ce44adbb1bc5d",
+ "run": "exp2",
+ "started": "2026-10-23T14:48:56Z"
+}

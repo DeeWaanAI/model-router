@@ -1,0 +1,1143 @@
+{
+ "schema": "datapoints-v1",
+ "generated": "2026-10-26",
+ "paper": "paper/draft.tex",
+ "convention": "Sources are frozen artifacts only: raw run outputs (experiments/*/results/raw/), frozen corpora, the chained datasets, and the frozen outputs of committed analysis scripts (spine.py, baselines.py, diagnostics.py, fault_injection.py, rules_audit.py, annotate.py runs, compute_spend_summary.py) under results/derived/. Audit reports (audit_*.json) are used ONLY for claims about the audit itself. The spine recomputes every derived artifact from raw; that is the deeper check. `expect` is the artifact's exact value; the paper prints it rounded. `marker` is verbatim draft text (whitespace-normalized).",
+ "datapoints": [
+  {
+   "id": "DP-001",
+   "claim": "verification checks pass (abstract)",
+   "marker": "263 checks pass on 414 recorded decisions across eight runs",
+   "kind": "json",
+   "source": "experiments/results/derived/verification_summary.json",
+   "path": "verification_checks_total",
+   "expect": 263
+  },
+  {
+   "id": "DP-002",
+   "claim": "decisions replayed (abstract)",
+   "marker": "414 recorded decisions across eight runs",
+   "kind": "json",
+   "source": "experiments/results/derived/verification_summary.json",
+   "path": "decisions_replayed_total",
+   "expect": 414
+  },
+  {
+   "id": "DP-003",
+   "claim": "eight runs audited",
+   "marker": "across eight runs",
+   "kind": "json",
+   "source": "experiments/results/derived/verification_summary.json",
+   "path": "n_runs",
+   "expect": 8
+  },
+  {
+   "id": "DP-004",
+   "claim": "free 3B measured accuracy 0.00 on compute (abstract)",
+   "marker": "a free 3B model (measured accuracy 0.00)",
+   "kind": "json",
+   "source": "experiments/exp3/results/raw/capabilities_exp1-pilot-v3.json",
+   "path": "rows.4.measured.accuracy",
+   "expect": 0.0
+  },
+  {
+   "id": "DP-005",
+   "claim": "free 8B accuracy 0.67 (abstract)",
+   "marker": "a free 8B (0.67)",
+   "kind": "json",
+   "source": "experiments/exp3/results/raw/capabilities_exp1-pilot-v3.json",
+   "path": "rows.8.measured.accuracy",
+   "expect": 0.6667
+  },
+  {
+   "id": "DP-006",
+   "claim": "70B accuracy 0.83 (abstract)",
+   "marker": "$1.04/Mtok model (0.83)",
+   "kind": "json",
+   "source": "experiments/exp3/results/raw/capabilities_exp1-pilot-v3.json",
+   "path": "rows.0.measured.accuracy",
+   "expect": 0.8333
+  },
+  {
+   "id": "DP-007",
+   "claim": "flagship accuracy 1.00 (abstract)",
+   "marker": "\\$2/\\$6 model (1.00)",
+   "kind": "json",
+   "source": "experiments/exp3/results/raw/capabilities_exp1-pilot-v3.json",
+   "path": "rows.2.measured.accuracy",
+   "expect": 1.0
+  },
+  {
+   "id": "DP-008",
+   "claim": "70B declared price $1.04/Mtok",
+   "marker": "$1.04/Mtok",
+   "kind": "jsonl-find",
+   "source": "datasets/models/history.jsonl",
+   "find": {
+    "id": "mdl_179270040314500002"
+   },
+   "path": "price.input_per_mtok",
+   "expect": 1.0399999999999998
+  },
+  {
+   "id": "DP-009",
+   "claim": "flagship declared price $2 in / $6 out",
+   "marker": "\\$2/\\$6 model",
+   "kind": "jsonl-find",
+   "source": "datasets/models/history.jsonl",
+   "find": {
+    "id": "mdl_179270040314500003"
+   },
+   "path": "price.output_per_mtok",
+   "expect": 6.0
+  },
+  {
+   "id": "DP-010",
+   "claim": "four of five models compute the 800-row total exactly via code (abstract, Table 3)",
+   "marker": "four of five models compute an 800-row total exactly",
+   "kind": "jsonl-contains-count",
+   "source": "experiments/exp1/results/raw/arms_exp1-pilot-v3.jsonl",
+   "where": {
+    "item": "b_total_large_code",
+    "arch": "code"
+   },
+   "field": "program_stdout",
+   "contains": "361572.4",
+   "expect": 4
+  },
+  {
+   "id": "DP-011",
+   "claim": "five models attempted the code arm of that item",
+   "marker": "via code four of five print the exactly correct",
+   "kind": "jsonl-count",
+   "source": "experiments/exp1/results/raw/arms_exp1-pilot-v3.jsonl",
+   "where": {
+    "item": "b_total_large_code",
+    "arch": "code"
+   },
+   "expect": 5
+  },
+  {
+   "id": "DP-012",
+   "claim": "6 items per capability cell",
+   "marker": "with 6 items per capability cell one",
+   "kind": "json",
+   "source": "experiments/exp3/results/derived/sweep_exp3-sweep-v3.json",
+   "path": "points.0.n_items",
+   "expect": 6
+  },
+  {
+   "id": "DP-013",
+   "claim": "seven corruptions injected",
+   "marker": "injecting seven corruptions",
+   "kind": "json",
+   "source": "experiments/results/derived/fault_injection.json",
+   "path": "mutations.@len",
+   "expect": 7
+  },
+  {
+   "id": "DP-014",
+   "claim": "all seven caught on the expected check",
+   "marker": "all seven are caught on the check that should catch",
+   "kind": "json",
+   "source": "experiments/results/derived/fault_injection.json",
+   "path": "detected_on_expected_check",
+   "expect": "7/7"
+  },
+  {
+   "id": "DP-015",
+   "claim": "three clean copies produce zero failures",
+   "marker": "three unmodified copies produce zero",
+   "kind": "json",
+   "source": "experiments/results/derived/fault_injection.json",
+   "path": "false_positives",
+   "expect": "0/3"
+  },
+  {
+   "id": "DP-016",
+   "claim": "free local 8B 0.73 accuracy at $0 (abstract + baselines)",
+   "marker": "a free local model reaches 0.73 accuracy at \\$0",
+   "kind": "json-find",
+   "source": "experiments/results/derived/baselines.json",
+   "list_path": "panels.B_compute_6_items",
+   "where": {
+    "strategy": "always-local-8b"
+   },
+   "path": "accuracy",
+   "expect": 0.7273
+  },
+  {
+   "id": "DP-017",
+   "claim": "8B baseline cost $0",
+   "marker": "always local 8B & 0.73 & \\$0",
+   "kind": "json-find",
+   "source": "experiments/results/derived/baselines.json",
+   "list_path": "panels.B_compute_6_items",
+   "where": {
+    "strategy": "always-local-8b"
+   },
+   "path": "cost_usd",
+   "expect": 0.0
+  },
+  {
+   "id": "DP-018",
+   "claim": "always-flagship pays 4.8x the router for the same score",
+   "marker": "4.8$\\times$ what the router pays for the same score",
+   "kind": "ratio",
+   "num": {
+    "source": "experiments/results/derived/baselines.json",
+    "path": "panels.B_compute_6_items.4.cost_usd"
+   },
+   "den": {
+    "source": "experiments/results/derived/baselines.json",
+    "path": "panels.B_compute_6_items.7.cost_usd"
+   },
+   "expect": 4.756,
+   "tol": 0.05
+  },
+  {
+   "id": "DP-019",
+   "claim": "spend on frozen runs $0.3173",
+   "marker": "\\$0.3173",
+   "kind": "json",
+   "source": "experiments/results/derived/spend_summary.json",
+   "path": "group_totals_usd.frozen_runs",
+   "expect": 0.31726,
+   "tol": 0.0001
+  },
+  {
+   "id": "DP-020",
+   "claim": "project total $1.352 of a $10 cap",
+   "marker": "of a \\$10 cap",
+   "kind": "json",
+   "source": "experiments/results/derived/spend_summary.json",
+   "path": "project_total_usd",
+   "expect": 1.352495,
+   "tol": 0.0005
+  },
+  {
+   "id": "DP-021",
+   "claim": "cap is $10",
+   "marker": "\\$10 cap",
+   "kind": "json",
+   "source": "experiments/results/derived/spend_summary.json",
+   "path": "pilot_cap_usd",
+   "expect": 10.0
+  },
+  {
+   "id": "DP-022",
+   "claim": "replay table: 414/414 gate traces",
+   "marker": "414/414",
+   "kind": "json",
+   "source": "experiments/results/derived/verification_summary.json",
+   "path": "decisions_replayed_total",
+   "expect": 414
+  },
+  {
+   "id": "DP-023",
+   "claim": "five datasets' chains verify",
+   "marker": "5/5 datasets",
+   "kind": "json",
+   "source": "experiments/results/derived/audit_full_log.json",
+   "path": "checks.0.pass",
+   "expect": true
+  },
+  {
+   "id": "DP-024",
+   "claim": "audit full log: 17 checks all pass",
+   "marker": "17/17",
+   "kind": "json",
+   "source": "experiments/results/derived/audit_full_log.json",
+   "path": "checks.@len",
+   "expect": 17
+  },
+  {
+   "id": "DP-025",
+   "claim": "privacy battery: 44 prompts, 18 private",
+   "marker": "44 short prompts (18 private, 11 confidential, 15 public, 9 adversarial",
+   "kind": "json",
+   "source": "experiments/exp2/results/derived/headline_numbers.json",
+   "path": "battery.by_label.private",
+   "expect": 18
+  },
+  {
+   "id": "DP-026",
+   "claim": "battery n=44",
+   "marker": "44 short prompts",
+   "kind": "json",
+   "source": "experiments/exp2/results/derived/headline_numbers.json",
+   "path": "battery.n",
+   "expect": 44
+  },
+  {
+   "id": "DP-027",
+   "claim": "battery 9 adversarial",
+   "marker": "9 adversarial",
+   "kind": "json",
+   "source": "experiments/exp2/results/derived/headline_numbers.json",
+   "path": "battery.adversarial",
+   "expect": 9
+  },
+  {
+   "id": "DP-028",
+   "claim": "exp2 v1 rules: classifier accuracy 0.8182",
+   "marker": "v1 policy, substring rules & 0 & 0/18 & 0.8182 & 7 & 1 & 0.9545",
+   "kind": "json",
+   "source": "experiments/exp2/results/derived/headline_numbers.json",
+   "path": "runs.exp2.M3_accuracy",
+   "expect": 0.8182
+  },
+  {
+   "id": "DP-029",
+   "claim": "exp2 v1: 7 over / 1 under",
+   "marker": "0.8182 & 7 & 1 & 0.9545",
+   "kind": "json",
+   "source": "experiments/exp2/results/derived/headline_numbers.json",
+   "path": "runs.exp2.M4_over_classified",
+   "expect": 7
+  },
+  {
+   "id": "DP-030",
+   "claim": "exp2 v1: coverage 0.9545",
+   "marker": "& 7 & 1 & 0.9545",
+   "kind": "json",
+   "source": "experiments/exp2/results/derived/headline_numbers.json",
+   "path": "runs.exp2.M6_label_coverage",
+   "expect": 0.9545
+  },
+  {
+   "id": "DP-031",
+   "claim": "exp2 v2b: coverage 0.9318",
+   "marker": "v2b (word boundaries) & 0 & 0/18 & 0.8182 & 7 & 1 & 0.9318",
+   "kind": "json",
+   "source": "experiments/exp2/results/derived/headline_numbers.json",
+   "path": "runs.exp2-v2b.M6_label_coverage",
+   "expect": 0.9318
+  },
+  {
+   "id": "DP-032",
+   "claim": "exp2 v4 (ruleset v2): 0.8864, 5 over, 0 under, 0.9545",
+   "marker": "ruleset v2 & 0 & 0/18 & 0.8864 & 5 & 0 & 0.9545",
+   "kind": "json",
+   "source": "experiments/exp2/results/derived/headline_numbers.json",
+   "path": "runs.exp2-v4.M3_accuracy",
+   "expect": 0.8864
+  },
+  {
+   "id": "DP-033",
+   "claim": "exp2 v5 (ruleset v3): 0.9318, 3 over, 0 under, coverage 1.0",
+   "marker": "ruleset v3 (current) & 0 & 0/18 & 0.9318 & 3 & 0 & 1.0000",
+   "kind": "json",
+   "source": "experiments/exp2/results/derived/headline_numbers.json",
+   "path": "runs.exp2-v5.M3_accuracy",
+   "expect": 0.9318
+  },
+  {
+   "id": "DP-034",
+   "claim": "zero end-to-end violations in every run (M2 0/18)",
+   "marker": "0/18",
+   "kind": "json",
+   "source": "experiments/exp2/results/derived/headline_numbers.json",
+   "path": "runs.exp2-v5.M2_end_to_end_violations",
+   "expect": 0
+  },
+  {
+   "id": "DP-035",
+   "claim": "paired exact test p = 0.0625 = 2*(1/2)^5 (five fixed, none broken; components verified in DP-028/DP-033)",
+   "marker": "$p = 0.0625$",
+   "kind": "ratio",
+   "num": {
+    "const": 2
+   },
+   "den": {
+    "const": 32
+   },
+   "expect": 0.0625
+  },
+  {
+   "id": "DP-036",
+   "claim": "rules vs author on tuning set: 124 items, 0.9758",
+   "marker": "124 & 0.9758 & 0.9589",
+   "kind": "json",
+   "source": "experiments/exp2/results/derived/rules_audit.json",
+   "path": "all.accuracy",
+   "expect": 0.9758
+  },
+  {
+   "id": "DP-037",
+   "claim": "Qwen3.8 vs author: 122, 0.9836, kappa 0.9728",
+   "marker": "122 & 0.9836 & 0.9728",
+   "kind": "json",
+   "source": "experiments/exp2/results/derived/annotation_agreement.json",
+   "path": "annotator_vs_author.accuracy",
+   "expect": 0.9836
+  },
+  {
+   "id": "DP-038",
+   "claim": "Qwen3.8 kappa 0.9728",
+   "marker": "0.9836 & 0.9728",
+   "kind": "json",
+   "source": "experiments/exp2/results/derived/annotation_agreement.json",
+   "path": "annotator_vs_author.kappa",
+   "expect": 0.9728
+  },
+  {
+   "id": "DP-039",
+   "claim": "DeepSeek vs author tuning+A: 187, 0.9840, 0.9736",
+   "marker": "187 & 0.9840 & 0.9736",
+   "kind": "json",
+   "source": "experiments/exp2/results/derived/annotation_agreement_deepseek.json",
+   "path": "annotator_vs_author.kappa",
+   "expect": 0.9736
+  },
+  {
+   "id": "DP-040",
+   "claim": "DeepSeek battery B: 70, 0.9857, 0.9772",
+   "marker": "70 & 0.9857 & 0.9772",
+   "kind": "json",
+   "source": "experiments/exp2/results/derived/deepseek_heldout_b.json",
+   "path": "annotator_vs_author.kappa",
+   "expect": 0.9772
+  },
+  {
+   "id": "DP-041",
+   "claim": "annotation cost $0.095 (three runs)",
+   "marker": "Total annotation cost: \\$0.095",
+   "kind": "json",
+   "source": "experiments/results/derived/spend_summary.json",
+   "path": "groups.annotations.qwen_tuning124",
+   "expect": 0.054136
+  },
+  {
+   "id": "DP-042",
+   "claim": "rules v6 battery B: acc 0.542, 7 under, 26 over",
+   "marker": "rules (v6, with guard) & 0.542 & 7 & 26",
+   "kind": "glob-json",
+   "source": "experiments/exp2/results/raw/verifier_eval_rules_*.json",
+   "path": "metrics.accuracy",
+   "expect": 0.5417
+  },
+  {
+   "id": "DP-043",
+   "claim": "two-marker variant: 0.417, 7 under, 35 over",
+   "marker": "rules + two-marker public test & 0.417 & 7 & 35",
+   "kind": "glob-json",
+   "source": "experiments/exp2/results/raw/verifier_eval_two_markers_*.json",
+   "path": "metrics.accuracy",
+   "expect": 0.4167
+  },
+  {
+   "id": "DP-044",
+   "claim": "local-8B verifier: 0.556, 6 under, 26 over",
+   "marker": "rules + local-8B verifier & 0.556 & 6 & 26",
+   "kind": "glob-json",
+   "source": "experiments/exp2/results/raw/verifier_eval_local8b_*.json",
+   "path": "metrics.accuracy",
+   "expect": 0.5556
+  },
+  {
+   "id": "DP-045",
+   "claim": "frontier verifier (public only): 0.597, 3 under, 26 over",
+   "marker": "frontier verifier (public verdicts only) & 0.597 & 3 & 26",
+   "kind": "glob-json",
+   "source": "experiments/exp2/results/raw/verifier_eval_frontier_2*.json",
+   "path": "metrics.accuracy",
+   "expect": 0.5972
+  },
+  {
+   "id": "DP-046",
+   "claim": "frontier annotator: 0.861, 9 under, 1 over",
+   "marker": "frontier annotator (labels every prompt) & \\textbf{0.861} & 9 & 1",
+   "kind": "glob-json",
+   "source": "experiments/exp2/results/raw/verifier_eval_frontier_annot_*.json",
+   "path": "metrics.accuracy",
+   "expect": 0.8611
+  },
+  {
+   "id": "DP-047",
+   "claim": "rules right 54% on battery B",
+   "marker": "the rules are right 54\\% of the time",
+   "kind": "glob-json",
+   "source": "experiments/exp2/results/raw/verifier_eval_rules_*.json",
+   "path": "metrics.n",
+   "expect": 72
+  },
+  {
+   "id": "DP-048",
+   "claim": "held-out A (64 items): rules v6 accuracy 0.672",
+   "marker": "scores \\textbf{0.672} with no under-classifications",
+   "kind": "json",
+   "source": "experiments/exp2/results/derived/rules_audit.json",
+   "path": [
+    "by_set",
+    "prompts_heldout.jsonl",
+    "accuracy"
+   ],
+   "expect": 0.6719
+  },
+  {
+   "id": "DP-049",
+   "claim": "58% of battery A prompts match no rule",
+   "marker": "58\\% of prompts matching no rule",
+   "kind": "ratio",
+   "num": {
+    "source": "experiments/exp2/results/derived/rules_audit.json",
+    "path": [
+     "by_set",
+     "prompts_heldout.jsonl",
+     "defaulted",
+     "@len"
+    ]
+   },
+   "den": {
+    "source": "experiments/exp2/results/derived/rules_audit.json",
+    "path": [
+     "by_set",
+     "prompts_heldout.jsonl",
+     "n"
+    ]
+   },
+   "expect": 0.578,
+   "tol": 0.005
+  },
+  {
+   "id": "DP-050",
+   "claim": "battery B: 0.542 with seven under-classifications (limits)",
+   "marker": "\\textbf{0.542} with seven",
+   "kind": "json",
+   "source": "experiments/exp2/results/derived/rules_audit.json",
+   "path": [
+    "by_set",
+    "prompts_heldout_b.jsonl",
+    "accuracy"
+   ],
+   "expect": 0.5417
+  },
+  {
+   "id": "DP-051",
+   "claim": "twelve questions asked two ways",
+   "marker": "twelve questions two ways",
+   "kind": "json",
+   "source": "experiments/exp1/results/raw/run_meta_exp1-pilot-v3.json",
+   "path": "n_items",
+   "expect": 12
+  },
+  {
+   "id": "DP-052",
+   "claim": "800 rows / exact total 361,572.40 (ground truth)",
+   "marker": "361{,}572.40",
+   "kind": "csv-sum",
+   "source": "experiments/exp1/battery/corpus/expenses_large.csv",
+   "column": "amount",
+   "expect_rows": 800,
+   "expect_sum": 361572.4,
+   "tol": 0.01
+  },
+  {
+   "id": "DP-053",
+   "claim": "in-context: cheap cloud scores 0.5 on the total (1/2 fields)",
+   "marker": "cheap cloud & 0.5 & 1/2",
+   "kind": "jsonl-find",
+   "source": "experiments/exp1/results/raw/arms_exp1-pilot-v3.jsonl",
+   "find": {
+    "item": "b_total_large_inhead",
+    "arm": "cloud-cheap"
+   },
+   "path": "fields_correct",
+   "expect": 1
+  },
+  {
+   "id": "DP-054",
+   "claim": "via code: local 3B program failed (0/2)",
+   "marker": "wrong (program failed) & 0/2",
+   "kind": "jsonl-find",
+   "source": "experiments/exp1/results/raw/arms_exp1-pilot-v3.jsonl",
+   "find": {
+    "item": "b_total_large_code",
+    "arm": "local-3b"
+   },
+   "path": "fields_correct",
+   "expect": 0
+  },
+  {
+   "id": "DP-055",
+   "claim": "via code: flagship exact (2/2 after regrade alias)",
+   "marker": "flagship & 0.5 & 1/2 & \\textbf{exact} & 2/2",
+   "kind": "jsonl-contains-count",
+   "source": "experiments/exp1/results/raw/arms_exp1-pilot-v3.jsonl",
+   "where": {
+    "item": "b_total_large_code",
+    "arm": "cloud-max"
+   },
+   "field": "program_stdout",
+   "contains": "361572.4",
+   "expect": 1
+  },
+  {
+   "id": "DP-056",
+   "claim": "code arm input 168-217 tokens",
+   "marker": "168--217 tokens for the request",
+   "kind": "jsonl-range",
+   "source": "experiments/exp1/results/raw/arms_exp1-pilot-v3.jsonl",
+   "field": "tokens_in",
+   "where": {
+    "arch": "code"
+   },
+   "expect": [
+    168,
+    217
+   ]
+  },
+  {
+   "id": "DP-057",
+   "claim": "in-context input 1,213-24,096 tokens",
+   "marker": "1{,}213--24{,}096",
+   "kind": "jsonl-range",
+   "source": "experiments/exp1/results/raw/arms_exp1-pilot-v3.jsonl",
+   "field": "tokens_in",
+   "where": {
+    "arch": "inhead"
+   },
+   "expect": [
+    1213,
+    24096
+   ]
+  },
+  {
+   "id": "DP-058",
+   "claim": "regrade: 8 rows, $0, no new calls",
+   "marker": "(8 rows, \\$0, no new model calls)",
+   "kind": "json",
+   "source": "experiments/exp1/results/derived/regrade_exp1-pilot-v3.json",
+   "path": "n_scores_corrected",
+   "expect": 8
+  },
+  {
+   "id": "DP-059",
+   "claim": "replication: 132 attempts",
+   "marker": "132 attempts",
+   "kind": "jsonl-len",
+   "source": "experiments/exp1/results/raw/reps_exp1-reps-v1.jsonl",
+   "expect": 132
+  },
+  {
+   "id": "DP-060",
+   "claim": "replication: 6 excluded for context",
+   "marker": "six excluded for context",
+   "kind": "jsonl-count",
+   "source": "experiments/exp1/results/raw/reps_exp1-reps-v1.jsonl",
+   "where": {
+    "status": "excluded_context"
+   },
+   "expect": 6
+  },
+  {
+   "id": "DP-061",
+   "claim": "replication: 97 answered",
+   "marker": "97 answered",
+   "kind": "jsonl-count",
+   "source": "experiments/exp1/results/raw/reps_exp1-reps-v1.jsonl",
+   "where": {
+    "status": "ok"
+   },
+   "expect": 97
+  },
+  {
+   "id": "DP-062",
+   "claim": "replication: 29 typed failures",
+   "marker": "29 typed failures",
+   "kind": "jsonl-count",
+   "source": "experiments/exp1/results/raw/reps_exp1-reps-v1.jsonl",
+   "where": {
+    "status": "malformed_response"
+   },
+   "expect": 29
+  },
+  {
+   "id": "DP-063",
+   "claim": "replication spend $0.616",
+   "marker": "\\$0.616",
+   "kind": "json",
+   "source": "experiments/exp1/results/raw/summary_exp1-reps-v1.json",
+   "path": "spend_usd",
+   "expect": 0.616032
+  },
+  {
+   "id": "DP-064",
+   "claim": "reps: local 3B compute mean 0.0000 n=18",
+   "marker": "local 3B & compute & 18 & 0.0000",
+   "kind": "json",
+   "source": "experiments/exp1/results/raw/summary_exp1-reps-v1.json",
+   "path": [
+    "cells",
+    "llama3.2:latest|compute_via_code",
+    "mean_accuracy"
+   ],
+   "expect": 0.0
+  },
+  {
+   "id": "DP-065",
+   "claim": "reps: local 8B compute 0.6667",
+   "marker": "local 8B & compute & 18 & 0.6667",
+   "kind": "json",
+   "source": "experiments/exp1/results/raw/summary_exp1-reps-v1.json",
+   "path": [
+    "cells",
+    "llama3.1:8b-instruct-q4_K_M|compute_via_code",
+    "mean_accuracy"
+   ],
+   "expect": 0.6667
+  },
+  {
+   "id": "DP-066",
+   "claim": "reps: cheap cloud compute 0.2222, spread 0.50, $0.0031",
+   "marker": "cheap cloud & compute & 18 & 0.2222",
+   "kind": "json",
+   "source": "experiments/exp1/results/raw/summary_exp1-reps-v1.json",
+   "path": [
+    "cells",
+    "Together GLM-5.3-Flash|compute_via_code",
+    "mean_accuracy"
+   ],
+   "expect": 0.2222
+  },
+  {
+   "id": "DP-067",
+   "claim": "reps: flagship compute 1.0000 at $0.0229",
+   "marker": "flagship & compute & 18 & 1.0000",
+   "kind": "json",
+   "source": "experiments/exp1/results/raw/summary_exp1-reps-v1.json",
+   "path": [
+    "cells",
+    "Qwen3.8-2.4T-A95B|compute_via_code",
+    "cost_usd"
+   ],
+   "expect": 0.022914
+  },
+  {
+   "id": "DP-068",
+   "claim": "reps: flagship extraction $0.5891",
+   "marker": "\\$0.5891",
+   "kind": "json",
+   "source": "experiments/exp1/results/raw/summary_exp1-reps-v1.json",
+   "path": [
+    "cells",
+    "Qwen3.8-2.4T-A95B|structured_extract",
+    "cost_usd"
+   ],
+   "expect": 0.589074
+  },
+  {
+   "id": "DP-069",
+   "claim": "same connection costs 25.7x with rows in context",
+   "marker": "25.7$\\times$ more with the rows in context",
+   "kind": "ratio",
+   "num": {
+    "source": "experiments/exp1/results/raw/summary_exp1-reps-v1.json",
+    "path": [
+     "cells",
+     "Qwen3.8-2.4T-A95B|structured_extract",
+     "cost_usd"
+    ]
+   },
+   "den": {
+    "source": "experiments/exp1/results/raw/summary_exp1-reps-v1.json",
+    "path": [
+     "cells",
+     "Qwen3.8-2.4T-A95B|compute_via_code",
+     "cost_usd"
+    ]
+   },
+   "expect": 25.71,
+   "tol": 0.05
+  },
+  {
+   "id": "DP-070",
+   "claim": "cheap arm: 29 of 36 calls return content:null at 2,048",
+   "marker": "29 of 36 calls",
+   "kind": "jsonl-count",
+   "source": "experiments/exp1/results/raw/reps_exp1-reps-v1.jsonl",
+   "where": {
+    "arm": "Together GLM-5.3-Flash",
+    "status": "malformed_response"
+   },
+   "expect": 29
+  },
+  {
+   "id": "DP-071",
+   "claim": "budget probe: 9 of 12 answered at 8,192",
+   "marker": "answers 9 of 12 calls instead of 7 of 36",
+   "kind": "jsonl-count",
+   "source": "experiments/exp1/results/raw/reps_budget-8192-all.jsonl",
+   "where": {
+    "arm": "Together GLM-5.3-Flash",
+    "status": "ok"
+   },
+   "expect": 9
+  },
+  {
+   "id": "DP-072",
+   "claim": "7 of 36 answered at 2,048",
+   "marker": "instead of 7 of 36",
+   "kind": "jsonl-count",
+   "source": "experiments/exp1/results/raw/reps_exp1-reps-v1.jsonl",
+   "where": {
+    "arm": "Together GLM-5.3-Flash",
+    "status": "ok"
+   },
+   "expect": 7
+  },
+  {
+   "id": "DP-073",
+   "claim": "compute accuracy 0.22 -> 1.00 at 8,192 for $0.0057",
+   "marker": "0.22 to \\textbf{1.00} for \\$0.0057",
+   "kind": "json",
+   "source": "experiments/exp1/results/raw/summary_glm-budget-8192.json",
+   "path": [
+    "cells",
+    "Together GLM-5.3-Flash|compute_via_code",
+    "cost_usd"
+   ],
+   "expect": 0.005708
+  },
+  {
+   "id": "DP-074",
+   "claim": "four times cheaper than flagship's 1.00 at $0.0229",
+   "marker": "four times cheaper than the flagship's 1.00 at \\$0.0229",
+   "kind": "ratio",
+   "num": {
+    "source": "experiments/exp1/results/raw/summary_exp1-reps-v1.json",
+    "path": [
+     "cells",
+     "Qwen3.8-2.4T-A95B|compute_via_code",
+     "cost_usd"
+    ]
+   },
+   "den": {
+    "source": "experiments/exp1/results/raw/summary_glm-budget-8192.json",
+    "path": [
+     "cells",
+     "Together GLM-5.3-Flash|compute_via_code",
+     "cost_usd"
+    ]
+   },
+   "expect": 4.01,
+   "tol": 0.05
+  },
+  {
+   "id": "DP-075",
+   "claim": "budget table: cheap cloud @8192 costs $0.0066",
+   "marker": "0.22 & \\textbf{1.00} & \\$0.0066",
+   "kind": "json",
+   "source": "experiments/exp1/results/raw/summary_budget-8192-all.json",
+   "path": [
+    "cells",
+    "Together GLM-5.3-Flash|compute_via_code",
+    "cost_usd"
+   ],
+   "expect": 0.006628
+  },
+  {
+   "id": "DP-076",
+   "claim": "budget table: flagship @8192 costs $0.0078",
+   "marker": "1.00 & 1.00 & \\$0.0078",
+   "kind": "json",
+   "source": "experiments/exp1/results/raw/summary_budget-8192-all.json",
+   "path": [
+    "cells",
+    "Qwen3.8-2.4T-A95B|compute_via_code",
+    "cost_usd"
+   ],
+   "expect": 0.00775
+  },
+  {
+   "id": "DP-077",
+   "claim": "sweep: ten capability rows",
+   "marker": "ten capability rows (five arms, two task classes)",
+   "kind": "json",
+   "source": "experiments/exp3/results/derived/sweep_exp3-sweep-v3.json",
+   "path": "n_capability_rows_active",
+   "expect": 10
+  },
+  {
+   "id": "DP-078",
+   "claim": "sweep: 24 policy points, costing $0",
+   "marker": "24 policy points",
+   "kind": "json",
+   "source": "experiments/exp3/results/derived/sweep_exp3-sweep-v3.json",
+   "path": "points.@len",
+   "expect": 24
+  },
+  {
+   "id": "DP-079",
+   "claim": "sweep no-floors point: local 3B, acc 0.00, $0",
+   "marker": "no floors & local 3B & 0.00 & \\$0.000000",
+   "kind": "json-find",
+   "source": "experiments/exp3/results/derived/sweep_exp3-sweep-v3.json",
+   "list_path": "points",
+   "where": {
+    "mode": "allow_flagged",
+    "min_accuracy": 0.0,
+    "min_schema": 0.0
+   },
+   "path": "mean_measured_accuracy",
+   "expect": 0.0
+  },
+  {
+   "id": "DP-080",
+   "claim": "sweep accuracy-floor-only: 70B, 0.83, $0.001054",
+   "marker": "accuracy $\\ge 0.8$ only & 70B & 0.83 & \\$0.001054",
+   "kind": "json-find",
+   "source": "experiments/exp3/results/derived/sweep_exp3-sweep-v3.json",
+   "list_path": "points",
+   "where": {
+    "mode": "allow_flagged",
+    "min_accuracy": 0.8,
+    "min_schema": 0.0
+   },
+   "path": "est_cost_usd",
+   "expect": 0.001054
+  },
+  {
+   "id": "DP-081",
+   "claim": "sweep shipped floors: flagship 1.00 at $0.002018",
+   "marker": "shipped (both floors) & flagship & 1.00 & \\$0.002018",
+   "kind": "json-find",
+   "source": "experiments/exp3/results/derived/sweep_exp3-sweep-v3.json",
+   "list_path": "points",
+   "where": {
+    "mode": "allow_flagged",
+    "min_accuracy": 0.8,
+    "min_schema": 0.9
+   },
+   "path": "est_cost_usd",
+   "expect": 0.002018
+  },
+  {
+   "id": "DP-082",
+   "claim": "shipped default costs 40x the cheapest measured cloud arm",
+   "marker": "40$\\times$ the cheapest measured cloud arm",
+   "kind": "ratio",
+   "num": {
+    "source": "datasets/models/history.jsonl",
+    "find": {
+     "id": "mdl_179270040314500003"
+    },
+    "path": "price.input_per_mtok"
+   },
+   "den": {
+    "source": "datasets/models/history.jsonl",
+    "find": {
+     "id": "mdl_179270040314600007"
+    },
+    "path": "price.input_per_mtok"
+   },
+   "expect": 40.0,
+   "tol": 0.01
+  },
+  {
+   "id": "DP-083",
+   "claim": "fig2: twelve allow_flagged points",
+   "marker": "Twelve \\code{allow\\_flagged} policy points collapse onto four outcomes",
+   "kind": "json-list-count",
+   "source": "experiments/exp3/results/derived/sweep_exp3-sweep-v3.json",
+   "list_path": "points",
+   "where": {
+    "mode": "allow_flagged"
+   },
+   "expect": 12
+  },
+  {
+   "id": "DP-084",
+   "claim": "fig2: four distinct outcomes",
+   "marker": "collapse onto four outcomes",
+   "kind": "json-distinct",
+   "source": "experiments/exp3/results/derived/sweep_exp3-sweep-v3.json",
+   "list_path": "points",
+   "where": {
+    "mode": "allow_flagged"
+   },
+   "path": "chosen_counts",
+   "expect": 4
+  },
+  {
+   "id": "DP-085",
+   "claim": "baselines: cheapest cloud 0.45 at $0.000489",
+   "marker": "cheapest cloud arm & 0.45 & \\$0.000489 & \\$0.000098",
+   "kind": "json-find",
+   "source": "experiments/results/derived/baselines.json",
+   "list_path": "panels.B_compute_6_items",
+   "where": {
+    "strategy": "cheapest-cloud"
+   },
+   "path": "accuracy",
+   "expect": 0.4545
+  },
+  {
+   "id": "DP-086",
+   "claim": "baselines: always 70B 0.82 at $0.002520",
+   "marker": "always 70B & 0.82 & \\$0.002520 & \\$0.000280",
+   "kind": "json-find",
+   "source": "experiments/results/derived/baselines.json",
+   "list_path": "panels.B_compute_6_items",
+   "where": {
+    "strategy": "always-70b"
+   },
+   "path": "cost_usd",
+   "expect": 0.00252
+  },
+  {
+   "id": "DP-087",
+   "claim": "baselines: always flagship 1.00 at $0.009598",
+   "marker": "always flagship & 1.00 & \\$0.009598 & \\$0.000873",
+   "kind": "json-find",
+   "source": "experiments/results/derived/baselines.json",
+   "list_path": "panels.B_compute_6_items",
+   "where": {
+    "strategy": "always-flagship"
+   },
+   "path": "cost_usd",
+   "expect": 0.009598
+  },
+  {
+   "id": "DP-088",
+   "claim": "baselines: router v9 (dry-run) 1.00 at $0.002018",
+   "marker": "router, default policy (v9, dry-run) & 1.00 & \\$0.002018",
+   "kind": "json-find",
+   "source": "experiments/results/derived/baselines.json",
+   "list_path": "panels.B_compute_6_items",
+   "where": {
+    "strategy": "router, default policy (v9)"
+   },
+   "path": "accuracy",
+   "expect": 1.0
+  },
+  {
+   "id": "DP-089",
+   "claim": "baselines: router v8 tie-break defect row 0.00 at $0.002018",
+   "marker": "router, same policy before tie-break fix (v8, dry-run) & 0.00 & \\$0.002018",
+   "kind": "json-find",
+   "source": "experiments/results/derived/baselines.json",
+   "list_path": "panels.B_compute_6_items",
+   "where": {
+    "strategy": "router, before tie-break fix (v8)"
+   },
+   "path": "accuracy",
+   "expect": 0.0
+  },
+  {
+   "id": "DP-090",
+   "claim": "baselines: decisions actually made 0.82 at $0.002542",
+   "marker": "router, decisions actually made & 0.82 & \\$0.002542 & \\$0.000282",
+   "kind": "json-find",
+   "source": "experiments/results/derived/baselines.json",
+   "list_path": "panels.B_compute_6_items",
+   "where": {
+    "strategy": "router (actual decisions)"
+   },
+   "path": "cost_usd",
+   "expect": 0.002542
+  },
+  {
+   "id": "DP-091",
+   "claim": "gate binding: 828 decisions, privacy binds in 26.7%",
+   "marker": "over 828 decisions the privacy gate excluded at least one candidate in 26.7\\%",
+   "kind": "json",
+   "source": "experiments/results/derived/diagnostics.json",
+   "path": "gates.overall.2.binding_rate",
+   "expect": 0.2669
+  },
+  {
+   "id": "DP-092",
+   "claim": "verifiability binds in 62.4% and emptied the set 84 times",
+   "marker": "verifiability in 62.4\\% and emptied the set 84 times",
+   "kind": "json",
+   "source": "experiments/results/derived/diagnostics.json",
+   "path": "gates.overall.3.emptied_set",
+   "expect": 84
+  },
+  {
+   "id": "DP-093",
+   "claim": "context fit binds in 1.6%; availability ran twice and excluded none",
+   "marker": "context fit in 1.6\\%, and availability ran in only two decisions and excluded none",
+   "kind": "json",
+   "source": "experiments/results/derived/diagnostics.json",
+   "path": "gates.overall.1.binding_rate",
+   "expect": 0.0161
+  },
+  {
+   "id": "DP-094",
+   "claim": "latency: 70B median 2.6s, local 3B 8.3s, cheap cloud 1.5s",
+   "marker": "median attempt is 2.6\\,s, the free local 3B's is 8.3\\,s",
+   "kind": "json",
+   "source": "experiments/results/derived/diagnostics.json",
+   "path": "latency.0.p50_s",
+   "expect": 2.639
+  },
+  {
+   "id": "DP-095",
+   "claim": "determinism: ten semantic fields, zero differ",
+   "marker": "identical in all ten semantic fields",
+   "kind": "json",
+   "source": "experiments/results/derived/diagnostics.json",
+   "path": "determinism.fields_compared.@len",
+   "expect": 10
+  },
+  {
+   "id": "DP-096",
+   "claim": "check 7 cloud spend $0.0002",
+   "marker": "Check 7 spent \\$0.0002",
+   "kind": "json",
+   "source": "experiments/results/derived/acceptance_live_20261026.json",
+   "path": "cloud_spend_usd",
+   "expect": 0.0001882,
+   "tol": 0.0001
+  },
+  {
+   "id": "DP-097",
+   "claim": "12 concurrent requests leave a valid chain",
+   "marker": "12 concurrent requests leave a valid chain, 12 unique ids",
+   "kind": "text-in-file",
+   "source": "experiments/results/derived/acceptance_rc_offline_20261026.json",
+   "text": "12 unique"
+  },
+  {
+   "id": "DP-098",
+   "claim": "RC-2 removed eleven files / 1,132 lines from the router package",
+   "marker": "eleven files --- 1{,}132 lines, of which 257 were the backends themselves",
+   "kind": "json",
+   "source": "experiments/results/derived/code_metrics.json",
+   "path": "superseded_total_lines",
+   "expect": 1132
+  },
+  {
+   "id": "DP-099",
+   "claim": "conclusion: 1.00 for about $0.0003 per item (router v9 cost / 6 items)",
+   "kind": "ratio",
+   "num": {
+    "source": "experiments/results/derived/baselines.json",
+    "path": "panels.B_compute_6_items.7.cost_usd"
+   },
+   "den": {
+    "const": 6
+   },
+   "expect": 0.000336,
+   "tol": 1e-05,
+   "marker": "scores 1.00 on a task for about \\$0.0003"
+  },
+  {
+   "id": "DP-100",
+   "claim": "conclusion: computes the 800-row total correctly four times out of five via code",
+   "marker": "four times out of five when it writes code",
+   "kind": "jsonl-contains-count",
+   "source": "experiments/exp1/results/raw/arms_exp1-pilot-v3.jsonl",
+   "where": {
+    "item": "b_total_large_code",
+    "arch": "code"
+   },
+   "field": "program_stdout",
+   "contains": "361572.4",
+   "expect": 4
+  }
+ ]
+}

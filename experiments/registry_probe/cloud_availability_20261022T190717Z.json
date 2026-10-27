@@ -1,0 +1,92 @@
+{
+ "purpose": "cloud serverless-availability probe (one minimal call per candidate)",
+ "at": "2026-10-22T19:07:17Z",
+ "prompt": "Reply with one word: ready",
+ "max_tokens": 8,
+ "catalog_artifact": "experiments/catalog/together_models_2026-10-22T182818Z.json",
+ "total_actual_cost_usd": 9.271999999999999e-05,
+ "results": [
+  {
+   "upstream_id": "Qwen/Qwen2-1.5B-Instruct",
+   "callable": false,
+   "error_code": "model_not_available",
+   "error": "HTTP 400 Bad Request from https://api.together.xyz/v1/chat/completions: {\n  \"id\": \"p6HQjyF-2kFHot-a4eac882c94834e2\",\n  \"error\": {\n    \"message\": \"Unable to access non-serverless model Qwen/Qwen2-1.5B-Instruct. Please visit https://api.together.ai/models/Qwen/Qwen2-1.5B-Instruct to create and start a",
+   "input_per_mtok": 0.02,
+   "output_per_mtok": 0.02,
+   "context_length": 32768
+  },
+  {
+   "upstream_id": "openai/gpt-oss-20b",
+   "callable": false,
+   "error_code": "model_not_available",
+   "error": "HTTP 400 Bad Request from https://api.together.xyz/v1/chat/completions: {\n  \"id\": \"p6HQkDZ-2kFHot-a4eac8898eebd2d8\",\n  \"error\": {\n    \"message\": \"Unable to access non-serverless model openai/gpt-oss-20b. Please visit https://api.together.ai/models/openai/gpt-oss-20b to create and start a new dedicat",
+   "input_per_mtok": 0.05,
+   "output_per_mtok": 0.2,
+   "context_length": 131072
+  },
+  {
+   "upstream_id": "nvidia/NVIDIA-Nemotron-Nano-9B-v2",
+   "callable": false,
+   "error_code": "model_not_available",
+   "error": "HTTP 400 Bad Request from https://api.together.xyz/v1/chat/completions: {\n  \"id\": \"p6HQkSG-2kFHot-a4eac88ef9ad37ae\",\n  \"error\": {\n    \"message\": \"Unable to access non-serverless model nvidia/NVIDIA-Nemotron-Nano-9B-v2. Please visit https://api.together.ai/models/nvidia/NVIDIA-Nemotron-Nano-9B-v2 to ",
+   "input_per_mtok": 0.060000000000000005,
+   "output_per_mtok": 0.25,
+   "context_length": 131072
+  },
+  {
+   "upstream_id": "meta-llama/Llama-3.2-3B-Instruct",
+   "callable": false,
+   "error_code": "model_not_available",
+   "error": "HTTP 400 Bad Request from https://api.together.xyz/v1/chat/completions: {\n  \"id\": \"p6HQkeL-2kFHot-a4eac893db05a056\",\n  \"error\": {\n    \"message\": \"Unable to access non-serverless model meta-llama/Llama-3.2-3B-Instruct. Please visit https://api.together.ai/models/meta-llama/Llama-3.2-3B-Instruct to cr",
+   "input_per_mtok": 0.060000000000000005,
+   "output_per_mtok": 0.060000000000000005,
+   "context_length": 131072
+  },
+  {
+   "upstream_id": "meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo",
+   "callable": false,
+   "error_code": "model_not_available",
+   "error": "HTTP 400 Bad Request from https://api.together.xyz/v1/chat/completions: {\n  \"id\": \"p6HQkqf-2kFHot-a4eac897fad8cc28\",\n  \"error\": {\n    \"message\": \"Unable to access non-serverless model meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo. Please visit https://api.together.ai/models/meta-llama/Meta-Llama-3.1-8",
+   "input_per_mtok": 0.18000000000000002,
+   "output_per_mtok": 0.18000000000000002,
+   "context_length": 131072
+  },
+  {
+   "upstream_id": "meta-llama/Llama-3.3-70B-Instruct-Turbo",
+   "callable": true,
+   "http_status": 200,
+   "finish_reason": "stop",
+   "tokens_in": 41,
+   "tokens_out": 2,
+   "wall_clock_s": 1.306,
+   "cost_usd": 4.471999999999999e-05,
+   "response_text": "Ready",
+   "input_per_mtok": 1.0399999999999998,
+   "output_per_mtok": 1.0399999999999998,
+   "context_length": 131072
+  },
+  {
+   "upstream_id": "Qwen/Qwen3.8-2.4T-A95B",
+   "callable": true,
+   "http_status": 200,
+   "finish_reason": "stop",
+   "tokens_in": 18,
+   "tokens_out": 2,
+   "wall_clock_s": 2.574,
+   "cost_usd": 4.8e-05,
+   "response_text": "ready",
+   "input_per_mtok": 2.0,
+   "output_per_mtok": 6.0,
+   "context_length": 1010000
+  },
+  {
+   "upstream_id": "meta-llama/Llama-3.1-405B-Instruct",
+   "callable": false,
+   "error_code": "model_not_available",
+   "error": "HTTP 400 Bad Request from https://api.together.xyz/v1/chat/completions: {\n  \"id\": \"p6HQnBc-2kFHot-a4eac8b41ca9759d\",\n  \"error\": {\n    \"message\": \"Unable to access non-serverless model meta-llama/Llama-3.1-405B-Instruct. Please visit https://api.together.ai/models/meta-llama/Llama-3.1-405B-Instruct t",
+   "input_per_mtok": 3.5,
+   "output_per_mtok": 3.5,
+   "context_length": 4096
+  }
+ ]
+}

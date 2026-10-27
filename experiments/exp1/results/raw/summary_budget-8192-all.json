@@ -1,0 +1,41 @@
+{
+ "cells": {
+  "Qwen3.8-2.4T-A95B|compute_via_code": {
+   "code_runs_rate": 1.0,
+   "cost_usd": 0.00775,
+   "mean_accuracy": 1.0,
+   "n": 6,
+   "per_rep": {
+    "1": 1.0
+   }
+  },
+  "Qwen3.8-2.4T-A95B|structured_extract": {
+   "code_runs_rate": null,
+   "cost_usd": 0.277106,
+   "mean_accuracy": 0.1667,
+   "n": 6,
+   "per_rep": {
+    "1": 0.1667
+   }
+  },
+  "Together GLM-5.3-Flash|compute_via_code": {
+   "code_runs_rate": 1.0,
+   "cost_usd": 0.006628,
+   "mean_accuracy": 1.0,
+   "n": 6,
+   "per_rep": {
+    "1": 1.0
+   }
+  },
+  "Together GLM-5.3-Flash|structured_extract": {
+   "code_runs_rate": null,
+   "cost_usd": 0.009422,
+   "mean_accuracy": 0.3333,
+   "n": 6,
+   "per_rep": {
+    "1": 0.3333
+   }
+  }
+ },
+ "spend_usd": 0.300906
+}

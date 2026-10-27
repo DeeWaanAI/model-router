@@ -1,0 +1,26 @@
+{
+ "artifact": "code metrics for the RC-2 simplification (paper \u00a74.6)",
+ "backend_files": {
+  "dashscope.py": 74,
+  "http.py": 29,
+  "ollama_backend.py": 82,
+  "together.py": 72
+ },
+ "backend_lines": 257,
+ "n_files": 11,
+ "script": "computed by wc-style line counts over experiments/registry_tools/superseded/",
+ "superseded_files": {
+  "dashscope.py": 74,
+  "http.py": 29,
+  "ollama_backend.py": 82,
+  "probe_dashscope.py": 105,
+  "probe_local_arms.py": 99,
+  "probe_tokenizer_agreement.py": 87,
+  "smoke_cloud.py": 79,
+  "test_live_local.py": 167,
+  "test_router_pre_rc.py": 205,
+  "together.py": 72,
+  "verify_dashscope_route.py": 133
+ },
+ "superseded_total_lines": 1132
+}

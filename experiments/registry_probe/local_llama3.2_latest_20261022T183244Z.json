@@ -1,0 +1,35 @@
+{
+ "model": "llama3.2:latest",
+ "probed_at": "2026-10-22T18:32:44Z",
+ "details": {
+  "parent_model": "",
+  "format": "gguf",
+  "family": "llama",
+  "families": [
+   "llama"
+  ],
+  "parameter_size": "3.2B",
+  "quantization_level": "Q4_K_M"
+ },
+ "model_info": {
+  "general.architecture": "llama",
+  "general.quantization_version": 2,
+  "llama.context_length": 131072,
+  "llama.embedding_length": 3072
+ },
+ "parameters_declared": "stop                           \"<|start_header_id|>\"\nstop                           \"<|end_header_id|>\"\nstop                           \"<|eot_id|>\"",
+ "requested_num_ctx": 8192,
+ "probe_call": {
+  "wall_clock_s": 3.002,
+  "prompt_eval_count": 60,
+  "eval_count": 9,
+  "prompt_eval_duration_ns": 243546000,
+  "eval_duration_ns": 181895000,
+  "finish_reason": "stop",
+  "response_chars": 17,
+  "response_is_json_only": true,
+  "prompt_tokens_per_s": 246.4,
+  "output_tokens_per_s": 49.5,
+  "response_text": "{\"total\": 200.50}"
+ }
+}

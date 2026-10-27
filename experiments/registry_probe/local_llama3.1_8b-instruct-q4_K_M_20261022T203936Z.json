@@ -1,0 +1,35 @@
+{
+ "model": "llama3.1:8b-instruct-q4_K_M",
+ "probed_at": "2026-10-22T20:39:36Z",
+ "details": {
+  "parent_model": "",
+  "format": "gguf",
+  "family": "llama",
+  "families": [
+   "llama"
+  ],
+  "parameter_size": "8.0B",
+  "quantization_level": "Q4_K_M"
+ },
+ "model_info": {
+  "general.architecture": "llama",
+  "general.quantization_version": 2,
+  "llama.context_length": 131072,
+  "llama.embedding_length": 4096
+ },
+ "parameters_declared": "stop                           \"<|start_header_id|>\"\nstop                           \"<|end_header_id|>\"\nstop                           \"<|eot_id|>\"",
+ "requested_num_ctx": 8192,
+ "probe_call": {
+  "wall_clock_s": 6.04,
+  "prompt_eval_count": 45,
+  "eval_count": 9,
+  "prompt_eval_duration_ns": 324734000,
+  "eval_duration_ns": 375222000,
+  "finish_reason": "stop",
+  "response_chars": 16,
+  "response_is_json_only": true,
+  "prompt_tokens_per_s": 138.6,
+  "output_tokens_per_s": 24.0,
+  "response_text": "{\"total\": 200.5}"
+ }
+}

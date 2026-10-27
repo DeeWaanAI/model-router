@@ -1,0 +1,677 @@
+[
+ {
+  "title": "FrugalGPT: How to Use Large Language Models While Reducing Cost and Improving Performance",
+  "year": 2023,
+  "venue": "arXiv",
+  "authors": [
+   "Lingjiao Chen",
+   "Matei Zaharia",
+   "James Zou"
+  ],
+  "doi": "https://doi.org/10.48550/arXiv.2305.05176",
+  "journal_doi": null,
+  "verified_via": "arxiv",
+  "pick": "FrugalGPT: How to Use Large Language Models While Reducing Cost"
+ },
+ {
+  "title": "Large Language Model Cascades with Mixture of Thoughts Representations for Cost-efficient Reasoning",
+  "year": 2023,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+   "Murong Yue",
+   "Jie Zhao",
+   "Min Zhang",
+   "Du, Liang",
+   "Ziyu Yao"
+  ],
+  "doi": "https://doi.org/10.48550/arxiv.2310.03094",
+  "cited_by": 3,
+  "verified_via": "openalex",
+  "pick": "Large Language Model Cascades with Mixture of Thoughts"
+ },
+ {
+  "title": "RouteLLM: Learning to Route LLMs with Preference Data",
+  "year": 2024,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+   "Isaac Ong",
+   "Amjad Almahairi",
+   "Vin\u2010Cent Wu",
+   "Wei-Lin Chiang",
+   "Tianhao Wu",
+   "Joseph E. Gonzalez"
+  ],
+  "doi": "https://doi.org/10.48550/arxiv.2406.18665",
+  "cited_by": 14,
+  "verified_via": "openalex",
+  "pick": "RouteLLM: Learning to Route LLMs with Preference Data"
+ },
+ {
+  "title": "Hybrid LLM: Cost-Efficient and Quality-Aware Query Routing",
+  "year": 2024,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+   "Dujian Ding",
+   "Ankur Mallick",
+   "Chi Wang",
+   "Sim, Robert",
+   "Subhabrata Mukherjee",
+   "Victor R\u00fchle"
+  ],
+  "doi": "https://doi.org/10.48550/arxiv.2404.14618",
+  "cited_by": 11,
+  "verified_via": "openalex",
+  "pick": "Hybrid LLM: Cost-Efficient and Quality-Aware Query Routing"
+ },
+ {
+  "title": "RouterBench: A Benchmark for Multi-LLM Routing System",
+  "year": 2024,
+  "venue": "arXiv",
+  "authors": [
+   "Qitian Jason Hu",
+   "Jacob Bieker",
+   "Xiuyu Li",
+   "Nan Jiang",
+   "Benjamin Keigwin",
+   "Gaurav Ranganath"
+  ],
+  "doi": "https://doi.org/10.48550/arXiv.2403.12031",
+  "journal_doi": null,
+  "verified_via": "arxiv",
+  "pick": "RouterBench: A Benchmark for Multi-LLM Routing System"
+ },
+ {
+  "title": "AutoMix: Automatically Mixing Language Models",
+  "year": 2024,
+  "venue": "neural information processing systems",
+  "authors": [
+   "Pranjal Aggarwal",
+   "Aman Madaan",
+   "Ankit Anand",
+   "Srividya Pranavi Potharaju",
+   "Swaroop Ranjan Mishra",
+   "Pei Zhou"
+  ],
+  "doi": "https://doi.org/10.52202/079017-4164",
+  "cited_by": 18,
+  "verified_via": "openalex",
+  "pick": "AutoMix: Automatically Mixing Language Models"
+ },
+ {
+  "title": "Large Language Model Routing with Benchmark Datasets",
+  "year": 2023,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+   "Tal Shnitzer",
+   "Anthony Ou",
+   "M\u00edrian Silva",
+   "Kate Soule",
+   "Yuekai Sun",
+   "Justin Solomon"
+  ],
+  "doi": "https://doi.org/10.48550/arxiv.2309.15789",
+  "cited_by": 9,
+  "verified_via": "openalex",
+  "pick": "Large Language Model Routing with Benchmark Datasets"
+ },
+ {
+  "title": "A Unified Approach to Routing and Cascading for LLMs",
+  "year": 2024,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+   "Jasper Dekoninck",
+   "Maximilian Baader",
+   "Martin Vechev"
+  ],
+  "doi": "https://doi.org/10.48550/arxiv.2410.10347",
+  "cited_by": 0,
+  "verified_via": "openalex",
+  "pick": "A Unified Approach to Routing and Cascading for LLMs"
+ },
+ {
+  "title": "Efficient Contextual LLM Cascades through Budget-Constrained Policy Learning",
+  "year": 2024,
+  "venue": "neural information processing systems",
+  "authors": [
+   "Xuechen Zhang",
+   "Zijian Huang",
+   "Ege Onur Taga",
+   "Carlee Joe\u2010Wong",
+   "Samet Oymak",
+   "Jiasi Chen"
+  ],
+  "doi": "https://doi.org/10.52202/079017-2910",
+  "cited_by": 3,
+  "verified_via": "openalex",
+  "pick": "Efficient Contextual LLM Cascades through Budget-Constrained Policy Learning"
+ },
+ {
+  "title": "Agreement-Based Cascading for Efficient Inference",
+  "year": 2024,
+  "venue": "arXiv",
+  "authors": [
+   "Steven Kolawole",
+   "Don Dennis",
+   "Ameet Talwalkar",
+   "Virginia Smith"
+  ],
+  "doi": "https://doi.org/10.48550/arXiv.2407.02348",
+  "journal_doi": null,
+  "verified_via": "arxiv",
+  "pick": "Agreement-Based Cascading for Efficient Inference"
+ },
+ {
+  "title": "Cost-Saving LLM Cascades with Early Abstention",
+  "year": 2025,
+  "venue": "arXiv",
+  "authors": [
+   "Michael J. Zellinger",
+   "Rex Liu",
+   "Matt Thomson"
+  ],
+  "doi": "https://doi.org/10.48550/arXiv.2502.09054",
+  "journal_doi": null,
+  "verified_via": "arxiv",
+  "pick": "Cost-Saving LLM Cascades with Early Abstention"
+ },
+ {
+  "title": "Rational Tuning of LLM Cascades via Probabilistic Modeling",
+  "year": 2025,
+  "venue": "arXiv",
+  "authors": [
+   "Michael J. Zellinger",
+   "Matt Thomson"
+  ],
+  "doi": "https://doi.org/10.48550/arXiv.2501.09345",
+  "journal_doi": null,
+  "verified_via": "arxiv",
+  "pick": "Rational Tuning of LLM Cascades via Probabilistic Modeling"
+ },
+ {
+  "title": "Adaptive LLM Routing under Budget Constraints",
+  "year": 2025,
+  "venue": null,
+  "authors": [
+   "Pranoy Panda",
+   "Raghav Magazine",
+   "Chaitanya Devaguptapu",
+   "Sho Takemori",
+   "Vishal Sharma"
+  ],
+  "doi": "https://doi.org/10.18653/v1/2025.findings-emnlp.1301",
+  "cited_by": 2,
+  "verified_via": "openalex",
+  "pick": "Adaptive LLM Routing under Budget Constraints"
+ },
+ {
+  "title": "Harnessing the Power of Multiple Minds: Lessons Learned from LLM Routing",
+  "year": 2024,
+  "venue": "arXiv",
+  "authors": [
+   "KV Aditya Srivatsa",
+   "Kaushal Kumar Maurya",
+   "Ekaterina Kochmar"
+  ],
+  "doi": "https://doi.org/10.48550/arXiv.2405.00467",
+  "journal_doi": null,
+  "verified_via": "arxiv",
+  "pick": "Harnessing the Power of Multiple Minds: Lessons Learned from LLM Routing"
+ },
+ {
+  "title": "RouterEval: A Comprehensive Benchmark for Routing LLMs to Explore Model-level Scaling Up in LLMs",
+  "year": 2025,
+  "venue": null,
+  "authors": [
+   "Zhongzhan Huang",
+   "Guoming Ling",
+   "Yupei Lin",
+   "Yandong Chen",
+   "Shanshan Zhong",
+   "Hefeng Wu"
+  ],
+  "doi": "https://doi.org/10.18653/v1/2025.findings-emnlp.208",
+  "cited_by": 4,
+  "verified_via": "openalex",
+  "pick": "RouterEval: A Comprehensive Benchmark for Routing LLMs"
+ },
+ {
+  "title": "Arch-Router: Aligning LLM Routing with Human Preferences",
+  "year": 2025,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+   "Tran, Co",
+   "Paracha, Salman",
+   "Hafeez, Adil",
+   "Chen, Shuguang"
+  ],
+  "doi": "https://doi.org/10.48550/arxiv.2506.16655",
+  "cited_by": 1,
+  "verified_via": "openalex",
+  "pick": "Arch-Router: Aligning LLM Routing with Human Preferences"
+ },
+ {
+  "title": "Most of the LLM Routing Gap Is Task Type",
+  "year": 2026,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+   "Janghoon Lee"
+  ],
+  "doi": "https://doi.org/10.48550/arxiv.2608.23023",
+  "cited_by": 0,
+  "verified_via": "openalex",
+  "pick": "Most of the LLM Routing Gap Is Task Type"
+ },
+ {
+  "title": "ICL-Router: In-Context Learned Model Representations for LLM Routing",
+  "year": 2025,
+  "venue": "arXiv",
+  "authors": [
+   "Chenxu Wang",
+   "Hao Li",
+   "Yiqun Zhang",
+   "Linyao Chen",
+   "Jianhao Chen",
+   "Ping Jian"
+  ],
+  "doi": "https://doi.org/10.48550/arXiv.2510.09719",
+  "journal_doi": null,
+  "verified_via": "arxiv",
+  "pick": "ICL-Router: In-Context Learned Model Representations"
+ },
+ {
+  "title": "C3PO: Optimized Large Language Model Cascades with Probabilistic Cost Constraints for Reasoning",
+  "year": 2025,
+  "venue": "arXiv",
+  "authors": [
+   "Antonios Valkanas",
+   "Soumyasundar Pal",
+   "Pavel Rumiantsev",
+   "Yingxue Zhang",
+   "Mark Coates"
+  ],
+  "doi": "https://doi.org/10.48550/arXiv.2511.07396",
+  "journal_doi": null,
+  "verified_via": "arxiv",
+  "pick": "C3PO: Optimized Large Language Model Cascades with Probabilistic Cost Constraints"
+ },
+ {
+  "title": "UCCI: Calibrated Uncertainty for Cost-Optimal LLM Cascade Routing",
+  "year": 2026,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+   "Varun Kotte"
+  ],
+  "doi": "https://doi.org/10.48550/arxiv.2605.18796",
+  "cited_by": 0,
+  "verified_via": "openalex",
+  "pick": "UCCI: Calibrated Uncertainty for Cost-Optimal LLM Cascade Routing"
+ },
+ {
+  "title": "Budget-Aware Calibrated Cascades for E-Commerce Customer Assistants: A Cost\u2013Quality Routing Benchmark",
+  "year": 2025,
+  "venue": "Zenodo (CERN European Organization for Nuclear Research)",
+  "authors": [
+   "Veera Ravindra Divi"
+  ],
+  "doi": "https://doi.org/10.5281/zenodo.21869763",
+  "cited_by": 0,
+  "verified_via": "openalex",
+  "pick": "Budget-Aware Calibrated Cascades for E-Commerce Customer Assistants"
+ },
+ {
+  "title": "SeqRoute: Global Budget-Aware Sequential LLM Routing via Offline Reinforcement Learning",
+  "year": 2026,
+  "venue": "arXiv",
+  "authors": [
+   "Zhongling Xu",
+   "Shunan Zheng",
+   "Wei Wang"
+  ],
+  "doi": "https://doi.org/10.48550/arXiv.2605.25424",
+  "journal_doi": null,
+  "verified_via": "arxiv",
+  "pick": "SeqRoute: Global Budget-Aware Sequential LLM Routing"
+ },
+ {
+  "title": "Is Escalation Worth It? On the Depth of LLM Cascades",
+  "year": 2026,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+   "Dylan Bouchard"
+  ],
+  "doi": "https://doi.org/10.48550/arxiv.2605.06350",
+  "cited_by": 0,
+  "verified_via": "openalex",
+  "pick": "Is Escalation Worth It? On the Depth of LLM Cascades"
+ },
+ {
+  "title": "Cost-Optimal LLM Routing with Limited User Feedback under User Satisfaction Guarantees",
+  "year": 2026,
+  "venue": "arXiv",
+  "authors": [
+   "Herbert Woisetschl\u00e4ger",
+   "Arastun Mammadli",
+   "Ryan Zhang",
+   "Shiqiang Wang"
+  ],
+  "doi": "https://doi.org/10.48550/arXiv.2606.19376",
+  "journal_doi": null,
+  "verified_via": "arxiv",
+  "pick": "Cost-Optimal LLM Routing with Limited User Feedback"
+ },
+ {
+  "title": "Routing Should Pay for Itself: Sparse Supervision for Economical LLM Routing",
+  "year": 2026,
+  "venue": "arXiv",
+  "authors": [
+   "Guannan Lai",
+   "Gelin Bian",
+   "Hao-Xuan Ma",
+   "Jun-Peng Jiang",
+   "Long Chen",
+   "Jian-Dong Liu"
+  ],
+  "doi": "https://doi.org/10.48550/arXiv.2609.37402",
+  "journal_doi": null,
+  "verified_via": "arxiv",
+  "pick": "Routing Should Pay for Itself: Sparse Supervision"
+ },
+ {
+  "title": "Privacy-preserved LLM Cascade via CoT-enhanced Policy Learning",
+  "year": 2024,
+  "venue": "arXiv",
+  "authors": [
+   "Kai Zhang",
+   "Congchao Wang",
+   "Liqian Peng",
+   "Alec Go",
+   "Xiaozhong Liu"
+  ],
+  "doi": "https://doi.org/10.48550/arXiv.2410.08014",
+  "journal_doi": null,
+  "verified_via": "arxiv",
+  "pick": "Privacy-preserved LLM Cascade via CoT-enhanced Policy Learning"
+ },
+ {
+  "title": "Privacy-Preserving LLMs Routing",
+  "year": 2026,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+   "Xidong Wu",
+   "Yukuan Zhang",
+   "Yuqiong Ji",
+   "Reza Shirkavand",
+   "Qian Lou",
+   "Shangqian Gao"
+  ],
+  "doi": "https://doi.org/10.48550/arxiv.2604.15728",
+  "cited_by": 0,
+  "verified_via": "openalex",
+  "pick": "Privacy-Preserving LLMs Routing"
+ },
+ {
+  "title": "A Hybrid Local-Cloud Large Language Model Architecture for Privacy Preservation and Costefficient Inference",
+  "year": 2026,
+  "venue": "International Conference on Computing for Sustainable Global Development",
+  "authors": [
+   "Anshpreet Singh Bindra",
+   "Bhani Kaur",
+   "Manisha Mittal",
+   "Mansimaran Singh",
+   "Gian Kaur",
+   "Surender Kumar"
+  ],
+  "doi": "https://doi.org/10.23919/indiacom70271.2026.11525699",
+  "cited_by": 0,
+  "verified_via": "openalex",
+  "pick": "A Hybrid Local-Cloud Large Language Model Architecture for Privacy Preservation"
+ },
+ {
+  "title": "OCELOT: Inference-Leakage Budgets for Privacy-Preserving LLM Agents",
+  "year": 2026,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+   "Jin Xie",
+   "Songze Li"
+  ],
+  "doi": "https://doi.org/10.48550/arxiv.2606.12341",
+  "cited_by": 0,
+  "verified_via": "openalex",
+  "pick": "OCELOT: Inference-Leakage Budgets"
+ },
+ {
+  "title": "Collaborative Inference and Learning between Edge SLMs and Cloud LLMs: A Survey of Algorithms, Execution, and Open Challenges",
+  "year": 2026,
+  "venue": "ACM Computing Surveys",
+  "authors": [
+   "Senyang Li",
+   "Haozhao Wang",
+   "Wenchao Xu",
+   "Rui Zhang",
+   "Song Guo",
+   "Jingling Yuan"
+  ],
+  "doi": "https://doi.org/10.1145/3838593",
+  "cited_by": 9,
+  "verified_via": "openalex",
+  "pick": "Collaborative Inference and Learning between Edge SLMs and Cloud LLMs"
+ },
+ {
+  "title": "LLMSwitchBench: A New Edge-Cloud Routing Benchmark for Smart Home LLM Inference",
+  "year": 2025,
+  "venue": "IEEE Access",
+  "authors": [
+   "Zihao Liu",
+   "Ping Guo",
+   "Peng Wang"
+  ],
+  "doi": "https://doi.org/10.1109/access.2025.3632276",
+  "cited_by": 1,
+  "verified_via": "openalex",
+  "pick": "LLMSwitchBench: A New Edge-Cloud Routing Benchmark"
+ },
+ {
+  "title": "Efficient Inference for Edge Large Language Models: A Survey",
+  "year": 2025,
+  "venue": "Tsinghua Science & Technology",
+  "authors": [
+   "Guanyu Cai",
+   "Ruiming Tian",
+   "Lang Yang",
+   "Yunzhe Jia",
+   "Lingkun Li",
+   "Jiliang Wang"
+  ],
+  "doi": "https://doi.org/10.26599/tst.2025.9010166",
+  "cited_by": 19,
+  "verified_via": "openalex",
+  "pick": "Efficient Inference for Edge Large Language Models: A Survey"
+ },
+ {
+  "title": "Sensitive-Topic Leakage Through LLM Routing Metadata: Measurement and Mitigation",
+  "year": 2026,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+   "Teng-Ruei Chen"
+  ],
+  "doi": "https://doi.org/10.48550/arxiv.2610.09981",
+  "cited_by": 0,
+  "verified_via": "openalex",
+  "pick": "Sensitive-Topic Leakage Through LLM Routing Metadata"
+ },
+ {
+  "title": "CSDiff: Training-Free LLM Task Routing via a CS Difficulty Lexicon and Bloom's Taxonomy Verb Multipliers",
+  "year": 2026,
+  "venue": "Zenodo (CERN European Organization for Nuclear Research)",
+  "authors": [
+   "olenick benjamin"
+  ],
+  "doi": "https://doi.org/10.5281/zenodo.20388407",
+  "cited_by": 0,
+  "verified_via": "openalex",
+  "pick": "CSDiff: Training-Free LLM Task Routing via a CS Difficulty Lexicon"
+ },
+ {
+  "title": "Register Bias in Complexity-Based Large Language Model Routing",
+  "year": 2026,
+  "venue": "arXiv",
+  "authors": [
+   "Simran Koul"
+  ],
+  "doi": "https://doi.org/10.48550/arXiv.2609.17542",
+  "journal_doi": null,
+  "verified_via": "arxiv",
+  "pick": "Register Bias in Complexity-Based Large Language Model Routing"
+ },
+ {
+  "title": "Who Pays for Efficient Inference? Confidence-Based Small-to-Large LLM Routing Across Tasks and Languages",
+  "year": 2026,
+  "venue": "arXiv",
+  "authors": [
+   "Md Sabbir Hossen",
+   "Anichur Rahman",
+   "Pabon Shaha",
+   "Airin Afroj Aishi",
+   "Andrew H. Sung",
+   "Md Shohel Rana"
+  ],
+  "doi": "https://doi.org/10.48550/arXiv.2610.23249",
+  "journal_doi": null,
+  "verified_via": "arxiv",
+  "pick": "Who Pays for Efficient Inference? Confidence-Based Small-to-Large LLM Routing"
+ },
+ {
+  "title": "SeLMRoute: Probabilistic Semantic Evidence for Large Language Model Routing",
+  "year": 2026,
+  "venue": "arXiv",
+  "authors": [
+   "Vasilis Perifanis",
+   "Nikolaos Pavlidis",
+   "Symeon Symeonidis"
+  ],
+  "doi": "https://doi.org/10.48550/arXiv.2609.34736",
+  "journal_doi": null,
+  "verified_via": "arxiv",
+  "pick": "SeLMRoute: Probabilistic Semantic Evidence for Large Language Model Routing"
+ },
+ {
+  "title": "VeriRouter: Towards Verifiable LLM Routing",
+  "year": 2026,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+   "Mengyu Yao",
+   "Ziqi Zhang",
+   "Shaofei Li",
+   "Yifeng Cai",
+   "Ding Li",
+   "Yao Guo"
+  ],
+  "doi": "https://doi.org/10.48550/arxiv.2610.17431",
+  "cited_by": 0,
+  "verified_via": "openalex",
+  "pick": "VeriRouter: Towards Verifiable LLM Routing"
+ },
+ {
+  "title": "When Correct Isn't Usable: Improving Structured Output Reliability in Small Language Models",
+  "year": 2026,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+   "Cosimo Galeone",
+   "Minsu Park",
+   "Giuseppe Ettorre",
+   "Daniele Ligorio"
+  ],
+  "doi": "https://doi.org/10.48550/arxiv.2605.02363",
+  "cited_by": 0,
+  "verified_via": "openalex",
+  "pick": "When Correct Isn't Usable: Improving Structured Output Reliability in Small Language Models"
+ },
+ {
+  "title": "Research on Structured Output of Large Language Models Based on Dual-Dimensional Testing",
+  "year": 2026,
+  "venue": "Applied and Computational Engineering",
+  "authors": [
+   "Chao Zhang"
+  ],
+  "doi": "https://doi.org/10.54254/2755-2721/2026.gl37071",
+  "cited_by": 0,
+  "verified_via": "openalex",
+  "pick": "Research on Structured Output of Large Language Models Based on Dual-Dimensional Testing"
+ },
+ {
+  "title": "Deterministic and Auditable Routing for Artificial Intelligence in Regulated Environments",
+  "year": 2026,
+  "venue": "Zenodo (CERN European Organization for Nuclear Research)",
+  "authors": [
+   "Felippe Barcelos"
+  ],
+  "doi": "https://doi.org/10.5281/zenodo.20531686",
+  "cited_by": 0,
+  "verified_via": "openalex",
+  "pick": "Deterministic and Auditable Routing for Artificial Intelligence in Regulated Environments"
+ },
+ {
+  "title": "Route to Rome Attack: Directing LLM Routers to Expensive Models via Adversarial Suffix Optimization",
+  "year": 2026,
+  "venue": "Annual Meeting of the Association for Computational Linguistics (ACL)",
+  "authors": [
+   "Haochun Tang",
+   "Yuliang Yan",
+   "Jiahua Lu",
+   "Huaxiao Liu",
+   "Enyan Dai"
+  ],
+  "doi": "https://doi.org/10.18653/v1/2026.acl-long.2051",
+  "cited_by": 0,
+  "verified_via": "openalex",
+  "pick": "Route to Rome Attack: Directing LLM Routers to Expensive Models"
+ },
+ {
+  "title": "When Efficiency Backfires: Cascading LLMs Trigger Cascade Failure under Adversarial Attack",
+  "year": 2026,
+  "venue": "arXiv",
+  "authors": [
+   "Zehan Sun",
+   "Dingfan Chen",
+   "Songze Li"
+  ],
+  "doi": "https://doi.org/10.48550/arXiv.2605.17288",
+  "journal_doi": null,
+  "verified_via": "arxiv",
+  "pick": "When Efficiency Backfires: Cascading LLMs Trigger Cascade Failure under Adversarial Attack"
+ },
+ {
+  "title": "LLMRouterBench: A Massive Benchmark and Unified Framework for LLM Routing",
+  "year": 2026,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+   "Hao Li",
+   "Yiqun Zhang",
+   "Zhaoyan Guo",
+   "Chenxu Wang",
+   "Shengji Tang",
+   "Qiaosheng Eric Zhang"
+  ],
+  "doi": "https://doi.org/10.48550/arXiv.2601.07206",
+  "openalex_id": "https://openalex.org/W7124118279",
+  "verified_via": "openalex-id",
+  "pick": "LLMRouterBench: A Massive Benchmark and Unified Framework for LLM Routing"
+ },
+ {
+  "title": "Confidence-Calibrated Small-Large Language Model Collaboration for Cost-Efficient Reasoning",
+  "year": 2026,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+   "Chuang Zhang",
+   "Zizhen Zhu",
+   "Yihao Wei",
+   "Bing Tian",
+   "Junyi Liu",
+   "Henan Wang"
+  ],
+  "doi": "https://doi.org/10.48550/arXiv.2603.03752",
+  "openalex_id": "https://openalex.org/W7134017093",
+  "verified_via": "openalex-id",
+  "pick": "Confidence-Calibrated Small-Large Language Model Collaboration"
+ }
+]

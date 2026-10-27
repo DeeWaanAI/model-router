@@ -1,0 +1,44 @@
+{
+ "artifact": "project spend summary, recomputed from frozen raw artifacts",
+ "frozen_runs_usd": 0.31726,
+ "group_totals_usd": {
+  "annotations": 0.095636,
+  "budget_probes": 0.310243,
+  "connector_checks": 0.013324,
+  "desktop_check": 0.0,
+  "frozen_runs": 0.31726,
+  "replication": 0.616032
+ },
+ "groups": {
+  "annotations": {
+   "deepseek_connectivity_probe": 0.000416,
+   "deepseek_heldout_b_70": 0.012732,
+   "deepseek_tuning_A_188": 0.028352,
+   "qwen_tuning124": 0.054136
+  },
+  "budget_probes": {
+   "budget-8192-all": 0.300906,
+   "glm-budget-8192": 0.009337
+  },
+  "connector_checks": {
+   "acceptance_live_20261026": 0.0001882,
+   "cloud_availability probes (3)": 0.0,
+   "dashscope_e2e": 0.01313603
+  },
+  "desktop_check": {
+   "lmstudio_bundled_llamacpp": 0.0
+  },
+  "frozen_runs": {
+   "exp1-pilot": 0.03855,
+   "exp1-pilot-v2": 0.004521,
+   "exp1-pilot-v3": 0.274189,
+   "exp2 series (all six runs, dry-run)": 0.0
+  },
+  "replication": {
+   "exp1-reps-v1": 0.616032
+  }
+ },
+ "pilot_cap_usd": 10.0,
+ "project_total_usd": 1.352495,
+ "script": "experiments/compute_spend_summary.py"
+}

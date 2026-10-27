@@ -1,0 +1,46 @@
+{
+ "annotator": "deepseek-ai/DeepSeek-V4.1-Flash",
+ "annotator_failures": {},
+ "annotator_vs_author": {
+  "accuracy": 1.0,
+  "confusion": {
+   "private": {
+    "private": 3
+   }
+  },
+  "kappa": null,
+  "n": 3
+ },
+ "by_set": {
+  "prompts.jsonl": {
+   "annotator_vs_author": 1.0,
+   "n": 3,
+   "rules_vs_author": 1.0
+  }
+ },
+ "disagreements": [],
+ "experiment": "second annotator (LLM) on the privacy battery",
+ "n_items": 3,
+ "note": "the annotator is a model, not a human; battery is synthetic",
+ "rules_vs_annotator": {
+  "agreement": 1.0,
+  "confusion": {
+   "private": {
+    "private": 3
+   }
+  },
+  "kappa": null,
+  "n": 3
+ },
+ "rules_vs_author": {
+  "accuracy": 1.0,
+  "confusion": {
+   "private": {
+    "private": 3
+   }
+  },
+  "kappa": null,
+  "n": 3
+ },
+ "spend_usd": 0.000416
+}

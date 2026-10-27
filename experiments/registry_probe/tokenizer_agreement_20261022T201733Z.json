@@ -1,0 +1,26 @@
+{
+ "purpose": "frozen-tokenizer vs provider-meter agreement (template overhead cancelled)",
+ "at": "2026-10-22T20:17:33Z",
+ "provider": "dashscope-intl",
+ "model": "qwen-flash",
+ "corpus": "/Users/youssefhariri/Documents/ideas_2026 copy 2/DeewaanAI OS/02-view-renderer/qafiya-ref/experiments/efficiency-experiment/corpus/tabular/expenses_medium.csv",
+ "corpus_chars": 7534,
+ "metered_prompt_a": 17,
+ "metered_prompt_a_plus_corpus": 6025,
+ "provider_delta_tokens": 6008,
+ "candidates": [
+  {
+   "tokenizer_ref": "tokenizer/qwen25_tokenizer.json",
+   "my_tokens": 6008,
+   "abs_error_tokens": 0,
+   "relative_error": 0.0
+  },
+  {
+   "tokenizer_ref": "tokenizer/llama3_tokenizer.json",
+   "my_tokens": 4240,
+   "abs_error_tokens": -1768,
+   "relative_error": -0.29427
+  }
+ ],
+ "best_match": "tokenizer/qwen25_tokenizer.json"
+}

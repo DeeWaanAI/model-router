@@ -1,0 +1,300 @@
+{
+ "determinism": {
+  "bytes_equal_except_volatile": true,
+  "fields_compared": [
+   "privacy_class",
+   "task_class",
+   "classifier_matched_rank",
+   "gate_trace",
+   "feasible_set",
+   "chosen",
+   "outcome",
+   "refusal_reason",
+   "est_tokens_in",
+   "est_tokens_method"
+  ],
+  "fields_differing": []
+ },
+ "gates": {
+  "by_run": {
+   "dashscope-e2e": {
+    "context_fit": {
+     "excluded_something": 2,
+     "ran": 2
+    },
+    "privacy": {
+     "ran": 2
+    },
+    "verifiability": {
+     "ran": 2
+    }
+   },
+   "dbg": {
+    "context_fit": {
+     "excluded_something": 1,
+     "ran": 1
+    },
+    "privacy": {
+     "ran": 1
+    },
+    "verifiability": {
+     "ran": 1
+    }
+   },
+   "exp1-pilot": {
+    "context_fit": {
+     "emptied_set": 3,
+     "excluded_something": 3,
+     "ran": 6
+    },
+    "privacy": {
+     "excluded_something": 6,
+     "ran": 6
+    },
+    "verifiability": {
+     "ran": 6
+    }
+   },
+   "exp1-pilot-v2": {
+    "context_fit": {
+     "ran": 12
+    },
+    "privacy": {
+     "ran": 12
+    },
+    "verifiability": {
+     "ran": 12
+    }
+   },
+   "exp1-pilot-v3": {
+    "context_fit": {
+     "ran": 6
+    },
+    "privacy": {
+     "ran": 6
+    },
+    "verifiability": {
+     "excluded_something": 6,
+     "ran": 6
+    }
+   },
+   "exp2": {
+    "context_fit": {
+     "ran": 44
+    },
+    "privacy": {
+     "excluded_something": 36,
+     "ran": 44
+    },
+    "verifiability": {
+     "ran": 44
+    }
+   },
+   "exp2-mechanism": {
+    "context_fit": {
+     "emptied_set": 6,
+     "excluded_something": 6,
+     "ran": 6
+    },
+    "privacy": {
+     "excluded_something": 6,
+     "ran": 6
+    },
+    "verifiability": {
+     "ran": 6
+    }
+   },
+   "exp2-v2": {
+    "context_fit": {
+     "ran": 44
+    },
+    "privacy": {
+     "excluded_something": 36,
+     "ran": 44
+    },
+    "verifiability": {
+     "ran": 44
+    }
+   },
+   "exp2-v2b": {
+    "context_fit": {
+     "ran": 44
+    },
+    "privacy": {
+     "excluded_something": 36,
+     "ran": 44
+    },
+    "verifiability": {
+     "ran": 44
+    }
+   },
+   "exp2-v3": {
+    "context_fit": {
+     "ran": 44
+    },
+    "privacy": {
+     "excluded_something": 36,
+     "ran": 44
+    },
+    "verifiability": {
+     "ran": 44
+    }
+   },
+   "exp2-v4": {
+    "context_fit": {
+     "ran": 44
+    },
+    "privacy": {
+     "excluded_something": 32,
+     "ran": 44
+    },
+    "verifiability": {
+     "ran": 44
+    }
+   },
+   "exp2-v5": {
+    "context_fit": {
+     "ran": 44
+    },
+    "privacy": {
+     "excluded_something": 32,
+     "ran": 44
+    },
+    "verifiability": {
+     "ran": 44
+    }
+   },
+   "exp3-sweep": {
+    "context_fit": {
+     "ran": 156
+    },
+    "privacy": {
+     "ran": 240
+    },
+    "verifiability": {
+     "emptied_set": 84,
+     "excluded_something": 234,
+     "ran": 240
+    }
+   },
+   "exp3-sweep-v2": {
+    "context_fit": {
+     "ran": 144
+    },
+    "privacy": {
+     "ran": 144
+    },
+    "verifiability": {
+     "excluded_something": 138,
+     "ran": 144
+    }
+   },
+   "exp3-sweep-v3": {
+    "context_fit": {
+     "ran": 144
+    },
+    "privacy": {
+     "ran": 144
+    },
+    "verifiability": {
+     "excluded_something": 138,
+     "ran": 144
+    }
+   },
+   "local-arms-probe": {
+    "context_fit": {
+     "ran": 1
+    },
+    "privacy": {
+     "excluded_something": 1,
+     "ran": 1
+    },
+    "verifiability": {
+     "ran": 1
+    }
+   },
+   "rc-smoke": {
+    "availability": {
+     "ran": 1
+    },
+    "context_fit": {
+     "ran": 1
+    },
+    "privacy": {
+     "ran": 1
+    },
+    "verifiability": {
+     "excluded_something": 1,
+     "ran": 1
+    }
+   },
+   "trust-smoke": {
+    "availability": {
+     "ran": 1
+    },
+    "context_fit": {
+     "ran": 1
+    },
+    "privacy": {
+     "ran": 1
+    },
+    "verifiability": {
+     "ran": 1
+    }
+   }
+  },
+  "overall": [
+   {
+    "binding_rate": 0.0,
+    "decisions": 2,
+    "emptied_set": 0,
+    "excluded_something": 0,
+    "gate": "availability"
+   },
+   {
+    "binding_rate": 0.0161,
+    "decisions": 744,
+    "emptied_set": 9,
+    "excluded_something": 12,
+    "gate": "context_fit"
+   },
+   {
+    "binding_rate": 0.2669,
+    "decisions": 828,
+    "emptied_set": 0,
+    "excluded_something": 221,
+    "gate": "privacy"
+   },
+   {
+    "binding_rate": 0.6244,
+    "decisions": 828,
+    "emptied_set": 84,
+    "excluded_something": 517,
+    "gate": "verifiability"
+   }
+  ]
+ },
+ "latency": [
+  {
+   "max_s": 10.135,
+   "model": "Llama-3.3-70B-Instruct-Turbo",
+   "n_attempts": 7,
+   "p50_s": 2.639,
+   "p95_s": 10.135
+  },
+  {
+   "max_s": 12.142,
+   "model": "llama3.2:latest",
+   "n_attempts": 15,
+   "p50_s": 8.319,
+   "p95_s": 11.901
+  },
+  {
+   "max_s": 16.27,
+   "model": "qwen-flash",
+   "n_attempts": 2,
+   "p50_s": 1.547,
+   "p95_s": 16.27
+  }
+ ]
+}

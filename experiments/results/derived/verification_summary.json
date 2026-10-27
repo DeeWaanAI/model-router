@@ -1,0 +1,40 @@
+{
+ "artifact": "verification summary (frozen by spine.py at the end of every run)",
+ "audit_checks_per_run": {
+  "exp1-pilot-v3": 17,
+  "exp2": 20,
+  "exp2-v2": 20,
+  "exp2-v2b": 20,
+  "exp2-v3": 20,
+  "exp2-v4": 20,
+  "exp2-v5": 20,
+  "exp3-sweep-v3": 17
+ },
+ "audit_checks_total": 154,
+ "decisions_replayed_per_run": {
+  "exp1-pilot-v3": 6,
+  "exp2": 44,
+  "exp2-v2": 44,
+  "exp2-v2b": 44,
+  "exp2-v3": 44,
+  "exp2-v4": 44,
+  "exp2-v5": 44,
+  "exp3-sweep-v3": 144
+ },
+ "decisions_replayed_total": 414,
+ "n_runs": 8,
+ "runs_audited": [
+  "exp2",
+  "exp2-v2",
+  "exp2-v2b",
+  "exp2-v3",
+  "exp2-v4",
+  "exp2-v5",
+  "exp1-pilot-v3",
+  "exp3-sweep-v3"
+ ],
+ "spine_checks_failed": 0,
+ "spine_checks_passed": 109,
+ "spine_exit": 0,
+ "verification_checks_total": 263
+}

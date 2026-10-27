@@ -1,0 +1,47 @@
+{
+ "dataset": "models",
+ "id_field": "id",
+ "id_prefix": "mdl_",
+ "spec_ref": "05-model-router/spec.md \u00a714 (RC-1) \u2014 the registry is the user's connect list; supersedes \u00a71.2",
+ "fields": {
+  "id": "id",
+  "created_at": "timestamp",
+  "spec_version": "string",
+  "status": "enum[active,retired,discredited]",
+  "superseded_by": "id|null",
+  "source_ref": "list<id>",
+  "label": "string",
+  "connector": "enum[openai_compatible,ollama]",
+  "base_url": "string",
+  "model": "string",
+  "mode": "string|null",
+  "auth.scheme": "enum[bearer,header,x_api_key,none]",
+  "auth.key_env": "string|null",
+  "locus": "enum[local,cloud]",
+  "privacy_class": "enum[public,confidential,private]",
+  "price": "object",
+  "price.input_per_mtok": "number",
+  "price.output_per_mtok": "number",
+  "price.source": "enum[user_declared,unknown]",
+  "context_window": "number",
+  "output_budget_tokens": "number|null",
+  "tokenizer_ref": "string|null",
+  "request_params": "object|null",
+  "timeout_s": "number|null",
+  "local_resources": "object|null",
+  "health": "object|null",
+  "declared_at": "timestamp"
+ },
+ "derivations": [
+  "filter",
+  "count",
+  "groupby"
+ ],
+ "invariants": [
+  "no secret value is ever stored: auth.key_env names an environment variable and nothing else (RC-1.2)",
+  "locus and privacy_class are USER DECLARATIONS, not measurements; the decision log marks them declared (RC-1.3)",
+  "price.source=unknown means the connection cannot be ranked by cost; the router must never invent a price (RC-1.4)",
+  "an active connection is a routing target only while it is not marked unhealthy by the circuit breaker",
+  "capability_key includes the mode when a provider serves the same model id in more than one mode, so a chat measurement is never credited to a reasoning connection"
+ ]
+}

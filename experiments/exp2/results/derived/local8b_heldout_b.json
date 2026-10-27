@@ -1,0 +1,337 @@
+{
+ "annotator": "llama3.1:8b-instruct-q4_K_M",
+ "annotator_failures": {},
+ "annotator_vs_author": {
+  "accuracy": 0.6389,
+  "confusion": {
+   "confidential": {
+    "confidential": 13,
+    "public": 10
+   },
+   "private": {
+    "confidential": 2,
+    "private": 20,
+    "public": 13
+   },
+   "public": {
+    "private": 1,
+    "public": 13
+   }
+  },
+  "kappa": 0.48,
+  "n": 72
+ },
+ "by_set": {
+  "prompts_heldout_b.jsonl": {
+   "annotator_vs_author": 0.6389,
+   "n": 72,
+   "rules_vs_author": 0.5417
+  }
+ },
+ "disagreements": [
+  {
+   "annotator": "public",
+   "id": "n01",
+   "rules": "private",
+   "text": "My planning permission was refused; summarise the reasons and draft the appeal.",
+   "truth": "private"
+  },
+  {
+   "annotator": "public",
+   "id": "n04",
+   "rules": "private",
+   "text": "Draft a complaint to the contractor about the unfinished bathroom.",
+   "truth": "private"
+  },
+  {
+   "annotator": "public",
+   "id": "n05",
+   "rules": "private",
+   "text": "My energy certificate expired; list what I need to renew before the sale.",
+   "truth": "private"
+  },
+  {
+   "annotator": "public",
+   "id": "n07",
+   "rules": "private",
+   "text": "My grant application was rejected; summarise the reviewer comments and suggest a resubmission.",
+   "truth": "private"
+  },
+  {
+   "annotator": "confidential",
+   "id": "n10",
+   "rules": "private",
+   "text": "Summarise our donor list and the pledged amounts for the trustees.",
+   "truth": "confidential"
+  },
+  {
+   "annotator": "confidential",
+   "id": "n11",
+   "rules": "private",
+   "text": "Draft the grant report for the foundation, using the project's spend.",
+   "truth": "confidential"
+  },
+  {
+   "annotator": "public",
+   "id": "n12",
+   "rules": "private",
+   "text": "Our sponsorship proposal for the community event needs a one-page brief.",
+   "truth": "confidential"
+  },
+  {
+   "annotator": "confidential",
+   "id": "n13",
+   "rules": "private",
+   "text": "Write the internal note about the funding shortfall and the staff consultation.",
+   "truth": "confidential"
+  },
+  {
+   "annotator": "public",
+   "id": "n16",
+   "rules": "confidential",
+   "text": "My broadband contract ends next month; list what to check before switching.",
+   "truth": "private"
+  },
+  {
+   "annotator": "public",
+   "id": "n20",
+   "rules": "private",
+   "text": "My parcel never arrived; write the claim listing what was inside.",
+   "truth": "private"
+  },
+  {
+   "annotator": "confidential",
+   "id": "n21",
+   "rules": "private",
+   "text": "Summarise this quarter's returns by product category for the buying team.",
+   "truth": "confidential"
+  },
+  {
+   "annotator": "public",
+   "id": "n22",
+   "rules": "private",
+   "text": "Draft the price increase note for the retail partners.",
+   "truth": "confidential"
+  },
+  {
+   "annotator": "public",
+   "id": "n23",
+   "rules": "private",
+   "text": "Our stock count shows a shrinkage problem; list the plausible causes from this table.",
+   "truth": "confidential"
+  },
+  {
+   "annotator": "public",
+   "id": "n24",
+   "rules": "private",
+   "text": "Write the discount policy for seasonal stock.",
+   "truth": "confidential"
+  },
+  {
+   "annotator": "confidential",
+   "id": "n25",
+   "rules": "private",
+   "text": "Prepare the supplier review pack for the top five vendors.",
+   "truth": "confidential"
+  },
+  {
+   "annotator": "public",
+   "id": "n26",
+   "rules": "private",
+   "text": "My candidate profile is out of date; summarise what to update before the next interview.",
+   "truth": "private"
+  },
+  {
+   "annotator": "public",
+   "id": "n27",
+   "rules": "confidential",
+   "text": "My placement contract says a rebate applies; check whether it does for this start date.",
+   "truth": "private"
+  },
+  {
+   "annotator": "public",
+   "id": "n28",
+   "rules": "private",
+   "text": "Draft the job description for a warehouse supervisor.",
+   "truth": "confidential"
+  },
+  {
+   "annotator": "public",
+   "id": "n29",
+   "rules": "private",
+   "text": "Summarise the interview panel feedback template.",
+   "truth": "confidential"
+  },
+  {
+   "annotator": "public",
+   "id": "n31",
+   "rules": "private",
+   "text": "Write the offer letter template for permanent placements.",
+   "truth": "confidential"
+  },
+  {
+   "annotator": "public",
+   "id": "n38",
+   "rules": "private",
+   "text": "Draft a statement for my housing tribunal hearing.",
+   "truth": "private"
+  },
+  {
+   "annotator": "confidential",
+   "id": "n40",
+   "rules": "private",
+   "text": "Summarise the settlement offer from the other side.",
+   "truth": "private"
+  },
+  {
+   "annotator": "confidential",
+   "id": "n45",
+   "rules": "private",
+   "text": "Summarise the termly attendance report for the governors.",
+   "truth": "confidential"
+  },
+  {
+   "annotator": "confidential",
+   "id": "n46",
+   "rules": "private",
+   "text": "Draft the staff training plan for the new safeguarding policy.",
+   "truth": "confidential"
+  },
+  {
+   "annotator": "confidential",
+   "id": "n47",
+   "rules": "private",
+   "text": "Our admissions numbers are down; prepare the internal analysis.",
+   "truth": "confidential"
+  },
+  {
+   "annotator": "public",
+   "id": "n51",
+   "rules": "private",
+   "text": "Summarise the claims trend for the quarterly broker review.",
+   "truth": "confidential"
+  },
+  {
+   "annotator": "public",
+   "id": "n52",
+   "rules": "private",
+   "text": "Our underwriter wants a risk report on the new site.",
+   "truth": "confidential"
+  },
+  {
+   "annotator": "confidential",
+   "id": "n53",
+   "rules": "private",
+   "text": "Our shipment is stuck at customs; draft the escalation to the freight forwarder.",
+   "truth": "confidential"
+  },
+  {
+   "annotator": "public",
+   "id": "n54",
+   "rules": "private",
+   "text": "Summarise the warehouse inventory variance for the ops meeting.",
+   "truth": "confidential"
+  },
+  {
+   "annotator": "confidential",
+   "id": "n55",
+   "rules": "private",
+   "text": "Draft the service level terms for the new distributor.",
+   "truth": "confidential"
+  },
+  {
+   "annotator": "public",
+   "id": "n56",
+   "rules": "private",
+   "text": "My delivery was damaged; write the claim with the consignment number.",
+   "truth": "private"
+  },
+  {
+   "annotator": "private",
+   "id": "n57",
+   "rules": "public",
+   "text": "My driver's licence check is due; explain what the employer needs from me.",
+   "truth": "private"
+  },
+  {
+   "annotator": "confidential",
+   "id": "n58",
+   "rules": "private",
+   "text": "Our fleet insurance premium rose; list the reasons from the broker's note.",
+   "truth": "confidential"
+  },
+  {
+   "annotator": "public",
+   "id": "q10",
+   "rules": "confidential",
+   "text": "What is a freight forwarder?",
+   "truth": "public"
+  },
+  {
+   "annotator": "public",
+   "id": "q11",
+   "rules": "confidential",
+   "text": "Explain the difference between inventory and stock.",
+   "truth": "public"
+  },
+  {
+   "annotator": "public",
+   "id": "q12",
+   "rules": "confidential",
+   "text": "How do I write a clear job description?",
+   "truth": "public"
+  },
+  {
+   "annotator": "public",
+   "id": "q13",
+   "rules": "confidential",
+   "text": "What is a service level agreement?",
+   "truth": "public"
+  }
+ ],
+ "experiment": "second annotator (LLM) on the privacy battery",
+ "n_items": 72,
+ "note": "the annotator is a model, not a human; battery is synthetic",
+ "rules_vs_annotator": {
+  "agreement": 0.4861,
+  "confusion": {
+   "confidential": {
+    "confidential": 3,
+    "public": 6
+   },
+   "private": {
+    "confidential": 12,
+    "private": 20,
+    "public": 18
+   },
+   "public": {
+    "private": 1,
+    "public": 12
+   }
+  },
+  "kappa": 0.2455,
+  "n": 72
+ },
+ "rules_vs_author": {
+  "accuracy": 0.5417,
+  "confusion": {
+   "confidential": {
+    "confidential": 2,
+    "private": 21
+   },
+   "private": {
+    "confidential": 3,
+    "private": 28,
+    "public": 4
+   },
+   "public": {
+    "confidential": 4,
+    "private": 1,
+    "public": 9
+   }
+  },
+  "kappa": 0.2197,
+  "n": 72
+ },
+ "spend_usd": 0.0
+}

@@ -1,0 +1,1120 @@
+{
+ "at": "2026-10-26T18:25:04Z",
+ "battery": {
+  "file": "prompts_heldout_b.jsonl",
+  "n": 72,
+  "sha256": "f236580547f50cb2dc96fbe5fadae98e712a0f306ef81209d9a42fcc8d5659b6"
+ },
+ "experiment": "classifier options on battery B (held-out, unseen domains)",
+ "metrics": {
+  "accuracy": 0.8611,
+  "n": 72,
+  "over": 1,
+  "over_ids": [
+   "n10"
+  ],
+  "under": 9,
+  "under_ids": [
+   "n02",
+   "n03",
+   "n05",
+   "n16",
+   "n18",
+   "n19",
+   "n20",
+   "n28",
+   "n40"
+  ]
+ },
+ "rows": [
+  {
+   "changed": false,
+   "final": "private",
+   "guard_fired": false,
+   "id": "n01",
+   "rules_label": "private",
+   "true": "private",
+   "verdict": {
+    "cost_usd": 0.001422,
+    "error": null,
+    "label": "private",
+    "tokens_in": 234,
+    "tokens_out": 159
+   }
+  },
+  {
+   "changed": false,
+   "final": "confidential",
+   "guard_fired": false,
+   "id": "n02",
+   "rules_label": "confidential",
+   "true": "private",
+   "verdict": {
+    "cost_usd": 0.00171,
+    "error": null,
+    "label": "confidential",
+    "tokens_in": 237,
+    "tokens_out": 206
+   }
+  },
+  {
+   "changed": false,
+   "final": "public",
+   "guard_fired": false,
+   "id": "n03",
+   "rules_label": "public",
+   "true": "private",
+   "verdict": {
+    "cost_usd": 0.002336,
+    "error": null,
+    "label": "public",
+    "tokens_in": 235,
+    "tokens_out": 311
+   }
+  },
+  {
+   "changed": false,
+   "final": "private",
+   "guard_fired": false,
+   "id": "n04",
+   "rules_label": "private",
+   "true": "private",
+   "verdict": {
+    "cost_usd": 0.00298,
+    "error": null,
+    "label": "private",
+    "tokens_in": 230,
+    "tokens_out": 420
+   }
+  },
+  {
+   "changed": true,
+   "final": "public",
+   "guard_fired": false,
+   "id": "n05",
+   "rules_label": "private",
+   "true": "private",
+   "verdict": {
+    "cost_usd": 0.001914,
+    "error": null,
+    "label": "public",
+    "tokens_in": 234,
+    "tokens_out": 241
+   }
+  },
+  {
+   "changed": false,
+   "final": "private",
+   "guard_fired": false,
+   "id": "n06",
+   "rules_label": "private",
+   "true": "private",
+   "verdict": {
+    "cost_usd": 0.00114,
+    "error": null,
+    "label": "private",
+    "tokens_in": 237,
+    "tokens_out": 111
+   }
+  },
+  {
+   "changed": false,
+   "final": "private",
+   "guard_fired": false,
+   "id": "n07",
+   "rules_label": "private",
+   "true": "private",
+   "verdict": {
+    "cost_usd": 0.002244,
+    "error": null,
+    "label": "private",
+    "tokens_in": 237,
+    "tokens_out": 295
+   }
+  },
+  {
+   "changed": false,
+   "final": "private",
+   "guard_fired": false,
+   "id": "n08",
+   "rules_label": "private",
+   "true": "private",
+   "verdict": {
+    "cost_usd": 0.001314,
+    "error": null,
+    "label": "private",
+    "tokens_in": 231,
+    "tokens_out": 142
+   }
+  },
+  {
+   "changed": false,
+   "final": "private",
+   "guard_fired": false,
+   "id": "n09",
+   "rules_label": "private",
+   "true": "private",
+   "verdict": {
+    "cost_usd": 0.001514,
+    "error": null,
+    "label": "private",
+    "tokens_in": 232,
+    "tokens_out": 175
+   }
+  },
+  {
+   "changed": false,
+   "final": "private",
+   "guard_fired": false,
+   "id": "n10",
+   "rules_label": "private",
+   "true": "confidential",
+   "verdict": {
+    "cost_usd": 0.001222,
+    "error": null,
+    "label": "private",
+    "tokens_in": 233,
+    "tokens_out": 126
+   }
+  },
+  {
+   "changed": true,
+   "final": "confidential",
+   "guard_fired": false,
+   "id": "n11",
+   "rules_label": "private",
+   "true": "confidential",
+   "verdict": {
+    "cost_usd": 0.000898,
+    "error": null,
+    "label": "confidential",
+    "tokens_in": 233,
+    "tokens_out": 72
+   }
+  },
+  {
+   "changed": true,
+   "final": "confidential",
+   "guard_fired": false,
+   "id": "n12",
+   "rules_label": "private",
+   "true": "confidential",
+   "verdict": {
+    "cost_usd": 0.000836,
+    "error": null,
+    "label": "confidential",
+    "tokens_in": 232,
+    "tokens_out": 62
+   }
+  },
+  {
+   "changed": true,
+   "final": "confidential",
+   "guard_fired": false,
+   "id": "n13",
+   "rules_label": "private",
+   "true": "confidential",
+   "verdict": {
+    "cost_usd": 0.00164,
+    "error": null,
+    "label": "confidential",
+    "tokens_in": 232,
+    "tokens_out": 196
+   }
+  },
+  {
+   "changed": true,
+   "final": "private",
+   "guard_fired": false,
+   "id": "n14",
+   "rules_label": "public",
+   "true": "private",
+   "verdict": {
+    "cost_usd": 0.001004,
+    "error": null,
+    "label": "private",
+    "tokens_in": 232,
+    "tokens_out": 90
+   }
+  },
+  {
+   "changed": false,
+   "final": "private",
+   "guard_fired": false,
+   "id": "n15",
+   "rules_label": "private",
+   "true": "private",
+   "verdict": {
+    "cost_usd": 0.001342,
+    "error": null,
+    "label": "private",
+    "tokens_in": 236,
+    "tokens_out": 145
+   }
+  },
+  {
+   "changed": true,
+   "final": "public",
+   "guard_fired": false,
+   "id": "n16",
+   "rules_label": "confidential",
+   "true": "private",
+   "verdict": {
+    "cost_usd": 0.00178,
+    "error": null,
+    "label": "public",
+    "tokens_in": 233,
+    "tokens_out": 219
+   }
+  },
+  {
+   "changed": false,
+   "final": "private",
+   "guard_fired": false,
+   "id": "n17",
+   "rules_label": "private",
+   "true": "private",
+   "verdict": {
+    "cost_usd": 0.001084,
+    "error": null,
+    "label": "private",
+    "tokens_in": 233,
+    "tokens_out": 103
+   }
+  },
+  {
+   "changed": true,
+   "final": "confidential",
+   "guard_fired": false,
+   "id": "n18",
+   "rules_label": "private",
+   "true": "private",
+   "verdict": {
+    "cost_usd": null,
+    "error": "malformed_response",
+    "label": null,
+    "tokens_in": null,
+    "tokens_out": null
+   }
+  },
+  {
+   "changed": true,
+   "final": "confidential",
+   "guard_fired": false,
+   "id": "n19",
+   "rules_label": "private",
+   "true": "private",
+   "verdict": {
+    "cost_usd": null,
+    "error": "malformed_response",
+    "label": null,
+    "tokens_in": null,
+    "tokens_out": null
+   }
+  },
+  {
+   "changed": true,
+   "final": "public",
+   "guard_fired": false,
+   "id": "n20",
+   "rules_label": "private",
+   "true": "private",
+   "verdict": {
+    "cost_usd": 0.00308,
+    "error": null,
+    "label": "public",
+    "tokens_in": 232,
+    "tokens_out": 436
+   }
+  },
+  {
+   "changed": true,
+   "final": "confidential",
+   "guard_fired": false,
+   "id": "n21",
+   "rules_label": "private",
+   "true": "confidential",
+   "verdict": {
+    "cost_usd": 0.000912,
+    "error": null,
+    "label": "confidential",
+    "tokens_in": 234,
+    "tokens_out": 74
+   }
+  },
+  {
+   "changed": true,
+   "final": "confidential",
+   "guard_fired": false,
+   "id": "n22",
+   "rules_label": "private",
+   "true": "confidential",
+   "verdict": {
+    "cost_usd": 0.001058,
+    "error": null,
+    "label": "confidential",
+    "tokens_in": 229,
+    "tokens_out": 100
+   }
+  },
+  {
+   "changed": true,
+   "final": "confidential",
+   "guard_fired": false,
+   "id": "n23",
+   "rules_label": "private",
+   "true": "confidential",
+   "verdict": {
+    "cost_usd": 0.000904,
+    "error": null,
+    "label": "confidential",
+    "tokens_in": 236,
+    "tokens_out": 72
+   }
+  },
+  {
+   "changed": true,
+   "final": "confidential",
+   "guard_fired": false,
+   "id": "n24",
+   "rules_label": "private",
+   "true": "confidential",
+   "verdict": {
+    "cost_usd": 0.001102,
+    "error": null,
+    "label": "confidential",
+    "tokens_in": 227,
+    "tokens_out": 108
+   }
+  },
+  {
+   "changed": true,
+   "final": "confidential",
+   "guard_fired": false,
+   "id": "n25",
+   "rules_label": "private",
+   "true": "confidential",
+   "verdict": {
+    "cost_usd": 0.000856,
+    "error": null,
+    "label": "confidential",
+    "tokens_in": 230,
+    "tokens_out": 66
+   }
+  },
+  {
+   "changed": false,
+   "final": "private",
+   "guard_fired": false,
+   "id": "n26",
+   "rules_label": "private",
+   "true": "private",
+   "verdict": {
+    "cost_usd": 0.001638,
+    "error": null,
+    "label": "private",
+    "tokens_in": 237,
+    "tokens_out": 194
+   }
+  },
+  {
+   "changed": true,
+   "final": "private",
+   "guard_fired": false,
+   "id": "n27",
+   "rules_label": "confidential",
+   "true": "private",
+   "verdict": {
+    "cost_usd": 0.001342,
+    "error": null,
+    "label": "private",
+    "tokens_in": 236,
+    "tokens_out": 145
+   }
+  },
+  {
+   "changed": true,
+   "final": "public",
+   "guard_fired": false,
+   "id": "n28",
+   "rules_label": "private",
+   "true": "confidential",
+   "verdict": {
+    "cost_usd": 0.001146,
+    "error": null,
+    "label": "public",
+    "tokens_in": 228,
+    "tokens_out": 115
+   }
+  },
+  {
+   "changed": true,
+   "final": "confidential",
+   "guard_fired": false,
+   "id": "n29",
+   "rules_label": "private",
+   "true": "confidential",
+   "verdict": {
+    "cost_usd": 0.001482,
+    "error": null,
+    "label": "confidential",
+    "tokens_in": 228,
+    "tokens_out": 171
+   }
+  },
+  {
+   "changed": false,
+   "final": "confidential",
+   "guard_fired": false,
+   "id": "n30",
+   "rules_label": "confidential",
+   "true": "confidential",
+   "verdict": {
+    "cost_usd": 0.000836,
+    "error": null,
+    "label": "confidential",
+    "tokens_in": 232,
+    "tokens_out": 62
+   }
+  },
+  {
+   "changed": true,
+   "final": "confidential",
+   "guard_fired": false,
+   "id": "n31",
+   "rules_label": "private",
+   "true": "confidential",
+   "verdict": {
+    "cost_usd": 0.00126,
+    "error": null,
+    "label": "confidential",
+    "tokens_in": 228,
+    "tokens_out": 134
+   }
+  },
+  {
+   "changed": false,
+   "final": "private",
+   "guard_fired": false,
+   "id": "n32",
+   "rules_label": "private",
+   "true": "private",
+   "verdict": {
+    "cost_usd": 0.001046,
+    "error": null,
+    "label": "private",
+    "tokens_in": 235,
+    "tokens_out": 96
+   }
+  },
+  {
+   "changed": false,
+   "final": "private",
+   "guard_fired": false,
+   "id": "n33",
+   "rules_label": "private",
+   "true": "private",
+   "verdict": {
+    "cost_usd": 0.00089,
+    "error": null,
+    "label": "private",
+    "tokens_in": 235,
+    "tokens_out": 70
+   }
+  },
+  {
+   "changed": false,
+   "final": "private",
+   "guard_fired": false,
+   "id": "n34",
+   "rules_label": "private",
+   "true": "private",
+   "verdict": {
+    "cost_usd": 0.001102,
+    "error": null,
+    "label": "private",
+    "tokens_in": 230,
+    "tokens_out": 107
+   }
+  },
+  {
+   "changed": false,
+   "final": "private",
+   "guard_fired": false,
+   "id": "n35",
+   "rules_label": "private",
+   "true": "private",
+   "verdict": {
+    "cost_usd": 0.001126,
+    "error": null,
+    "label": "private",
+    "tokens_in": 230,
+    "tokens_out": 111
+   }
+  },
+  {
+   "changed": false,
+   "final": "private",
+   "guard_fired": false,
+   "id": "n36",
+   "rules_label": "private",
+   "true": "private",
+   "verdict": {
+    "cost_usd": 0.000966,
+    "error": null,
+    "label": "private",
+    "tokens_in": 231,
+    "tokens_out": 84
+   }
+  },
+  {
+   "changed": false,
+   "final": "private",
+   "guard_fired": false,
+   "id": "n37",
+   "rules_label": "private",
+   "true": "private",
+   "verdict": {
+    "cost_usd": 0.001106,
+    "error": null,
+    "label": "private",
+    "tokens_in": 235,
+    "tokens_out": 106
+   }
+  },
+  {
+   "changed": false,
+   "final": "private",
+   "guard_fired": false,
+   "id": "n38",
+   "rules_label": "private",
+   "true": "private",
+   "verdict": {
+    "cost_usd": 0.000906,
+    "error": null,
+    "label": "private",
+    "tokens_in": 228,
+    "tokens_out": 75
+   }
+  },
+  {
+   "changed": false,
+   "final": "private",
+   "guard_fired": false,
+   "id": "n39",
+   "rules_label": "private",
+   "true": "private",
+   "verdict": {
+    "cost_usd": 0.00098,
+    "error": null,
+    "label": "private",
+    "tokens_in": 232,
+    "tokens_out": 86
+   }
+  },
+  {
+   "changed": true,
+   "final": "confidential",
+   "guard_fired": false,
+   "id": "n40",
+   "rules_label": "private",
+   "true": "private",
+   "verdict": {
+    "cost_usd": 0.002308,
+    "error": null,
+    "label": "confidential",
+    "tokens_in": 230,
+    "tokens_out": 308
+   }
+  },
+  {
+   "changed": false,
+   "final": "private",
+   "guard_fired": false,
+   "id": "n41",
+   "rules_label": "private",
+   "true": "private",
+   "verdict": {
+    "cost_usd": 0.000902,
+    "error": null,
+    "label": "private",
+    "tokens_in": 232,
+    "tokens_out": 73
+   }
+  },
+  {
+   "changed": false,
+   "final": "private",
+   "guard_fired": false,
+   "id": "n42",
+   "rules_label": "private",
+   "true": "private",
+   "verdict": {
+    "cost_usd": 0.001166,
+    "error": null,
+    "label": "private",
+    "tokens_in": 235,
+    "tokens_out": 116
+   }
+  },
+  {
+   "changed": false,
+   "final": "private",
+   "guard_fired": false,
+   "id": "n43",
+   "rules_label": "private",
+   "true": "private",
+   "verdict": {
+    "cost_usd": 0.000896,
+    "error": null,
+    "label": "private",
+    "tokens_in": 232,
+    "tokens_out": 72
+   }
+  },
+  {
+   "changed": false,
+   "final": "private",
+   "guard_fired": false,
+   "id": "n44",
+   "rules_label": "private",
+   "true": "private",
+   "verdict": {
+    "cost_usd": 0.00098,
+    "error": null,
+    "label": "private",
+    "tokens_in": 232,
+    "tokens_out": 86
+   }
+  },
+  {
+   "changed": true,
+   "final": "confidential",
+   "guard_fired": false,
+   "id": "n45",
+   "rules_label": "private",
+   "true": "confidential",
+   "verdict": {
+    "cost_usd": 0.00195,
+    "error": null,
+    "label": "confidential",
+    "tokens_in": 231,
+    "tokens_out": 248
+   }
+  },
+  {
+   "changed": true,
+   "final": "confidential",
+   "guard_fired": false,
+   "id": "n46",
+   "rules_label": "private",
+   "true": "confidential",
+   "verdict": {
+    "cost_usd": 0.000918,
+    "error": null,
+    "label": "confidential",
+    "tokens_in": 231,
+    "tokens_out": 76
+   }
+  },
+  {
+   "changed": true,
+   "final": "confidential",
+   "guard_fired": false,
+   "id": "n47",
+   "rules_label": "private",
+   "true": "confidential",
+   "verdict": {
+    "cost_usd": 0.001102,
+    "error": null,
+    "label": "confidential",
+    "tokens_in": 230,
+    "tokens_out": 107
+   }
+  },
+  {
+   "changed": true,
+   "final": "private",
+   "guard_fired": false,
+   "id": "n48",
+   "rules_label": "public",
+   "true": "private",
+   "verdict": {
+    "cost_usd": 0.001028,
+    "error": null,
+    "label": "private",
+    "tokens_in": 232,
+    "tokens_out": 94
+   }
+  },
+  {
+   "changed": false,
+   "final": "private",
+   "guard_fired": false,
+   "id": "n49",
+   "rules_label": "private",
+   "true": "private",
+   "verdict": {
+    "cost_usd": 0.001108,
+    "error": null,
+    "label": "private",
+    "tokens_in": 236,
+    "tokens_out": 106
+   }
+  },
+  {
+   "changed": false,
+   "final": "confidential",
+   "guard_fired": false,
+   "id": "n50",
+   "rules_label": "confidential",
+   "true": "confidential",
+   "verdict": {
+    "cost_usd": 0.000988,
+    "error": null,
+    "label": "confidential",
+    "tokens_in": 230,
+    "tokens_out": 88
+   }
+  },
+  {
+   "changed": true,
+   "final": "confidential",
+   "guard_fired": false,
+   "id": "n51",
+   "rules_label": "private",
+   "true": "confidential",
+   "verdict": {
+    "cost_usd": 0.001122,
+    "error": null,
+    "label": "confidential",
+    "tokens_in": 231,
+    "tokens_out": 110
+   }
+  },
+  {
+   "changed": true,
+   "final": "confidential",
+   "guard_fired": false,
+   "id": "n52",
+   "rules_label": "private",
+   "true": "confidential",
+   "verdict": {
+    "cost_usd": 0.00087,
+    "error": null,
+    "label": "confidential",
+    "tokens_in": 231,
+    "tokens_out": 68
+   }
+  },
+  {
+   "changed": true,
+   "final": "confidential",
+   "guard_fired": false,
+   "id": "n53",
+   "rules_label": "private",
+   "true": "confidential",
+   "verdict": {
+    "cost_usd": 0.000974,
+    "error": null,
+    "label": "confidential",
+    "tokens_in": 235,
+    "tokens_out": 84
+   }
+  },
+  {
+   "changed": true,
+   "final": "confidential",
+   "guard_fired": false,
+   "id": "n54",
+   "rules_label": "private",
+   "true": "confidential",
+   "verdict": {
+    "cost_usd": 0.000894,
+    "error": null,
+    "label": "confidential",
+    "tokens_in": 231,
+    "tokens_out": 72
+   }
+  },
+  {
+   "changed": true,
+   "final": "confidential",
+   "guard_fired": false,
+   "id": "n55",
+   "rules_label": "private",
+   "true": "confidential",
+   "verdict": {
+    "cost_usd": 0.000866,
+    "error": null,
+    "label": "confidential",
+    "tokens_in": 229,
+    "tokens_out": 68
+   }
+  },
+  {
+   "changed": false,
+   "final": "private",
+   "guard_fired": false,
+   "id": "n56",
+   "rules_label": "private",
+   "true": "private",
+   "verdict": {
+    "cost_usd": 0.00169,
+    "error": null,
+    "label": "private",
+    "tokens_in": 233,
+    "tokens_out": 204
+   }
+  },
+  {
+   "changed": true,
+   "final": "private",
+   "guard_fired": false,
+   "id": "n57",
+   "rules_label": "public",
+   "true": "private",
+   "verdict": {
+    "cost_usd": 0.001352,
+    "error": null,
+    "label": "private",
+    "tokens_in": 235,
+    "tokens_out": 147
+   }
+  },
+  {
+   "changed": true,
+   "final": "confidential",
+   "guard_fired": false,
+   "id": "n58",
+   "rules_label": "private",
+   "true": "confidential",
+   "verdict": {
+    "cost_usd": 0.001026,
+    "error": null,
+    "label": "confidential",
+    "tokens_in": 234,
+    "tokens_out": 93
+   }
+  },
+  {
+   "changed": false,
+   "final": "public",
+   "guard_fired": false,
+   "id": "q01",
+   "rules_label": "public",
+   "true": "public",
+   "verdict": {
+    "cost_usd": 0.000748,
+    "error": null,
+    "label": "public",
+    "tokens_in": 230,
+    "tokens_out": 48
+   }
+  },
+  {
+   "changed": false,
+   "final": "public",
+   "guard_fired": false,
+   "id": "q02",
+   "rules_label": "public",
+   "true": "public",
+   "verdict": {
+    "cost_usd": 0.000796,
+    "error": null,
+    "label": "public",
+    "tokens_in": 230,
+    "tokens_out": 56
+   }
+  },
+  {
+   "changed": false,
+   "final": "public",
+   "guard_fired": false,
+   "id": "q03",
+   "rules_label": "public",
+   "true": "public",
+   "verdict": {
+    "cost_usd": 0.000784,
+    "error": null,
+    "label": "public",
+    "tokens_in": 227,
+    "tokens_out": 55
+   }
+  },
+  {
+   "changed": false,
+   "final": "public",
+   "guard_fired": false,
+   "id": "q04",
+   "rules_label": "public",
+   "true": "public",
+   "verdict": {
+    "cost_usd": 0.00089,
+    "error": null,
+    "label": "public",
+    "tokens_in": 229,
+    "tokens_out": 72
+   }
+  },
+  {
+   "changed": false,
+   "final": "public",
+   "guard_fired": false,
+   "id": "q05",
+   "rules_label": "public",
+   "true": "public",
+   "verdict": {
+    "cost_usd": 0.00078,
+    "error": null,
+    "label": "public",
+    "tokens_in": 228,
+    "tokens_out": 54
+   }
+  },
+  {
+   "changed": true,
+   "final": "public",
+   "guard_fired": false,
+   "id": "q06",
+   "rules_label": "private",
+   "true": "public",
+   "verdict": {
+    "cost_usd": 0.000808,
+    "error": null,
+    "label": "public",
+    "tokens_in": 227,
+    "tokens_out": 59
+   }
+  },
+  {
+   "changed": false,
+   "final": "public",
+   "guard_fired": false,
+   "id": "q07",
+   "rules_label": "public",
+   "true": "public",
+   "verdict": {
+    "cost_usd": 0.000782,
+    "error": null,
+    "label": "public",
+    "tokens_in": 229,
+    "tokens_out": 54
+   }
+  },
+  {
+   "changed": false,
+   "final": "public",
+   "guard_fired": false,
+   "id": "q08",
+   "rules_label": "public",
+   "true": "public",
+   "verdict": {
+    "cost_usd": 0.000774,
+    "error": null,
+    "label": "public",
+    "tokens_in": 228,
+    "tokens_out": 53
+   }
+  },
+  {
+   "changed": false,
+   "final": "public",
+   "guard_fired": false,
+   "id": "q09",
+   "rules_label": "public",
+   "true": "public",
+   "verdict": {
+    "cost_usd": 0.000718,
+    "error": null,
+    "label": "public",
+    "tokens_in": 227,
+    "tokens_out": 44
+   }
+  },
+  {
+   "changed": true,
+   "final": "public",
+   "guard_fired": true,
+   "id": "q10",
+   "rules_label": "confidential",
+   "true": "public",
+   "verdict": {
+    "cost_usd": 0.000716,
+    "error": null,
+    "label": "public",
+    "tokens_in": 226,
+    "tokens_out": 44
+   }
+  },
+  {
+   "changed": true,
+   "final": "public",
+   "guard_fired": true,
+   "id": "q11",
+   "rules_label": "confidential",
+   "true": "public",
+   "verdict": {
+    "cost_usd": 0.00087,
+    "error": null,
+    "label": "public",
+    "tokens_in": 228,
+    "tokens_out": 69
+   }
+  },
+  {
+   "changed": true,
+   "final": "public",
+   "guard_fired": true,
+   "id": "q12",
+   "rules_label": "confidential",
+   "true": "public",
+   "verdict": {
+    "cost_usd": 0.000768,
+    "error": null,
+    "label": "public",
+    "tokens_in": 228,
+    "tokens_out": 52
+   }
+  },
+  {
+   "changed": true,
+   "final": "public",
+   "guard_fired": true,
+   "id": "q13",
+   "rules_label": "confidential",
+   "true": "public",
+   "verdict": {
+    "cost_usd": 0.000782,
+    "error": null,
+    "label": "public",
+    "tokens_in": 226,
+    "tokens_out": 55
+   }
+  },
+  {
+   "changed": false,
+   "final": "public",
+   "guard_fired": false,
+   "id": "q14",
+   "rules_label": "public",
+   "true": "public",
+   "verdict": {
+    "cost_usd": 0.00074,
+    "error": null,
+    "label": "public",
+    "tokens_in": 229,
+    "tokens_out": 47
+   }
+  }
+ ],
+ "ruleset_ref": "rul_179299781445100001",
+ "script": "experiments/exp2/verifier_eval.py",
+ "spend_usd": 0.083214,
+ "variant": "frontier_annot",
+ "verifier_conn": {
+  "connector": "openai_compatible",
+  "label": "Together Qwen3.8",
+  "model": "Qwen/Qwen3.8-2.4T-A95B"
+ }
+}

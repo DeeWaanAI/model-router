@@ -1,0 +1,21 @@
+{
+ "ACTUAL_SPEND_USD": 0.03855,
+ "battery_sha256": "f98170e5b408df128c20863019be637104691a03d74a90be7baaf7cd670fad61",
+ "ceiling_usd": 1.5,
+ "n_forced_calls": 25,
+ "n_routed": 6,
+ "note": "forced arms are experiment controls and are NOT written to ds:decision_log (FREEZE \u00a73); the routed arm is logged and bound",
+ "policy_id": "pol_179278044666800002",
+ "policy_label": "v5",
+ "preflight_by_arm": {
+  "always-big": 0.070507,
+  "always-big-max": 0.230692,
+  "always-small": 0.0,
+  "always-small-plus": 0.0,
+  "hazard-reasoning": 0.097128
+ },
+ "preflight_estimate_usd": 0.398327,
+ "reps": 1,
+ "run": "exp1-pilot",
+ "temperature": 0
+}

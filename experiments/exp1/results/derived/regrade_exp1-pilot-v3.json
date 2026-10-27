@@ -1,0 +1,191 @@
+{
+ "affected_items": [
+  "b_total_large_code",
+  "b_total_large_inhead",
+  "b_total_small_code",
+  "b_total_small_inhead"
+ ],
+ "alias_map": {
+  "total_amount": "total"
+ },
+ "amendment": "B.1",
+ "arms": [
+  {
+   "after": {
+    "accuracy": 0.8333,
+    "fields_correct": 9,
+    "fields_total": 11,
+    "n": 6
+   },
+   "before": {
+    "accuracy": 0.6667,
+    "fields_correct": 7,
+    "fields_total": 11,
+    "n": 6
+   },
+   "model": "Llama-3.3-70B-Instruct-Turbo",
+   "prompt_class": "compute_via_code"
+  },
+  {
+   "after": {
+    "accuracy": 0.3333,
+    "fields_correct": 4,
+    "fields_total": 11,
+    "n": 6
+   },
+   "before": {
+    "accuracy": 0.3333,
+    "fields_correct": 4,
+    "fields_total": 11,
+    "n": 6
+   },
+   "model": "Llama-3.3-70B-Instruct-Turbo",
+   "prompt_class": "structured_extract"
+  },
+  {
+   "after": {
+    "accuracy": 1.0,
+    "fields_correct": 11,
+    "fields_total": 11,
+    "n": 6
+   },
+   "before": {
+    "accuracy": 0.8333,
+    "fields_correct": 9,
+    "fields_total": 11,
+    "n": 6
+   },
+   "model": "Qwen3.8-2.4T-A95B",
+   "prompt_class": "compute_via_code"
+  },
+  {
+   "after": {
+    "accuracy": 0.1667,
+    "fields_correct": 2,
+    "fields_total": 11,
+    "n": 6
+   },
+   "before": {
+    "accuracy": 0.1667,
+    "fields_correct": 2,
+    "fields_total": 11,
+    "n": 6
+   },
+   "model": "Qwen3.8-2.4T-A95B",
+   "prompt_class": "structured_extract"
+  },
+  {
+   "after": {
+    "accuracy": 0.6667,
+    "fields_correct": 8,
+    "fields_total": 11,
+    "n": 6
+   },
+   "before": {
+    "accuracy": 0.5,
+    "fields_correct": 6,
+    "fields_total": 11,
+    "n": 6
+   },
+   "model": "llama3.1:8b-instruct-q4_K_M",
+   "prompt_class": "compute_via_code"
+  },
+  {
+   "after": {
+    "accuracy": 0.3333,
+    "fields_correct": 2,
+    "fields_total": 5,
+    "n": 3
+   },
+   "before": {
+    "accuracy": 0.3333,
+    "fields_correct": 2,
+    "fields_total": 5,
+    "n": 3
+   },
+   "model": "llama3.1:8b-instruct-q4_K_M",
+   "prompt_class": "structured_extract"
+  },
+  {
+   "after": {
+    "accuracy": 0.0,
+    "fields_correct": 0,
+    "fields_total": 11,
+    "n": 6
+   },
+   "before": {
+    "accuracy": 0.0,
+    "fields_correct": 0,
+    "fields_total": 11,
+    "n": 6
+   },
+   "model": "llama3.2:latest",
+   "prompt_class": "compute_via_code"
+  },
+  {
+   "after": {
+    "accuracy": 0.1667,
+    "fields_correct": 1,
+    "fields_total": 5,
+    "n": 3
+   },
+   "before": {
+    "accuracy": 0.1667,
+    "fields_correct": 1,
+    "fields_total": 5,
+    "n": 3
+   },
+   "model": "llama3.2:latest",
+   "prompt_class": "structured_extract"
+  },
+  {
+   "after": {
+    "accuracy": 0.5,
+    "fields_correct": 5,
+    "fields_total": 11,
+    "n": 6
+   },
+   "before": {
+    "accuracy": 0.3333,
+    "fields_correct": 3,
+    "fields_total": 11,
+    "n": 6
+   },
+   "model": "qwen-flash",
+   "prompt_class": "compute_via_code"
+  },
+  {
+   "after": {
+    "accuracy": 0.3333,
+    "fields_correct": 4,
+    "fields_total": 11,
+    "n": 6
+   },
+   "before": {
+    "accuracy": 0.3333,
+    "fields_correct": 4,
+    "fields_total": 11,
+    "n": 6
+   },
+   "model": "qwen-flash",
+   "prompt_class": "structured_extract"
+  }
+ ],
+ "battery_sha256": "5084db3086d212e3c9cea1f766e4c3ac83cbb478f5b96adee82982d8035553a3",
+ "cost_usd": 0.0,
+ "defect": "prompt mandated key names differ from ground-truth key names",
+ "n_not_regradable": 30,
+ "n_rows": 60,
+ "n_scores_corrected": 8,
+ "not_regradable_reason": "run_v2.py stored in-head scores but not in-head replies",
+ "routed_arm": {
+  "fields_correct": 9,
+  "fields_total": 11,
+  "n_graded": 6,
+  "quality": 0.8182,
+  "scores_corrected": 2
+ },
+ "routed_sidecar": "experiments/exp1/results/derived/routed_exp1-pilot-v3-regraded.jsonl",
+ "run": "exp1-pilot-v3",
+ "sidecar": "experiments/exp1/results/derived/arms_exp1-pilot-v3-regraded.jsonl"
+}

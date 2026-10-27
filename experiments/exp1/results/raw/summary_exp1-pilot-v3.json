@@ -1,0 +1,74 @@
+{
+ "by_architecture": {
+  "code": {
+   "code_ran": 0.7333,
+   "cost_usd": 0.012607,
+   "errors": 0,
+   "n": 30,
+   "quality": 0.4667,
+   "skipped_context": 0
+  },
+  "inhead": {
+   "code_ran": null,
+   "cost_usd": 0.25904,
+   "errors": 0,
+   "n": 24,
+   "quality": 0.2708,
+   "skipped_context": 6
+  }
+ },
+ "by_arm": {
+  "cloud-70b": {
+   "code_ran": null,
+   "cost_usd": 0.061291,
+   "errors": 0,
+   "n": 12,
+   "quality": 0.5,
+   "skipped_context": 0
+  },
+  "cloud-cheap": {
+   "code_ran": null,
+   "cost_usd": 0.004537,
+   "errors": 0,
+   "n": 12,
+   "quality": 0.3333,
+   "skipped_context": 0
+  },
+  "cloud-max": {
+   "code_ran": null,
+   "cost_usd": 0.205818,
+   "errors": 0,
+   "n": 12,
+   "quality": 0.5,
+   "skipped_context": 0
+  },
+  "local-3b": {
+   "code_ran": null,
+   "cost_usd": 0.0,
+   "errors": 0,
+   "n": 9,
+   "quality": 0.0556,
+   "skipped_context": 3
+  },
+  "local-8b": {
+   "code_ran": null,
+   "cost_usd": 0.0,
+   "errors": 0,
+   "n": 9,
+   "quality": 0.4444,
+   "skipped_context": 3
+  }
+ },
+ "routed": {
+  "code_ran_rate": 0.8333,
+  "cost_usd": 0.002542,
+  "loci": [
+   "cloud"
+  ],
+  "models": [
+   "Llama-3.3-70B-Instruct-Turbo"
+  ],
+  "n": 6,
+  "quality": 0.6667
+ }
+}

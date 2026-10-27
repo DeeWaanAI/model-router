@@ -1,0 +1,23 @@
+{
+ "ACTUAL_SPEND_USD": 0.009337,
+ "arms": [
+  {
+   "label": "Together GLM-5.3-Flash",
+   "locus": "cloud",
+   "model": "zai-org/GLM-5.3-Flash",
+   "price": {
+    "input_per_mtok": 0.15,
+    "output_per_mtok": 0.5,
+    "source": "user_declared"
+   }
+  }
+ ],
+ "battery_sha256": "5084db3086d212e3c9cea1f766e4c3ac83cbb478f5b96adee82982d8035553a3",
+ "finished_at": "2026-10-25T19:30:56Z",
+ "grader": "B.1-key-alias (in-run)",
+ "n_items": 12,
+ "preflight_estimate_usd": 0.0545,
+ "reps": 1,
+ "run": "glm-budget-8192",
+ "wall_clock_s": 142.0
+}

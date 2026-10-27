@@ -1,0 +1,412 @@
+{
+ "amendment": "B.1 (exp1 key-name defect; see experiments/exp1/FREEZE.md \u00a76)",
+ "at": "2026-10-23T19:59:11Z",
+ "cost_usd": 0.0,
+ "experiment": "exp3 step 1 \u2014 measured capability rows",
+ "grader": "B.1-key-alias (experiments/exp1/regrade.py)",
+ "note": "no new model calls; rows derive from exp1's frozen raw artifacts",
+ "policy_id": "pol_179278215748500002",
+ "recipe": "termination_and_schema_and_accuracy_v1",
+ "registry_snapshot_hash_at_write": "cff3c0ffa2a04577dbfbef1998eced8c2422c6e5634df117d15ce44adbb1bc5d",
+ "rows": [
+  {
+   "created_at": "2026-10-23T19:59:11Z",
+   "eligibility_derivation": "termination_and_schema_and_accuracy_v1",
+   "eligible": false,
+   "id": "cap_179278555189200001",
+   "measured": {
+    "accuracy": 0.8333,
+    "code_runs_rate": 0.8333,
+    "grader": "B.1-key-alias (experiments/exp1/regrade.py)",
+    "item_ids": [
+     "b_groupby_medium_code",
+     "b_max_medium_code",
+     "b_top_vendor_large_code",
+     "b_total_large_code",
+     "b_total_small_code",
+     "b_travel_across_files_code"
+    ],
+    "schema_compliance": 0.8333,
+    "source_run": "exp1-pilot-v3/arms_exp1-pilot-v3-regraded.jsonl",
+    "termination_rate": 1.0
+   },
+   "model_ref": "mdl_179270040314500002",
+   "n": 6,
+   "output_budget_tokens": 2048,
+   "prompt_class": "compute_via_code",
+   "source_ref": [
+    "exp1-pilot-v3"
+   ],
+   "spec_version": "1.1",
+   "status": "active",
+   "superseded_by": null,
+   "thresholds_snapshot": {
+    "min_accuracy": {
+     "compute_via_code": 0.8
+    },
+    "min_schema_compliance": 0.9,
+    "min_termination_rate": 0.99
+   }
+  },
+  {
+   "created_at": "2026-10-23T19:59:11Z",
+   "eligibility_derivation": "termination_and_schema_and_accuracy_v1",
+   "eligible": false,
+   "id": "cap_179278555190200002",
+   "measured": {
+    "accuracy": 0.3333,
+    "code_runs_rate": null,
+    "grader": "frozen grader for ['b_total_large_inhead', 'b_total_small_inhead']; B.1 could not regrade them (no reply text stored)",
+    "item_ids": [
+     "b_groupby_medium_inhead",
+     "b_max_medium_inhead",
+     "b_top_vendor_large_inhead",
+     "b_total_large_inhead",
+     "b_total_small_inhead",
+     "b_travel_across_files_inhead"
+    ],
+    "schema_compliance": 1.0,
+    "source_run": "exp1-pilot-v3/arms_exp1-pilot-v3-regraded.jsonl",
+    "termination_rate": 1.0
+   },
+   "model_ref": "mdl_179270040314500002",
+   "n": 6,
+   "output_budget_tokens": 2048,
+   "prompt_class": "structured_extract",
+   "source_ref": [
+    "exp1-pilot-v3"
+   ],
+   "spec_version": "1.1",
+   "status": "active",
+   "superseded_by": null,
+   "thresholds_snapshot": {
+    "min_accuracy": {
+     "structured_extract": 0.8
+    },
+    "min_schema_compliance": 0.9,
+    "min_termination_rate": 0.99
+   }
+  },
+  {
+   "created_at": "2026-10-23T19:59:11Z",
+   "eligibility_derivation": "termination_and_schema_and_accuracy_v1",
+   "eligible": true,
+   "id": "cap_179278555190800003",
+   "measured": {
+    "accuracy": 1.0,
+    "code_runs_rate": 1.0,
+    "grader": "B.1-key-alias (experiments/exp1/regrade.py)",
+    "item_ids": [
+     "b_groupby_medium_code",
+     "b_max_medium_code",
+     "b_top_vendor_large_code",
+     "b_total_large_code",
+     "b_total_small_code",
+     "b_travel_across_files_code"
+    ],
+    "schema_compliance": 1.0,
+    "source_run": "exp1-pilot-v3/arms_exp1-pilot-v3-regraded.jsonl",
+    "termination_rate": 1.0
+   },
+   "model_ref": "mdl_179270040314500003",
+   "n": 6,
+   "output_budget_tokens": 2048,
+   "prompt_class": "compute_via_code",
+   "source_ref": [
+    "exp1-pilot-v3"
+   ],
+   "spec_version": "1.1",
+   "status": "active",
+   "superseded_by": null,
+   "thresholds_snapshot": {
+    "min_accuracy": {
+     "compute_via_code": 0.8
+    },
+    "min_schema_compliance": 0.9,
+    "min_termination_rate": 0.99
+   }
+  },
+  {
+   "created_at": "2026-10-23T19:59:11Z",
+   "eligibility_derivation": "termination_and_schema_and_accuracy_v1",
+   "eligible": false,
+   "id": "cap_179278555191500004",
+   "measured": {
+    "accuracy": 0.1667,
+    "code_runs_rate": null,
+    "grader": "frozen grader for ['b_total_large_inhead', 'b_total_small_inhead']; B.1 could not regrade them (no reply text stored)",
+    "item_ids": [
+     "b_groupby_medium_inhead",
+     "b_max_medium_inhead",
+     "b_top_vendor_large_inhead",
+     "b_total_large_inhead",
+     "b_total_small_inhead",
+     "b_travel_across_files_inhead"
+    ],
+    "schema_compliance": 0.3333,
+    "source_run": "exp1-pilot-v3/arms_exp1-pilot-v3-regraded.jsonl",
+    "termination_rate": 0.5
+   },
+   "model_ref": "mdl_179270040314500003",
+   "n": 6,
+   "output_budget_tokens": 2048,
+   "prompt_class": "structured_extract",
+   "source_ref": [
+    "exp1-pilot-v3"
+   ],
+   "spec_version": "1.1",
+   "status": "active",
+   "superseded_by": null,
+   "thresholds_snapshot": {
+    "min_accuracy": {
+     "structured_extract": 0.8
+    },
+    "min_schema_compliance": 0.9,
+    "min_termination_rate": 0.99
+   }
+  },
+  {
+   "created_at": "2026-10-23T19:59:11Z",
+   "eligibility_derivation": "termination_and_schema_and_accuracy_v1",
+   "eligible": false,
+   "id": "cap_179278555192300005",
+   "measured": {
+    "accuracy": 0.0,
+    "code_runs_rate": 0.1667,
+    "grader": "B.1-key-alias (experiments/exp1/regrade.py)",
+    "item_ids": [
+     "b_groupby_medium_code",
+     "b_max_medium_code",
+     "b_top_vendor_large_code",
+     "b_total_large_code",
+     "b_total_small_code",
+     "b_travel_across_files_code"
+    ],
+    "schema_compliance": 0.0,
+    "source_run": "exp1-pilot-v3/arms_exp1-pilot-v3-regraded.jsonl",
+    "termination_rate": 1.0
+   },
+   "model_ref": "mdl_179270040314500006",
+   "n": 6,
+   "output_budget_tokens": 2048,
+   "prompt_class": "compute_via_code",
+   "source_ref": [
+    "exp1-pilot-v3"
+   ],
+   "spec_version": "1.1",
+   "status": "active",
+   "superseded_by": null,
+   "thresholds_snapshot": {
+    "min_accuracy": {
+     "compute_via_code": 0.8
+    },
+    "min_schema_compliance": 0.9,
+    "min_termination_rate": 0.99
+   }
+  },
+  {
+   "created_at": "2026-10-23T19:59:11Z",
+   "eligibility_derivation": "termination_and_schema_and_accuracy_v1",
+   "eligible": false,
+   "id": "cap_179278555193000006",
+   "measured": {
+    "accuracy": 0.1667,
+    "code_runs_rate": null,
+    "grader": "frozen grader for ['b_total_small_inhead']; B.1 could not regrade them (no reply text stored)",
+    "item_ids": [
+     "b_groupby_medium_inhead",
+     "b_max_medium_inhead",
+     "b_total_small_inhead"
+    ],
+    "schema_compliance": 1.0,
+    "source_run": "exp1-pilot-v3/arms_exp1-pilot-v3-regraded.jsonl",
+    "termination_rate": 1.0
+   },
+   "model_ref": "mdl_179270040314500006",
+   "n": 3,
+   "output_budget_tokens": 2048,
+   "prompt_class": "structured_extract",
+   "source_ref": [
+    "exp1-pilot-v3"
+   ],
+   "spec_version": "1.1",
+   "status": "active",
+   "superseded_by": null,
+   "thresholds_snapshot": {
+    "min_accuracy": {
+     "structured_extract": 0.8
+    },
+    "min_schema_compliance": 0.9,
+    "min_termination_rate": 0.99
+   }
+  },
+  {
+   "created_at": "2026-10-23T19:59:11Z",
+   "eligibility_derivation": "termination_and_schema_and_accuracy_v1",
+   "eligible": false,
+   "id": "cap_179278555193600007",
+   "measured": {
+    "accuracy": 0.5,
+    "code_runs_rate": 1.0,
+    "grader": "B.1-key-alias (experiments/exp1/regrade.py)",
+    "item_ids": [
+     "b_groupby_medium_code",
+     "b_max_medium_code",
+     "b_top_vendor_large_code",
+     "b_total_large_code",
+     "b_total_small_code",
+     "b_travel_across_files_code"
+    ],
+    "schema_compliance": 0.6667,
+    "source_run": "exp1-pilot-v3/arms_exp1-pilot-v3-regraded.jsonl",
+    "termination_rate": 1.0
+   },
+   "model_ref": "mdl_179270040314600007",
+   "n": 6,
+   "output_budget_tokens": 2048,
+   "prompt_class": "compute_via_code",
+   "source_ref": [
+    "exp1-pilot-v3"
+   ],
+   "spec_version": "1.1",
+   "status": "active",
+   "superseded_by": null,
+   "thresholds_snapshot": {
+    "min_accuracy": {
+     "compute_via_code": 0.8
+    },
+    "min_schema_compliance": 0.9,
+    "min_termination_rate": 0.99
+   }
+  },
+  {
+   "created_at": "2026-10-23T19:59:11Z",
+   "eligibility_derivation": "termination_and_schema_and_accuracy_v1",
+   "eligible": false,
+   "id": "cap_179278555194300008",
+   "measured": {
+    "accuracy": 0.3333,
+    "code_runs_rate": null,
+    "grader": "frozen grader for ['b_total_large_inhead', 'b_total_small_inhead']; B.1 could not regrade them (no reply text stored)",
+    "item_ids": [
+     "b_groupby_medium_inhead",
+     "b_max_medium_inhead",
+     "b_top_vendor_large_inhead",
+     "b_total_large_inhead",
+     "b_total_small_inhead",
+     "b_travel_across_files_inhead"
+    ],
+    "schema_compliance": 1.0,
+    "source_run": "exp1-pilot-v3/arms_exp1-pilot-v3-regraded.jsonl",
+    "termination_rate": 1.0
+   },
+   "model_ref": "mdl_179270040314600007",
+   "n": 6,
+   "output_budget_tokens": 2048,
+   "prompt_class": "structured_extract",
+   "source_ref": [
+    "exp1-pilot-v3"
+   ],
+   "spec_version": "1.1",
+   "status": "active",
+   "superseded_by": null,
+   "thresholds_snapshot": {
+    "min_accuracy": {
+     "structured_extract": 0.8
+    },
+    "min_schema_compliance": 0.9,
+    "min_termination_rate": 0.99
+   }
+  },
+  {
+   "created_at": "2026-10-23T19:59:11Z",
+   "eligibility_derivation": "termination_and_schema_and_accuracy_v1",
+   "eligible": false,
+   "id": "cap_179278555195100009",
+   "measured": {
+    "accuracy": 0.6667,
+    "code_runs_rate": 0.6667,
+    "grader": "B.1-key-alias (experiments/exp1/regrade.py)",
+    "item_ids": [
+     "b_groupby_medium_code",
+     "b_max_medium_code",
+     "b_top_vendor_large_code",
+     "b_total_large_code",
+     "b_total_small_code",
+     "b_travel_across_files_code"
+    ],
+    "schema_compliance": 0.6667,
+    "source_run": "exp1-pilot-v3/arms_exp1-pilot-v3-regraded.jsonl",
+    "termination_rate": 1.0
+   },
+   "model_ref": "mdl_179270164246200007",
+   "n": 6,
+   "output_budget_tokens": 2048,
+   "prompt_class": "compute_via_code",
+   "source_ref": [
+    "exp1-pilot-v3"
+   ],
+   "spec_version": "1.1",
+   "status": "active",
+   "superseded_by": null,
+   "thresholds_snapshot": {
+    "min_accuracy": {
+     "compute_via_code": 0.8
+    },
+    "min_schema_compliance": 0.9,
+    "min_termination_rate": 0.99
+   }
+  },
+  {
+   "created_at": "2026-10-23T19:59:11Z",
+   "eligibility_derivation": "termination_and_schema_and_accuracy_v1",
+   "eligible": false,
+   "id": "cap_179278555196000010",
+   "measured": {
+    "accuracy": 0.3333,
+    "code_runs_rate": null,
+    "grader": "frozen grader for ['b_total_small_inhead']; B.1 could not regrade them (no reply text stored)",
+    "item_ids": [
+     "b_groupby_medium_inhead",
+     "b_max_medium_inhead",
+     "b_total_small_inhead"
+    ],
+    "schema_compliance": 1.0,
+    "source_run": "exp1-pilot-v3/arms_exp1-pilot-v3-regraded.jsonl",
+    "termination_rate": 1.0
+   },
+   "model_ref": "mdl_179270164246200007",
+   "n": 3,
+   "output_budget_tokens": 2048,
+   "prompt_class": "structured_extract",
+   "source_ref": [
+    "exp1-pilot-v3"
+   ],
+   "spec_version": "1.1",
+   "status": "active",
+   "superseded_by": null,
+   "thresholds_snapshot": {
+    "min_accuracy": {
+     "structured_extract": 0.8
+    },
+    "min_schema_compliance": 0.9,
+    "min_termination_rate": 0.99
+   }
+  }
+ ],
+ "rows_superseded": [
+  "cap_179278443101700001",
+  "cap_179278443102300002",
+  "cap_179278443102500003",
+  "cap_179278443102700004",
+  "cap_179278443102800005",
+  "cap_179278443103400006",
+  "cap_179278443104000007",
+  "cap_179278443104400008",
+  "cap_179278443104900009",
+  "cap_179278443105400010"
+ ],
+ "rows_written": 10,
+ "source_artifact": "experiments/exp1/results/derived/arms_exp1-pilot-v3-regraded.jsonl",
+ "source_run": "exp1-pilot-v3"
+}

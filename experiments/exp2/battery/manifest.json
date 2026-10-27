@@ -1,0 +1,27 @@
+{
+ "battery": "experiments/exp2/battery/prompts.jsonl",
+ "sha256": "bd833e8835a6b46c5325b5c087aafad653346ee4db177b73604edd1347e0268b",
+ "bytes": 7798,
+ "n_prompts": 44,
+ "n_unique_ids": 44,
+ "by_label": {
+  "private": 18,
+  "public": 15,
+  "confidential": 11
+ },
+ "adversarial": 9,
+ "label_vocabulary": [
+  "private",
+  "confidential",
+  "public"
+ ],
+ "annotator": "single annotator (the layer author); frozen before any run",
+ "fields": [
+  "id",
+  "text",
+  "label",
+  "adversarial",
+  "note",
+  "attachment_type?"
+ ]
+}

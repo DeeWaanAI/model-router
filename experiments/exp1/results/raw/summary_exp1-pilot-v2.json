@@ -1,0 +1,58 @@
+{
+ "by_architecture": {
+  "code": {
+   "code_ran": 0.5556,
+   "cost_usd": 0.000474,
+   "errors": 0,
+   "n": 18,
+   "quality": 0.2778,
+   "skipped_context": 0
+  },
+  "inhead": {
+   "code_ran": null,
+   "cost_usd": 0.004047,
+   "errors": 0,
+   "n": 12,
+   "quality": 0.2917,
+   "skipped_context": 6
+  }
+ },
+ "by_arm": {
+  "cloud-cheap": {
+   "code_ran": null,
+   "cost_usd": 0.004521,
+   "errors": 0,
+   "n": 12,
+   "quality": 0.3333,
+   "skipped_context": 0
+  },
+  "local-3b": {
+   "code_ran": null,
+   "cost_usd": 0.0,
+   "errors": 0,
+   "n": 9,
+   "quality": 0.0556,
+   "skipped_context": 3
+  },
+  "local-8b": {
+   "code_ran": null,
+   "cost_usd": 0.0,
+   "errors": 0,
+   "n": 9,
+   "quality": 0.4444,
+   "skipped_context": 3
+  }
+ },
+ "routed": {
+  "code_ran_rate": 0.1667,
+  "cost_usd": 0.0,
+  "loci": [
+   "local"
+  ],
+  "models": [
+   "llama3.2:latest"
+  ],
+  "n": 6,
+  "quality": 0.0
+ }
+}
